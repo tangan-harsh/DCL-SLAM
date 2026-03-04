@@ -48,15 +48,15 @@
 
     # ===== FAST-LIO 前端参数 =====
     common:
-      lid_topic: "livox/lidar"              # MID-360 默认话题名（CustomMsg 格式）
-      imu_topic: "livox/imu"                # MID-360 内置 IMU 话题名
+      lid_topic: "/livox/lidar"             # MID-360 默认话题名（绝对路径，避免命名空间前缀）
+      imu_topic: "/livox/imu"              # MID-360 内置 IMU 话题名（绝对路径）
       time_sync_en: false                   # MID-360 硬件同步，无需软件同步
 
     preprocess:
       lidar_type: 1              # 1=Livox, 2=Velodyne, 3=Ouster
       scan_line: 4               # MID-360: 4 线
       scan_rate: 10              # 扫描频率 10Hz
-      timestamp_unit: 1          # Livox 时间戳单位: 1=毫秒
+      timestamp_unit: 3          # Livox 时间戳单位: 3=纳秒（与原版 FAST-LIO mid360.yaml 一致）
       blind: 0.5                 # 最小检测距离 0.5m（MID-360 近距有效）
 
     mapping:

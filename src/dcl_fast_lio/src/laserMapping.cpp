@@ -810,7 +810,6 @@ int main(int argc, char** argv)
 	}
 	name = ns.substr(1, 1);
 
-	std::thread loop_closure_thread(&distributedMapping::loopClosureThread, &dm);
 	std::thread visualize_map_thread(&distributedMapping::globalMapThread, &dm);
 
     // Declare and get parameters
@@ -997,7 +996,7 @@ int main(int argc, char** argv)
 
             if (feats_undistort->empty() || (feats_undistort == NULL))
             {
-                printf("No point, skip this scan!\n");
+                printf("No point, skip this scan\n");
                 continue;
             }
 
@@ -1024,13 +1023,18 @@ int main(int argc, char** argv)
                         pointBodyToWorld(&(feats_down_body->points[i]), &(feats_down_world->points[i]));
                     }
                     ikdtree.Build(feats_down_world->points);
+                    cout<<"[ mapping ]: ikdtree initialized with "<<feats_down_size<<" points, map valid: "<<ikdtree.validnum()<<endl;
+                }
+                else
+                {
+                    cout<<"[ mapping ]: ikdtree init skipped, feats_down_size="<<feats_down_size<<endl;
                 }
                 continue;
             }
             int featsFromMapNum = ikdtree.validnum();
             kdtree_size_st = ikdtree.size();
             
-            // cout<<"[ mapping ]: In num: "<<feats_undistort->points.size()<<" downsamp "<<feats_down_size<<" Map num: "<<featsFromMapNum<<"effect num:"<<effct_feat_num<<endl;
+            cout<<"[ mapping ]: In num: "<<feats_undistort->points.size()<<" downsamp "<<feats_down_size<<" Map num: "<<featsFromMapNum<<"effect num:"<<effct_feat_num<<endl;
 
             /*** ICP and iterated Kalman filter update ***/
             if (feats_down_size < 5)
@@ -1196,7 +1200,6 @@ int main(int argc, char** argv)
         rate.sleep();
     }
 
-	loop_closure_thread.join();
 	visualize_map_thread.join();
 
     /**************** save map ****************/
