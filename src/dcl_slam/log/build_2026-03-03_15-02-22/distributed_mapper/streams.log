@@ -1,0 +1,69 @@
+[0.007s] Invoking command in '/home/isaac/DCL-SLAM/build/distributed_mapper': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/distributed_mapper -- -j32 -l32
+[0.050s] [ 22%] Built target fast_max-clique_finder
+[0.056s] [ 31%] Built target graph_utils
+[0.096s] [ 50%] Built target robot_measurements
+[0.131s] [ 59%] Built target pairwise_consistency
+[0.162s] [ 68%] Built target global_map_solver
+[0.182s] [35m[1mConsolidate compiler generated dependencies of target distributed_pcm[0m
+[0.199s] [ 77%] Built target distributed_pcm
+[0.219s] [35m[1mConsolidate compiler generated dependencies of target distributed_mapper[0m
+[0.254s] [ 81%] [32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/distributed_mapper.cpp.o[0m
+[0.256s] [ 86%] [32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/evaluation_utils.cpp.o[0m
+[2.635s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:[m[K In function ‘[01m[Kgtsam::Values distributed_mapper::evaluation_utils::retractPose3GlobalWithOffset(const gtsam::Values&, const gtsam::VectorValues&, const Point3&)[m[K’:
+[2.635s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:108:14:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kt_initial[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[2.635s]   108 |       Point3 [01;35m[Kt_initial[m[K = initial.at<Pose3>(key).translation();
+[2.635s]       |              [01;35m[K^~~~~~~~~[m[K
+[2.737s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:[m[K In function ‘[01m[Kstd::tuple<double, double, double> distributed_mapper::evaluation_utils::evaluateEstimates(const size_t&, const GraphAndValues&, const shared_ptr&, const shared_ptr&, const bool&, const gtsam::Values&, const bool&)[m[K’:
+[2.737s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:538:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knr_robots[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[2.737s]   538 |   std::tuple<double, double, double> evaluateEstimates([01;35m[Kconst size_t &nr_robots[m[K,
+[2.737s]       |                                                        [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[2.741s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:[m[K In member function ‘[01m[Kstd::pair<gtsam::NonlinearFactorGraph, std::vector<long unsigned int> > distributed_mapper::DistributedMapper::createSubgraphInnerAndSepEdges(const gtsam::NonlinearFactorGraph&)[m[K’:
+[2.741s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:35:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kindex_mask[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.741s]    35 |     Key [01;35m[Kindex_mask[m[K = ~chr_mask;
+[2.742s]       |         [01;35m[K^~~~~~~~~~[m[K
+[6.456s] [ 90%] [32m[1mLinking CXX static library libdistributed_mapper.a[0m
+[6.552s] [100%] Built target distributed_mapper
+[6.559s] Invoked command in '/home/isaac/DCL-SLAM/build/distributed_mapper' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/distributed_mapper -- -j32 -l32
+[6.567s] Invoking command in '/home/isaac/DCL-SLAM/build/distributed_mapper': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/isaac/DCL-SLAM/build/distributed_mapper
+[6.572s] -- Install configuration: ""
+[6.573s] -- Execute custom install script
+[6.573s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/library_path.sh
+[6.583s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/library_path.dsv
+[6.593s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/between_chordal_factor.h
+[6.604s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/distributed_mapper.h
+[6.615s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/distributed_mapper_utils.h
+[6.624s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/evaluation_utils.h
+[6.634s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/run_distributed_mapper.h
+[6.645s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.h
+[6.652s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/global_map/global_map.h
+[6.659s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/graph_utils/graph_types.h
+[6.670s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/graph_utils/graph_utils_functions.h
+[6.680s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/pairwise_consistency/pairwise_consistency.h
+[6.689s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/robot_measurements/interrobot_measurements.h
+[6.700s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/robot_measurements/robot_local_map.h
+[6.710s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/robot_measurements/robot_measurements.h
+[6.719s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/ament_index/resource_index/package_run_dependencies/distributed_mapper
+[6.729s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/ament_index/resource_index/parent_prefix_path/distributed_mapper
+[6.739s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/ament_prefix_path.sh
+[6.747s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/ament_prefix_path.dsv
+[6.758s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/path.sh
+[6.770s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/path.dsv
+[6.779s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/local_setup.bash
+[6.788s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/local_setup.sh
+[6.798s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/local_setup.zsh
+[6.806s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/local_setup.dsv
+[6.813s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/package.dsv
+[6.821s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/ament_index/resource_index/packages/distributed_mapper
+[6.830s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.839s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/cmake/ament_cmake_export_libraries-extras.cmake
+[6.848s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/cmake/distributed_mapperConfig.cmake
+[6.856s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/cmake/distributed_mapperConfig-version.cmake
+[6.863s] -- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/package.xml
+[6.870s] -- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libdistributed_mapper.a
+[6.885s] -- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libgraph_utils.a
+[6.887s] -- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/librobot_measurements.a
+[6.887s] -- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libpairwise_consistency.a
+[6.889s] -- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libfast_max-clique_finder.a
+[6.889s] -- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libdistributed_pcm.a
+[6.890s] -- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libglobal_map_solver.a
+[6.891s] Invoked command in '/home/isaac/DCL-SLAM/build/distributed_mapper' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/isaac/DCL-SLAM/build/distributed_mapper

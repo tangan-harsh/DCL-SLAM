@@ -1,0 +1,37 @@
+[35m[1mConsolidate compiler generated dependencies of target libnabo[0m
+[100%] Built target libnabo
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/library_path.sh
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/library_path.dsv
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/brute_force_cpu.cpp
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/index_heap.h
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/kdtree_cpu.cpp
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/kdtree_opencl.cpp
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/nabo.cpp
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/nabo.h
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/nabo_private.h
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/heap.cl
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/knn_bf.cl
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/knn_kdtree_pt_in_leaves.cl
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/knn_kdtree_pt_in_nodes.cl
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/structure.cl
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/third_party/any.hpp
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/ament_index/resource_index/package_run_dependencies/libnabo
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/ament_index/resource_index/parent_prefix_path/libnabo
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/path.sh
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/path.dsv
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.bash
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.sh
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.zsh
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.dsv
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.dsv
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/ament_index/resource_index/packages/libnabo
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/libnaboConfig.cmake
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/libnaboConfig-version.cmake
+-- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.xml
+-- Up-to-date: /home/isaac/DCL-SLAM/install/libnabo/lib/liblibnabo.a

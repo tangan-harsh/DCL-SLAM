@@ -1,0 +1,83 @@
+# ROS2 参数文件格式：必须包裹在 节点名/ros__parameters 下
+/**:
+  ros__parameters:
+    # ===== DCL-SLAM 后端参数 =====
+    # frames
+    world_frame: "world"                    # global frame
+    odom_frame: "camera_init"               # local frame
+
+    # lidar configuration
+    sensor: "velodyne"                      # lidar type: velodyne / livox / ouster
+    n_scan: 64                              # number of lidar channel (i.e., 6, 16, 64)
+
+    # CPU params
+    onboard_cpu_cores_num: 4
+    loop_closure_process_interval: 0.01
+    map_publish_interval: 10.0
+    mapping_process_interval: 0.02
+
+    # keyframe params
+    keyframe_distance_threshold: 1.0
+    keyframe_angle_threshold: 0.2
+
+    # mapping
+    global_optmization_enable: true
+    use_between_noise: true
+    optmization_maximum_iteration: 30
+    use_pcm: false
+    pcm_threshold: 0.5
+
+    # downsample
+    descript_leaf_size: 0.1
+    map_leaf_size: 0.4
+
+    # loop closure
+    intra_robot_loop_closure_enable: false
+    inter_robot_loop_closure_enable: true
+    descriptor_type: "LidarIris"
+    knn_candidates: 6
+    match_mode: 2
+    descriptor_distance_threshold: 0.35
+    exclude_recent_frame_num: 50
+    search_radius: 15.0
+    history_keyframe_search_num: 18
+    fitness_score_threshold: 0.2
+    ransac_maximum_iteration: 2000
+    ransac_threshold: 0.3
+    ransac_outlier_reject_threshold: 0.3
+
+    # ===== FAST-LIO 前端参数 =====
+    common:
+      lid_topic: "points_raw"
+      imu_topic: "imu_correct"
+      time_sync_en: false
+
+    preprocess:
+      lidar_type: 2              # 1 for Livox, 2 for Velodyne, 3 for Ouster
+      scan_line: 64
+      scan_rate: 10
+      timestamp_unit: 2          # 0-second, 1-milisecond, 2-microsecond, 3-nanosecond
+      blind: 16.0
+
+    mapping:
+      acc_cov: 0.1
+      gyr_cov: 0.1
+      b_acc_cov: 0.0001
+      b_gyr_cov: 0.0001
+      fov_degree: 180.0
+      det_range: 100.0
+      extrinsic_est_en: false
+      extrinsic_T: [-8.086759e-01, 3.195559e-01, -7.997231e-01]
+      extrinsic_R: [9.999976e-01, 7.553071e-04, -2.035826e-03,
+                     -7.854027e-04, 9.998898e-01, -1.482298e-02,
+                     2.024406e-03, 1.482454e-02, 9.998881e-01]
+
+    publish:
+      path_en: false
+      scan_publish_en: true
+      dense_publish_en: true
+      scan_bodyframe_pub_en: true
+
+    pcd_save:
+      pcd_save_en: true
+      interval: -1

@@ -1,0 +1,113 @@
+[0.006s] Invoking command in '/home/isaac/DCL-SLAM/build/dcl_slam': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/dcl_slam -- -j32 -l32
+[0.025s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.098s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.099s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.100s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.114s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.125s] -- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)
+[0.136s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.149s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.156s] -- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)
+[0.165s] -- Found tf2: 0.25.17 (/opt/ros/humble/share/tf2/cmake)
+[0.167s] -- Found tf2_ros: 0.25.17 (/opt/ros/humble/share/tf2_ros/cmake)
+[0.187s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.188s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.245s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.289s] -- Found tf2_geometry_msgs: 0.25.17 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.290s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.291s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.292s] -- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)
+[0.308s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.326s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[0.495s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.499s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.587s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.592s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.595s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.679s] -- Found Qhull version 8.0.2
+[0.756s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.848s] [33mCMake Warning (dev) at CMakeLists.txt:21 (find_package):
+[0.848s]   Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+[0.848s]   Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+[0.848s]   command to set the policy and suppress this warning.
+[0.848s] 
+[0.848s]   CMake variable PCL_ROOT is set to:
+[0.848s] 
+[0.848s]     /usr
+[0.848s] 
+[0.848s]   For compatibility, CMake is ignoring the variable.
+[0.848s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.849s] [0m
+[1.037s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.194s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.384s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.397s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.412s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.412s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.412s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.438s] [0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):
+[1.438s]   Use rosidl_get_typesupport_target() and target_link_libraries() instead of
+[1.438s]   rosidl_target_interfaces()
+[1.438s] Call Stack (most recent call first):
+[1.438s]   CMakeLists.txt:63 (rosidl_target_interfaces)
+[1.438s] 
+[1.438s] [0m
+[1.440s] -- Configuring done
+[1.467s] -- Generating done
+[1.476s] -- Build files have been written to: /home/isaac/DCL-SLAM/build/dcl_slam
+[1.498s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_generator_c[0m
+[1.503s] [  1%] Built target dcl_slam__cpp
+[1.506s] [ 11%] Built target dcl_slam__rosidl_generator_c
+[1.509s] [ 11%] Built target ament_cmake_python_copy_dcl_slam
+[1.509s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_cpp[0m
+[1.510s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_introspection_cpp[0m
+[1.511s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_fastrtps_cpp[0m
+[1.514s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_c[0m
+[1.514s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_introspection_c[0m
+[1.514s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_fastrtps_c[0m
+[1.518s] [ 21%] Built target dcl_slam__rosidl_typesupport_introspection_cpp
+[1.518s] [ 31%] Built target dcl_slam__rosidl_typesupport_cpp
+[1.521s] [ 41%] Built target dcl_slam__rosidl_typesupport_c
+[1.521s] [ 50%] Built target dcl_slam__rosidl_typesupport_fastrtps_cpp
+[1.523s] [ 60%] Built target dcl_slam__rosidl_typesupport_introspection_c
+[1.523s] [ 70%] Built target dcl_slam__rosidl_typesupport_fastrtps_c
+[1.537s] [ 70%] Built target dcl_slam
+[1.550s] [ 72%] Built target dcl_slam__py
+[1.550s] [ 74%] [32mBuilding CXX object CMakeFiles/dcl_slam_descriptors.dir/src/m2dpDescriptor.cpp.o[0m
+[1.550s] [ 76%] [32mBuilding CXX object CMakeFiles/dcl_slam_descriptors.dir/src/lidarIrisDescriptor.cpp.o[0m
+[1.550s] [ 78%] [32mBuilding CXX object CMakeFiles/dcl_slam_descriptors.dir/src/scanContextDescriptor.cpp.o[0m
+[1.556s] In file included from [01m[K/home/isaac/DCL-SLAM/include/lidarIrisDescriptor.h:1[m[K,
+[1.556s]                  from [01m[K/home/isaac/DCL-SLAM/src/lidarIrisDescriptor.cpp:1[m[K:
+[1.556s] [01m[K/home/isaac/DCL-SLAM/include/descriptorBasis.h:5:10:[m[K [01;31m[Kfatal error: [m[Knabo/nabo.h: 没有那个文件或目录
+[1.556s]     5 | #include [01;31m[K<nabo/nabo.h>[m[K
+[1.557s]       |          [01;31m[K^~~~~~~~~~~~~[m[K
+[1.557s] In file included from [01m[K/home/isaac/DCL-SLAM/include/m2dpDescriptor.h:1[m[K,
+[1.557s]                  from [01m[K/home/isaac/DCL-SLAM/src/m2dpDescriptor.cpp:1[m[K:
+[1.557s] [01m[K/home/isaac/DCL-SLAM/include/descriptorBasis.h:5:10:[m[K [01;31m[Kfatal error: [m[Knabo/nabo.h: 没有那个文件或目录
+[1.557s]     5 | #include [01;31m[K<nabo/nabo.h>[m[K
+[1.557s]       |          [01;31m[K^~~~~~~~~~~~~[m[K
+[1.557s] compilation terminated.
+[1.557s] In file included from [01m[K/home/isaac/DCL-SLAM/include/scanContextDescriptor.h:1[m[K,
+[1.557s]                  from [01m[K/home/isaac/DCL-SLAM/src/scanContextDescriptor.cpp:1[m[K:
+[1.557s] [01m[K/home/isaac/DCL-SLAM/include/descriptorBasis.h:5:10:[m[K [01;31m[Kfatal error: [m[Knabo/nabo.h: 没有那个文件或目录
+[1.557s]     5 | #include [01;31m[K<nabo/nabo.h>[m[K
+[1.557s]       |          [01;31m[K^~~~~~~~~~~~~[m[K
+[1.557s] compilation terminated.
+[1.557s] compilation terminated.
+[1.557s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_generator_py[0m
+[1.557s] gmake[2]: *** [CMakeFiles/dcl_slam_descriptors.dir/build.make:104：CMakeFiles/dcl_slam_descriptors.dir/src/m2dpDescriptor.cpp.o] 错误 1
+[1.557s] gmake[2]: *** 正在等待未完成的任务....
+[1.557s] gmake[2]: *** [CMakeFiles/dcl_slam_descriptors.dir/build.make:90：CMakeFiles/dcl_slam_descriptors.dir/src/lidarIrisDescriptor.cpp.o] 错误 1
+[1.557s] gmake[2]: *** [CMakeFiles/dcl_slam_descriptors.dir/build.make:76：CMakeFiles/dcl_slam_descriptors.dir/src/scanContextDescriptor.cpp.o] 错误 1
+[1.557s] gmake[1]: *** [CMakeFiles/Makefile2:594：CMakeFiles/dcl_slam_descriptors.dir/all] 错误 2
+[1.557s] gmake[1]: *** 正在等待未完成的任务....
+[1.565s] [ 86%] Built target dcl_slam__rosidl_generator_py
+[1.611s] running egg_info
+[1.611s] writing dcl_slam.egg-info/PKG-INFO
+[1.611s] writing dependency_links to dcl_slam.egg-info/dependency_links.txt
+[1.611s] writing top-level names to dcl_slam.egg-info/top_level.txt
+[1.612s] reading manifest file 'dcl_slam.egg-info/SOURCES.txt'
+[1.612s] writing manifest file 'dcl_slam.egg-info/SOURCES.txt'
+[1.626s] [ 86%] Built target ament_cmake_python_build_dcl_slam_egg
+[1.627s] gmake: *** [Makefile:146：all] 错误 2
+[1.629s] Invoked command in '/home/isaac/DCL-SLAM/build/dcl_slam' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/dcl_slam -- -j32 -l32

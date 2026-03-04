@@ -1,0 +1,336 @@
+[0.000000] (-) TimerEvent: {}
+[0.000241] (dcl_slam) JobQueued: {'identifier': 'dcl_slam', 'dependencies': OrderedDict()}
+[0.000268] (dcl_slam) JobStarted: {'identifier': 'dcl_slam'}
+[0.004132] (dcl_slam) JobProgress: {'identifier': 'dcl_slam', 'progress': 'cmake'}
+[0.004727] (dcl_slam) JobProgress: {'identifier': 'dcl_slam', 'progress': 'build'}
+[0.005155] (dcl_slam) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/isaac/DCL-SLAM/build/dcl_slam', '--', '-j32', '-l32'], 'cwd': '/home/isaac/DCL-SLAM/build/dcl_slam', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'isaac'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.4/lib64:'), ('HOME', '/home/isaac'), ('OLDPWD', '/home/isaac'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/isaac/.nvm/versions/node/v24.12.0/bin'), ('NVM_INC', '/home/isaac/.nvm/versions/node/v24.12.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2688'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/isaac/.nvm'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'isaac'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'isaac'), ('TERM', 'xterm-color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/isaac/.local/bin:/home/isaac/.nvm/versions/node/v24.12.0/bin:/opt/ros/humble/bin:/usr/local/cuda-12.4/bin:/home/isaac/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/isaac-ROG-Strix-G614JV-G614JV:@/tmp/.ICE-unix/2660,unix/isaac-ROG-Strix-G614JV-G614JV:/tmp/.ICE-unix/2660'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/87d0c13a_027f_4791_b49e_e21d95af37ec'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/isaac/DCL-SLAM/build/dcl_slam'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.023207] (dcl_slam) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099653] (-) TimerEvent: {}
+[0.100407] (dcl_slam) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.101088] (dcl_slam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.102253] (dcl_slam) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.115425] (dcl_slam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.126597] (dcl_slam) StdoutLine: {'line': b'-- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.136660] (dcl_slam) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.149654] (dcl_slam) StdoutLine: {'line': b'-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[0.163824] (dcl_slam) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[0.179709] (dcl_slam) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)\n'}
+[0.199741] (-) TimerEvent: {}
+[0.299918] (-) TimerEvent: {}
+[0.395451] (dcl_slam) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[0.399556] (dcl_slam) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[0.399737] (dcl_slam) StderrLine: {'line': b'\x1b[0m** WARNING ** io features related to pcap will be disabled\x1b[0m\n'}
+[0.399965] (-) TimerEvent: {}
+[0.500197] (-) TimerEvent: {}
+[0.508571] (dcl_slam) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[0.513065] (dcl_slam) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[0.519337] (dcl_slam) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[0.600299] (-) TimerEvent: {}
+[0.609355] (dcl_slam) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[0.698652] (dcl_slam) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[0.700376] (-) TimerEvent: {}
+[0.771628] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_COMMON\n'}
+[0.771825] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_KDTREE\n'}
+[0.771945] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_OCTREE\n'}
+[0.771975] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_SEARCH\n'}
+[0.771996] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_SAMPLE_CONSENSUS\n'}
+[0.772088] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_FILTERS\n'}
+[0.772260] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_2D\n'}
+[0.772403] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_GEOMETRY\n'}
+[0.772525] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_IO\n'}
+[0.772716] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_FEATURES\n'}
+[0.772912] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_ML\n'}
+[0.773050] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_SEGMENTATION\n'}
+[0.773271] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_VISUALIZATION\n'}
+[0.773451] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_SURFACE\n'}
+[0.773630] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_REGISTRATION\n'}
+[0.773826] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_KEYPOINTS\n'}
+[0.774033] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_TRACKING\n'}
+[0.774186] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_RECOGNITION\n'}
+[0.774437] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_STEREO\n'}
+[0.774627] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_APPS\n'}
+[0.774981] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_IN_HAND_SCANNER\n'}
+[0.775084] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_MODELER\n'}
+[0.775207] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_POINT_CLOUD_EDITOR\n'}
+[0.775333] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_OUTOFCORE\n'}
+[0.775534] (dcl_slam) StdoutLine: {'line': b'-- looking for PCL_PEOPLE\n'}
+[0.783298] (dcl_slam) StdoutLine: {'line': b'-- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.800431] (-) TimerEvent: {}
+[0.809459] (dcl_slam) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.811228] (dcl_slam) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.898490] (dcl_slam) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.900541] (-) TimerEvent: {}
+[0.929571] (dcl_slam) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.969567] (dcl_slam) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.000671] (-) TimerEvent: {}
+[1.100933] (-) TimerEvent: {}
+[1.185573] (dcl_slam) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.201094] (-) TimerEvent: {}
+[1.301372] (-) TimerEvent: {}
+[1.379300] (dcl_slam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.401441] (-) TimerEvent: {}
+[1.501631] (-) TimerEvent: {}
+[1.601848] (-) TimerEvent: {}
+[1.621874] (dcl_slam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.637365] (dcl_slam) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.656213] (dcl_slam) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.656341] (dcl_slam) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.656399] (dcl_slam) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.687028] (dcl_slam) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.701939] (-) TimerEvent: {}
+[1.706332] (dcl_slam) StdoutLine: {'line': b'-- Generating done\n'}
+[1.713081] (dcl_slam) StdoutLine: {'line': b'-- Build files have been written to: /home/isaac/DCL-SLAM/build/dcl_slam\n'}
+[1.735346] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_generator_c\x1b[0m\n'}
+[1.742259] (dcl_slam) StdoutLine: {'line': b'[  2%] \x1b[32mBuilding C object CMakeFiles/dcl_slam__rosidl_generator_c.dir/rosidl_generator_c/dcl_slam/msg/detail/loop_info__functions.c.o\x1b[0m\n'}
+[1.742563] (dcl_slam) StdoutLine: {'line': b'[  4%] Built target dcl_slam__cpp\n'}
+[1.742929] (dcl_slam) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/dcl_slam__rosidl_generator_c.dir/rosidl_generator_c/dcl_slam/msg/detail/global_descriptor__functions.c.o\x1b[0m\n'}
+[1.743521] (dcl_slam) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/dcl_slam__rosidl_generator_c.dir/rosidl_generator_c/dcl_slam/msg/detail/neighbor_estimate__functions.c.o\x1b[0m\n'}
+[1.746605] (dcl_slam) StdoutLine: {'line': b'[  8%] Built target ament_cmake_python_copy_dcl_slam\n'}
+[1.748663] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[1.749574] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_cpp\x1b[0m\n'}
+[1.750554] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[1.756965] (dcl_slam) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/dcl_slam/msg/detail/dds_fastrtps/global_descriptor__type_support.cpp.o\x1b[0m\n'}
+[1.757119] (dcl_slam) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dcl_slam/msg/loop_info__type_support.cpp.o\x1b[0m\n'}
+[1.757330] (dcl_slam) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dcl_slam/msg/global_descriptor__type_support.cpp.o\x1b[0m\n'}
+[1.757464] (dcl_slam) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dcl_slam/msg/neighbor_estimate__type_support.cpp.o\x1b[0m\n'}
+[1.757552] (dcl_slam) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/dcl_slam/msg/detail/dds_fastrtps/loop_info__type_support.cpp.o\x1b[0m\n'}
+[1.757816] (dcl_slam) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/dcl_slam/msg/detail/dds_fastrtps/neighbor_estimate__type_support.cpp.o\x1b[0m\n'}
+[1.759013] (dcl_slam) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dcl_slam/msg/detail/loop_info__type_support.cpp.o\x1b[0m\n'}
+[1.759094] (dcl_slam) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dcl_slam/msg/detail/global_descriptor__type_support.cpp.o\x1b[0m\n'}
+[1.760728] (dcl_slam) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dcl_slam/msg/detail/neighbor_estimate__type_support.cpp.o\x1b[0m\n'}
+[1.783311] (dcl_slam) StdoutLine: {'line': b'[ 29%] \x1b[32m\x1b[1mLinking C shared library libdcl_slam__rosidl_generator_c.so\x1b[0m\n'}
+[1.802036] (-) TimerEvent: {}
+[1.816549] (dcl_slam) StdoutLine: {'line': b'[ 31%] Built target dcl_slam__rosidl_generator_c\n'}
+[1.826633] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_c\x1b[0m\n'}
+[1.826828] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[1.826979] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[1.837712] (dcl_slam) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/dcl_slam__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dcl_slam/msg/detail/global_descriptor__type_support.c.o\x1b[0m\n'}
+[1.837930] (dcl_slam) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/dcl_slam__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dcl_slam/msg/detail/loop_info__type_support.c.o\x1b[0m\n'}
+[1.838005] (dcl_slam) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_c.dir/rosidl_typesupport_c/dcl_slam/msg/global_descriptor__type_support.cpp.o\x1b[0m\n'}
+[1.838083] (dcl_slam) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_c.dir/rosidl_typesupport_c/dcl_slam/msg/neighbor_estimate__type_support.cpp.o\x1b[0m\n'}
+[1.838150] (dcl_slam) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/dcl_slam__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dcl_slam/msg/detail/neighbor_estimate__type_support.c.o\x1b[0m\n'}
+[1.838214] (dcl_slam) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_c.dir/rosidl_typesupport_c/dcl_slam/msg/loop_info__type_support.cpp.o\x1b[0m\n'}
+[1.839855] (dcl_slam) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/dcl_slam/msg/detail/loop_info__type_support_c.cpp.o\x1b[0m\n'}
+[1.840048] (dcl_slam) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/dcl_slam/msg/detail/global_descriptor__type_support_c.cpp.o\x1b[0m\n'}
+[1.840299] (dcl_slam) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/dcl_slam/msg/detail/neighbor_estimate__type_support_c.cpp.o\x1b[0m\n'}
+[1.867952] (dcl_slam) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking CXX shared library libdcl_slam__rosidl_typesupport_c.so\x1b[0m\n'}
+[1.874448] (dcl_slam) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking C shared library libdcl_slam__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[1.902140] (-) TimerEvent: {}
+[1.903830] (dcl_slam) StdoutLine: {'line': b'[ 57%] Built target dcl_slam__rosidl_typesupport_introspection_c\n'}
+[1.906670] (dcl_slam) StdoutLine: {'line': b'[ 59%] Built target dcl_slam__rosidl_typesupport_c\n'}
+[1.939630] (dcl_slam) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libdcl_slam__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[1.957430] (dcl_slam) StdoutLine: {'line': b'running egg_info\n'}
+[1.958159] (dcl_slam) StdoutLine: {'line': b'writing dcl_slam.egg-info/PKG-INFO\n'}
+[1.958335] (dcl_slam) StdoutLine: {'line': b'writing dependency_links to dcl_slam.egg-info/dependency_links.txt\n'}
+[1.958485] (dcl_slam) StdoutLine: {'line': b'writing top-level names to dcl_slam.egg-info/top_level.txt\n'}
+[1.960236] (dcl_slam) StdoutLine: {'line': b"reading manifest file 'dcl_slam.egg-info/SOURCES.txt'\n"}
+[1.960796] (dcl_slam) StdoutLine: {'line': b"writing manifest file 'dcl_slam.egg-info/SOURCES.txt'\n"}
+[1.973208] (dcl_slam) StdoutLine: {'line': b'[ 63%] Built target dcl_slam__rosidl_typesupport_cpp\n'}
+[1.984418] (dcl_slam) StdoutLine: {'line': b'[ 63%] Built target ament_cmake_python_build_dcl_slam_egg\n'}
+[2.002237] (-) TimerEvent: {}
+[2.003681] (dcl_slam) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libdcl_slam__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[2.050289] (dcl_slam) StdoutLine: {'line': b'[ 68%] Built target dcl_slam__rosidl_typesupport_fastrtps_cpp\n'}
+[2.064617] (dcl_slam) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libdcl_slam__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[2.095120] (dcl_slam) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX shared library libdcl_slam__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[2.102421] (-) TimerEvent: {}
+[2.110233] (dcl_slam) StdoutLine: {'line': b'[ 74%] Built target dcl_slam__rosidl_typesupport_fastrtps_c\n'}
+[2.136835] (dcl_slam) StdoutLine: {'line': b'[ 76%] Built target dcl_slam__rosidl_typesupport_introspection_cpp\n'}
+[2.154310] (dcl_slam) StdoutLine: {'line': b'[ 76%] Built target dcl_slam\n'}
+[2.182278] (dcl_slam) StdoutLine: {'line': b'[ 78%] Built target dcl_slam__py\n'}
+[2.195741] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_generator_py\x1b[0m\n'}
+[2.202501] (-) TimerEvent: {}
+[2.206505] (dcl_slam) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/dcl_slam__rosidl_generator_py.dir/rosidl_generator_py/dcl_slam/msg/_global_descriptor_s.c.o\x1b[0m\n'}
+[2.209089] (dcl_slam) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/dcl_slam__rosidl_generator_py.dir/rosidl_generator_py/dcl_slam/msg/_loop_info_s.c.o\x1b[0m\n'}
+[2.209621] (dcl_slam) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/dcl_slam__rosidl_generator_py.dir/rosidl_generator_py/dcl_slam/msg/_neighbor_estimate_s.c.o\x1b[0m\n'}
+[2.275388] (dcl_slam) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/dcl_slam/libdcl_slam__rosidl_generator_py.so\x1b[0m\n'}
+[2.300856] (dcl_slam) StdoutLine: {'line': b'[ 87%] Built target dcl_slam__rosidl_generator_py\n'}
+[2.302557] (-) TimerEvent: {}
+[2.308664] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[2.308752] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[2.308783] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[2.317550] (dcl_slam) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/dcl_slam__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/dcl_slam/_dcl_slam_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[2.318946] (dcl_slam) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/dcl_slam__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/dcl_slam/_dcl_slam_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[2.319024] (dcl_slam) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/dcl_slam__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/dcl_slam/_dcl_slam_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[2.370871] (dcl_slam) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/dcl_slam/dcl_slam_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.371025] (dcl_slam) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/dcl_slam/dcl_slam_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.371090] (dcl_slam) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/dcl_slam/dcl_slam_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[2.402696] (-) TimerEvent: {}
+[2.403038] (dcl_slam) StdoutLine: {'line': b'[100%] Built target dcl_slam__rosidl_typesupport_introspection_c__pyext\n'}
+[2.403461] (dcl_slam) StdoutLine: {'line': b'[100%] Built target dcl_slam__rosidl_typesupport_c__pyext\n'}
+[2.403541] (dcl_slam) StdoutLine: {'line': b'[100%] Built target dcl_slam__rosidl_typesupport_fastrtps_c__pyext\n'}
+[2.412058] (dcl_slam) CommandEnded: {'returncode': 0}
+[2.412609] (dcl_slam) JobProgress: {'identifier': 'dcl_slam', 'progress': 'install'}
+[2.418952] (dcl_slam) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/isaac/DCL-SLAM/build/dcl_slam'], 'cwd': '/home/isaac/DCL-SLAM/build/dcl_slam', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'isaac'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.4/lib64:'), ('HOME', '/home/isaac'), ('OLDPWD', '/home/isaac'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/isaac/.nvm/versions/node/v24.12.0/bin'), ('NVM_INC', '/home/isaac/.nvm/versions/node/v24.12.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2688'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/isaac/.nvm'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'isaac'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'isaac'), ('TERM', 'xterm-color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/isaac/.local/bin:/home/isaac/.nvm/versions/node/v24.12.0/bin:/opt/ros/humble/bin:/usr/local/cuda-12.4/bin:/home/isaac/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/isaac-ROG-Strix-G614JV-G614JV:@/tmp/.ICE-unix/2660,unix/isaac-ROG-Strix-G614JV-G614JV:/tmp/.ICE-unix/2660'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/87d0c13a_027f_4791_b49e_e21d95af37ec'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/isaac/DCL-SLAM/build/dcl_slam'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.423790] (dcl_slam) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[2.424058] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/ament_index/resource_index/rosidl_interfaces/dcl_slam\n'}
+[2.424122] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam\n'}
+[2.424178] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg\n'}
+[2.424232] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail\n'}
+[2.424285] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__type_support.h\n'}
+[2.424549] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__type_support.h\n'}
+[2.424624] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__functions.h\n'}
+[2.424679] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__functions.h\n'}
+[2.424733] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__functions.c\n'}
+[2.424803] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__struct.h\n'}
+[2.424877] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__type_support.h\n'}
+[2.424930] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__functions.h\n'}
+[2.424982] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__functions.c\n'}
+[2.425034] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__functions.c\n'}
+[2.425085] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__struct.h\n'}
+[2.425138] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__struct.h\n'}
+[2.425190] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/rosidl_generator_c__visibility_control.h\n'}
+[2.425241] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/global_descriptor.h\n'}
+[2.425296] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/neighbor_estimate.h\n'}
+[2.425421] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/loop_info.h\n'}
+[2.425471] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/library_path.sh\n'}
+[2.425529] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/library_path.dsv\n'}
+[2.425580] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_generator_c.so\n'}
+[2.425640] (dcl_slam) StdoutLine: {'line': b'-- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_generator_c.so" to ""\n'}
+[2.425710] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam\n'}
+[2.425760] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg\n'}
+[2.425811] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail\n'}
+[2.425861] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__rosidl_typesupport_fastrtps_c.h\n'}
+[2.425937] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__rosidl_typesupport_fastrtps_c.h\n'}
+[2.426032] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__rosidl_typesupport_fastrtps_c.h\n'}
+[2.426102] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[2.426155] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_fastrtps_c.so\n'}
+[2.426208] (dcl_slam) StdoutLine: {'line': b'-- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[2.426260] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam\n'}
+[2.426335] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg\n'}
+[2.426388] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail\n'}
+[2.426442] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__type_support.c\n'}
+[2.426490] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__rosidl_typesupport_introspection_c.h\n'}
+[2.426538] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__type_support.c\n'}
+[2.426586] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__type_support.c\n'}
+[2.426635] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__rosidl_typesupport_introspection_c.h\n'}
+[2.426683] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__rosidl_typesupport_introspection_c.h\n'}
+[2.426732] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[2.426781] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_introspection_c.so\n'}
+[2.426830] (dcl_slam) StdoutLine: {'line': b'-- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_introspection_c.so" to ""\n'}
+[2.426883] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_c.so\n'}
+[2.426935] (dcl_slam) StdoutLine: {'line': b'-- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_c.so" to ""\n'}
+[2.426984] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam\n'}
+[2.427032] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg\n'}
+[2.427079] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/global_descriptor.hpp\n'}
+[2.427127] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/loop_info.hpp\n'}
+[2.427175] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail\n'}
+[2.427222] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__traits.hpp\n'}
+[2.427270] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__type_support.hpp\n'}
+[2.427326] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__type_support.hpp\n'}
+[2.427375] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__builder.hpp\n'}
+[2.427427] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__traits.hpp\n'}
+[2.427476] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__type_support.hpp\n'}
+[2.427524] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__builder.hpp\n'}
+[2.427572] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__traits.hpp\n'}
+[2.427620] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__struct.hpp\n'}
+[2.427668] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__builder.hpp\n'}
+[2.427719] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__struct.hpp\n'}
+[2.427768] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__struct.hpp\n'}
+[2.427816] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/neighbor_estimate.hpp\n'}
+[2.427863] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[2.427911] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam\n'}
+[2.427959] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg\n'}
+[2.428006] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[2.428054] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail\n'}
+[2.428102] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/dds_fastrtps\n'}
+[2.428149] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.428197] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.428245] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[2.428296] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_fastrtps_cpp.so\n'}
+[2.428355] (dcl_slam) StdoutLine: {'line': b'-- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[2.428403] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam\n'}
+[2.428451] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg\n'}
+[2.428499] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail\n'}
+[2.428547] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__type_support.cpp\n'}
+[2.428595] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.428647] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.428703] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__type_support.cpp\n'}
+[2.428752] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__type_support.cpp\n'}
+[2.428801] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__rosidl_typesupport_introspection_cpp.hpp\n'}
+[2.428850] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_introspection_cpp.so\n'}
+[2.428898] (dcl_slam) StdoutLine: {'line': b'-- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[2.428946] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_cpp.so\n'}
+[2.428995] (dcl_slam) StdoutLine: {'line': b'-- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_cpp.so" to ""\n'}
+[2.429043] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/pythonpath.sh\n'}
+[2.429092] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/pythonpath.dsv\n'}
+[2.429140] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam-1.0.0-py3.10.egg-info\n'}
+[2.429189] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam-1.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[2.429237] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam-1.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[2.429286] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam-1.0.0-py3.10.egg-info/PKG-INFO\n'}
+[2.429374] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam-1.0.0-py3.10.egg-info/top_level.txt\n'}
+[2.429424] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam\n'}
+[2.429474] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/_dcl_slam_s.ep.rosidl_typesupport_c.c\n'}
+[2.429525] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/_dcl_slam_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[2.429574] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg\n'}
+[2.429622] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg/_neighbor_estimate_s.c\n'}
+[2.429672] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg/_global_descriptor.py\n'}
+[2.429720] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg/_loop_info_s.c\n'}
+[2.429768] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg/_loop_info.py\n'}
+[2.429816] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg/_neighbor_estimate.py\n'}
+[2.429869] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg/__init__.py\n'}
+[2.429917] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg/_global_descriptor_s.c\n'}
+[2.429965] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/libdcl_slam__rosidl_generator_py.so\n'}
+[2.430015] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.430065] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.430115] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.430164] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/_dcl_slam_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[2.430214] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/__init__.py\n'}
+[2.441522] (dcl_slam) StdoutLine: {'line': b"Listing '/home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam'...\n"}
+[2.441615] (dcl_slam) StdoutLine: {'line': b"Compiling '/home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/__init__.py'...\n"}
+[2.441683] (dcl_slam) StdoutLine: {'line': b"Listing '/home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg'...\n"}
+[2.443762] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.443882] (dcl_slam) StdoutLine: {'line': b'-- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.443941] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.444031] (dcl_slam) StdoutLine: {'line': b'-- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.444088] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[2.444139] (dcl_slam) StdoutLine: {'line': b'-- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[2.444206] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_generator_py.so\n'}
+[2.444287] (dcl_slam) StdoutLine: {'line': b'-- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_generator_py.so" to ""\n'}
+[2.444371] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/msg/LoopInfo.idl\n'}
+[2.444422] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/msg/GlobalDescriptor.idl\n'}
+[2.444474] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/msg/NeighborEstimate.idl\n'}
+[2.444554] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/msg/LoopInfo.msg\n'}
+[2.444604] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/msg/GlobalDescriptor.msg\n'}
+[2.444681] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/msg/NeighborEstimate.msg\n'}
+[2.444733] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/ament_index/resource_index/package_run_dependencies/dcl_slam\n'}
+[2.444785] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/ament_index/resource_index/parent_prefix_path/dcl_slam\n'}
+[2.444836] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/ament_prefix_path.sh\n'}
+[2.444887] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/ament_prefix_path.dsv\n'}
+[2.444938] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/path.sh\n'}
+[2.444990] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/path.dsv\n'}
+[2.445041] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/local_setup.bash\n'}
+[2.445091] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/local_setup.sh\n'}
+[2.445142] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/local_setup.zsh\n'}
+[2.445193] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/local_setup.dsv\n'}
+[2.445244] (dcl_slam) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/package.dsv\n'}
+[2.445299] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/ament_index/resource_index/packages/dcl_slam\n'}
+[2.445406] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_generator_cExport.cmake\n'}
+[2.445456] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_generator_cExport-noconfig.cmake\n'}
+[2.445504] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[2.445552] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[2.445600] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_introspection_cExport.cmake\n'}
+[2.445652] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[2.445703] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_cExport.cmake\n'}
+[2.445754] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[2.445873] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_generator_cppExport.cmake\n'}
+[2.445927] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[2.445979] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[2.446109] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[2.446161] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[2.446212] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_cppExport.cmake\n'}
+[2.446263] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[2.446420] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_generator_pyExport.cmake\n'}
+[2.446745] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_generator_pyExport-noconfig.cmake\n'}
+[2.446797] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/rosidl_cmake-extras.cmake\n'}
+[2.446849] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[2.446900] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.446951] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.447002] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[2.447052] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[2.447102] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[2.447153] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slamConfig.cmake\n'}
+[2.447204] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slamConfig-version.cmake\n'}
+[2.447255] (dcl_slam) StdoutLine: {'line': b'-- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/package.xml\n'}
+[2.447487] (dcl_slam) CommandEnded: {'returncode': 0}
+[2.456047] (dcl_slam) JobEnded: {'identifier': 'dcl_slam', 'rc': 0}
+[2.456426] (-) EventReactorShutdown: {}

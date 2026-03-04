@@ -1,0 +1,47 @@
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/isaac/DCL-SLAM/build/libnabo
+[35m[1mConsolidate compiler generated dependencies of target libnabo[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/libnabo.dir/nabo/kdtree_cpu.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/libnabo.dir/nabo/nabo.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/libnabo.dir/nabo/brute_force_cpu.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/libnabo.dir/nabo/kdtree_opencl.cpp.o[0m
+[100%] [32m[1mLinking CXX static library liblibnabo.a[0m
+[100%] Built target libnabo
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/library_path.sh
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/library_path.dsv
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/brute_force_cpu.cpp
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/index_heap.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/kdtree_cpu.cpp
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/kdtree_opencl.cpp
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/nabo.cpp
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/nabo.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/nabo_private.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/heap.cl
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/knn_bf.cl
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/knn_kdtree_pt_in_leaves.cl
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/knn_kdtree_pt_in_nodes.cl
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/structure.cl
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/third_party/any.hpp
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/ament_index/resource_index/package_run_dependencies/libnabo
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/ament_index/resource_index/parent_prefix_path/libnabo
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/ament_prefix_path.sh
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/ament_prefix_path.dsv
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/path.sh
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/path.dsv
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.bash
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.sh
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.zsh
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.dsv
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.dsv
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/ament_index/resource_index/packages/libnabo
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/libnaboConfig.cmake
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/libnaboConfig-version.cmake
+-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.xml
+-- Installing: /home/isaac/DCL-SLAM/install/libnabo/lib/liblibnabo.a

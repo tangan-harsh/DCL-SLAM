@@ -1,0 +1,84 @@
+# ROS2 参数文件格式：必须包裹在 节点名/ros__parameters 下
+/**:
+  ros__parameters:
+    # ===== DCL-SLAM 后端参数 =====
+    # frames
+    world_frame: "world"                    # 全局坐标系
+    odom_frame: "camera_init"               # 局部坐标系
+
+    # lidar configuration
+    sensor: "livox"                         # 雷达类型: velodyne / livox / ouster
+    n_scan: 4                               # MID-360 有 4 线非重复扫描
+
+    # CPU params
+    onboard_cpu_cores_num: 4                # 机载CPU核数
+    loop_closure_process_interval: 0.01     # 闭环检测间隔（秒）
+    map_publish_interval: 10.0              # 全局地图发布间隔（秒）
+    mapping_process_interval: 0.02          # 优化间隔（秒）
+
+    # keyframe params
+    keyframe_distance_threshold: 1.0        # 关键帧距离阈值（米）
+    keyframe_angle_threshold: 0.2           # 关键帧角度阈值（弧度）
+
+    # mapping
+    global_optmization_enable: true         # 开启分布式 DGS 优化
+    use_between_noise: true                 # 使用 between noise
+    optmization_maximum_iteration: 30       # 最大优化迭代次数
+    use_pcm: false                          # 开启 PCM 一致性校验
+    pcm_threshold: 0.5                      # PCM 置信度
+
+    # downsample
+    descript_leaf_size: 0.1                 # 描述子降采样分辨率
+    map_leaf_size: 0.4                      # 扫描匹配降采样分辨率
+
+    # loop closure
+    intra_robot_loop_closure_enable: false  # 单机闭环
+    inter_robot_loop_closure_enable: true   # 多机闭环
+    descriptor_type: "LidarIris"            # 描述子类型: ScanContext / LidarIris / M2DP
+    knn_candidates: 6                       # KNN 候选数
+    match_mode: 2                           # Iris 匹配模式 (0/1/2)
+    descriptor_distance_threshold: 0.35     # 描述子匹配阈值
+    exclude_recent_frame_num: 50            # 排除最近N帧（避免误匹配）
+    search_radius: 15.0                     # 闭环搜索半径（米）
+    history_keyframe_search_num: 18         # 子地图历史帧数
+    fitness_score_threshold: 0.2            # ICP 匹配得分阈值
+    ransac_maximum_iteration: 2000          # RANSAC 最大迭代
+    ransac_threshold: 0.3                   # RANSAC 阈值
+    ransac_outlier_reject_threshold: 0.3    # RANSAC 外点剔除距离
+
+    # ===== FAST-LIO 前端参数 =====
+    common:
+      lid_topic: "livox/lidar"              # MID-360 默认话题名（CustomMsg 格式）
+      imu_topic: "livox/imu"                # MID-360 内置 IMU 话题名
+      time_sync_en: false                   # MID-360 硬件同步，无需软件同步
+
+    preprocess:
+      lidar_type: 1              # 1=Livox, 2=Velodyne, 3=Ouster
+      scan_line: 4               # MID-360: 4 线
+      scan_rate: 10              # 扫描频率 10Hz
+      timestamp_unit: 1          # Livox 时间戳单位: 1=毫秒
+      blind: 0.5                 # 最小检测距离 0.5m（MID-360 近距有效）
+
+    mapping:
+      acc_cov: 0.1               # 加速度计噪声协方差
+      gyr_cov: 0.1               # 陀螺仪噪声协方差
+      b_acc_cov: 0.0001          # 加速度计偏置协方差
+      b_gyr_cov: 0.0001          # 陀螺仪偏置协方差
+      fov_degree: 360.0          # MID-360 水平视场角 360°
+      det_range: 40.0            # MID-360 最大检测距离 40m
+      extrinsic_est_en: false    # 是否在线估计外参
+      # MID-360 的 IMU 和雷达一体化，外参接近单位阵
+      extrinsic_T: [0.04165, 0.02326, -0.0284]
+      extrinsic_R: [1.0, 0.0, 0.0,
+                     0.0, 1.0, 0.0,
+                     0.0, 0.0, 1.0]
+
+    publish:
+      path_en: true              # 发布轨迹路径
+      scan_publish_en: true      # 发布点云
+      dense_publish_en: true     # 发布稠密点云
+      scan_bodyframe_pub_en: true  # 在 IMU 体坐标系下发布点云
+
+    pcd_save:
+      pcd_save_en: false         # 是否保存 PCD 文件
+      interval: -1               # -1 表示全部保存到一个文件

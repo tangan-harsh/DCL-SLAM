@@ -1,0 +1,328 @@
+[0.000000] (-) TimerEvent: {}
+[0.000141] (distributed_mapper) JobQueued: {'identifier': 'distributed_mapper', 'dependencies': OrderedDict()}
+[0.000259] (libnabo) JobQueued: {'identifier': 'libnabo', 'dependencies': OrderedDict()}
+[0.000345] (dcl_slam) JobQueued: {'identifier': 'dcl_slam', 'dependencies': OrderedDict([('distributed_mapper', '/home/isaac/DCL-SLAM/install/distributed_mapper'), ('libnabo', '/home/isaac/DCL-SLAM/install/libnabo')])}
+[0.000370] (distributed_mapper) JobStarted: {'identifier': 'distributed_mapper'}
+[0.002683] (libnabo) JobStarted: {'identifier': 'libnabo'}
+[0.004029] (distributed_mapper) JobProgress: {'identifier': 'distributed_mapper', 'progress': 'cmake'}
+[0.004246] (distributed_mapper) JobProgress: {'identifier': 'distributed_mapper', 'progress': 'build'}
+[0.004600] (distributed_mapper) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/isaac/DCL-SLAM/build/distributed_mapper', '--', '-j32', '-l32'], 'cwd': '/home/isaac/DCL-SLAM/build/distributed_mapper', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'isaac'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.4/lib64:'), ('HOME', '/home/isaac'), ('OLDPWD', '/home/isaac'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/isaac/.nvm/versions/node/v24.12.0/bin'), ('NVM_INC', '/home/isaac/.nvm/versions/node/v24.12.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2688'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/isaac/.nvm'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'isaac'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'isaac'), ('TERM', 'xterm-color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/isaac/.local/bin:/home/isaac/.nvm/versions/node/v24.12.0/bin:/opt/ros/humble/bin:/usr/local/cuda-12.4/bin:/home/isaac/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/isaac-ROG-Strix-G614JV-G614JV:@/tmp/.ICE-unix/2660,unix/isaac-ROG-Strix-G614JV-G614JV:/tmp/.ICE-unix/2660'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/87d0c13a_027f_4791_b49e_e21d95af37ec'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/isaac/DCL-SLAM/build/distributed_mapper'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.006205] (libnabo) JobProgress: {'identifier': 'libnabo', 'progress': 'cmake'}
+[0.006392] (libnabo) JobProgress: {'identifier': 'libnabo', 'progress': 'build'}
+[0.006521] (libnabo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/isaac/DCL-SLAM/build/libnabo', '--', '-j32', '-l32'], 'cwd': '/home/isaac/DCL-SLAM/build/libnabo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'isaac'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.4/lib64:'), ('HOME', '/home/isaac'), ('OLDPWD', '/home/isaac'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/isaac/.nvm/versions/node/v24.12.0/bin'), ('NVM_INC', '/home/isaac/.nvm/versions/node/v24.12.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2688'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/isaac/.nvm'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'isaac'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'isaac'), ('TERM', 'xterm-color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/isaac/.local/bin:/home/isaac/.nvm/versions/node/v24.12.0/bin:/opt/ros/humble/bin:/usr/local/cuda-12.4/bin:/home/isaac/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/isaac-ROG-Strix-G614JV-G614JV:@/tmp/.ICE-unix/2660,unix/isaac-ROG-Strix-G614JV-G614JV:/tmp/.ICE-unix/2660'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/87d0c13a_027f_4791_b49e_e21d95af37ec'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/isaac/DCL-SLAM/build/libnabo'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.021112] (distributed_mapper) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.021386] (libnabo) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.086622] (distributed_mapper) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.087199] (libnabo) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.098840] (distributed_mapper) StdoutLine: {'line': b'-- GTSAM include directory:  /opt/ros/humble/lib/cmake/GTSAM/../../../include\n'}
+[0.099634] (-) TimerEvent: {}
+[0.130982] (distributed_mapper) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.132141] (libnabo) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.134622] (libnabo) StdoutLine: {'line': b'-- Generating done\n'}
+[0.135366] (libnabo) StdoutLine: {'line': b'-- Build files have been written to: /home/isaac/DCL-SLAM/build/libnabo\n'}
+[0.137787] (distributed_mapper) StdoutLine: {'line': b'-- Generating done\n'}
+[0.139881] (distributed_mapper) StdoutLine: {'line': b'-- Build files have been written to: /home/isaac/DCL-SLAM/build/distributed_mapper\n'}
+[0.149453] (libnabo) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target libnabo\x1b[0m\n'}
+[0.155054] (libnabo) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/libnabo.dir/nabo/kdtree_cpu.cpp.o\x1b[0m\n'}
+[0.155188] (libnabo) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/libnabo.dir/nabo/nabo.cpp.o\x1b[0m\n'}
+[0.156487] (libnabo) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/libnabo.dir/nabo/brute_force_cpu.cpp.o\x1b[0m\n'}
+[0.156715] (libnabo) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/libnabo.dir/nabo/kdtree_opencl.cpp.o\x1b[0m\n'}
+[0.158841] (distributed_mapper) StdoutLine: {'line': b'[  4%] \x1b[32mBuilding CXX object CMakeFiles/graph_utils.dir/src/pairwise_consistency_maximization/graph_utils/graph_utils_functions.cpp.o\x1b[0m\n'}
+[0.161726] (distributed_mapper) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding CXX object CMakeFiles/fast_max-clique_finder.dir/src/pairwise_consistency_maximization/third_parties/fast_max-clique_finder/src/findClique.cpp.o\x1b[0m\n'}
+[0.161848] (distributed_mapper) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding CXX object CMakeFiles/fast_max-clique_finder.dir/src/pairwise_consistency_maximization/third_parties/fast_max-clique_finder/src/findCliqueHeu.cpp.o\x1b[0m\n'}
+[0.161996] (distributed_mapper) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/fast_max-clique_finder.dir/src/pairwise_consistency_maximization/third_parties/fast_max-clique_finder/src/utils.cpp.o\x1b[0m\n'}
+[0.162069] (distributed_mapper) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/fast_max-clique_finder.dir/src/pairwise_consistency_maximization/third_parties/fast_max-clique_finder/src/graphIO.cpp.o\x1b[0m\n'}
+[0.199850] (-) TimerEvent: {}
+[0.300248] (-) TimerEvent: {}
+[0.400530] (-) TimerEvent: {}
+[0.473554] (distributed_mapper) StdoutLine: {'line': b'[ 27%] \x1b[32m\x1b[1mLinking CXX static library libfast_max-clique_finder.a\x1b[0m\n'}
+[0.500671] (-) TimerEvent: {}
+[0.500922] (distributed_mapper) StdoutLine: {'line': b'[ 27%] Built target fast_max-clique_finder\n'}
+[0.600887] (-) TimerEvent: {}
+[0.701263] (-) TimerEvent: {}
+[0.801633] (-) TimerEvent: {}
+[0.901995] (-) TimerEvent: {}
+[1.002391] (-) TimerEvent: {}
+[1.102763] (-) TimerEvent: {}
+[1.203152] (-) TimerEvent: {}
+[1.303516] (-) TimerEvent: {}
+[1.403884] (-) TimerEvent: {}
+[1.504252] (-) TimerEvent: {}
+[1.604620] (-) TimerEvent: {}
+[1.705002] (-) TimerEvent: {}
+[1.805346] (-) TimerEvent: {}
+[1.868537] (libnabo) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX static library liblibnabo.a\x1b[0m\n'}
+[1.905444] (-) TimerEvent: {}
+[1.927601] (libnabo) StdoutLine: {'line': b'[100%] Built target libnabo\n'}
+[1.935677] (libnabo) CommandEnded: {'returncode': 0}
+[1.936523] (libnabo) JobProgress: {'identifier': 'libnabo', 'progress': 'install'}
+[1.942077] (libnabo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/isaac/DCL-SLAM/build/libnabo'], 'cwd': '/home/isaac/DCL-SLAM/build/libnabo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'isaac'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.4/lib64:'), ('HOME', '/home/isaac'), ('OLDPWD', '/home/isaac'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/isaac/.nvm/versions/node/v24.12.0/bin'), ('NVM_INC', '/home/isaac/.nvm/versions/node/v24.12.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2688'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/isaac/.nvm'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'isaac'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'isaac'), ('TERM', 'xterm-color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/isaac/.local/bin:/home/isaac/.nvm/versions/node/v24.12.0/bin:/opt/ros/humble/bin:/usr/local/cuda-12.4/bin:/home/isaac/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/isaac-ROG-Strix-G614JV-G614JV:@/tmp/.ICE-unix/2660,unix/isaac-ROG-Strix-G614JV-G614JV:/tmp/.ICE-unix/2660'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/87d0c13a_027f_4791_b49e_e21d95af37ec'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/isaac/DCL-SLAM/build/libnabo'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[1.947245] (libnabo) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.947699] (libnabo) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.947907] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/library_path.sh\n'}
+[1.953854] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/library_path.dsv\n'}
+[1.959552] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/brute_force_cpu.cpp\n'}
+[1.964360] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/index_heap.h\n'}
+[1.968911] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/kdtree_cpu.cpp\n'}
+[1.973941] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/kdtree_opencl.cpp\n'}
+[1.978113] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/nabo.cpp\n'}
+[1.982075] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/nabo.h\n'}
+[1.987755] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/nabo_private.h\n'}
+[1.992509] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/heap.cl\n'}
+[1.998474] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/knn_bf.cl\n'}
+[2.003845] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/knn_kdtree_pt_in_leaves.cl\n'}
+[2.005517] (-) TimerEvent: {}
+[2.007989] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/knn_kdtree_pt_in_nodes.cl\n'}
+[2.012844] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/structure.cl\n'}
+[2.018886] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/third_party/any.hpp\n'}
+[2.024393] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/ament_index/resource_index/package_run_dependencies/libnabo\n'}
+[2.030413] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/ament_index/resource_index/parent_prefix_path/libnabo\n'}
+[2.035937] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/ament_prefix_path.sh\n'}
+[2.041922] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/ament_prefix_path.dsv\n'}
+[2.046224] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/path.sh\n'}
+[2.052038] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/path.dsv\n'}
+[2.056614] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.bash\n'}
+[2.062573] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.sh\n'}
+[2.068390] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.zsh\n'}
+[2.072883] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.dsv\n'}
+[2.078581] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.dsv\n'}
+[2.083725] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/ament_index/resource_index/packages/libnabo\n'}
+[2.088534] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[2.094033] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[2.099029] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/libnaboConfig.cmake\n'}
+[2.103525] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/libnaboConfig-version.cmake\n'}
+[2.105615] (-) TimerEvent: {}
+[2.109474] (libnabo) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.xml\n'}
+[2.115030] (libnabo) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/libnabo/lib/liblibnabo.a\n'}
+[2.120008] (libnabo) CommandEnded: {'returncode': 0}
+[2.127027] (libnabo) JobEnded: {'identifier': 'libnabo', 'rc': 0}
+[2.205827] (-) TimerEvent: {}
+[2.306118] (-) TimerEvent: {}
+[2.406357] (-) TimerEvent: {}
+[2.506615] (-) TimerEvent: {}
+[2.606903] (-) TimerEvent: {}
+[2.707229] (-) TimerEvent: {}
+[2.807436] (-) TimerEvent: {}
+[2.907661] (-) TimerEvent: {}
+[3.007949] (-) TimerEvent: {}
+[3.059656] (distributed_mapper) StdoutLine: {'line': b'[ 31%] \x1b[32m\x1b[1mLinking CXX static library libgraph_utils.a\x1b[0m\n'}
+[3.101115] (distributed_mapper) StdoutLine: {'line': b'[ 31%] Built target graph_utils\n'}
+[3.108121] (-) TimerEvent: {}
+[3.114775] (distributed_mapper) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/robot_measurements.dir/src/pairwise_consistency_maximization/robot_measurements/robot_local_map.cpp.o\x1b[0m\n'}
+[3.114875] (distributed_mapper) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/robot_measurements.dir/src/pairwise_consistency_maximization/robot_measurements/interrobot_measurements.cpp.o\x1b[0m\n'}
+[3.115148] (distributed_mapper) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/robot_measurements.dir/src/pairwise_consistency_maximization/robot_measurements/robot_measurements.cpp.o\x1b[0m\n'}
+[3.208180] (-) TimerEvent: {}
+[3.308387] (-) TimerEvent: {}
+[3.408711] (-) TimerEvent: {}
+[3.509017] (-) TimerEvent: {}
+[3.609342] (-) TimerEvent: {}
+[3.709584] (-) TimerEvent: {}
+[3.809900] (-) TimerEvent: {}
+[3.910172] (-) TimerEvent: {}
+[4.010401] (-) TimerEvent: {}
+[4.110636] (-) TimerEvent: {}
+[4.210975] (-) TimerEvent: {}
+[4.311349] (-) TimerEvent: {}
+[4.411612] (-) TimerEvent: {}
+[4.511950] (-) TimerEvent: {}
+[4.612308] (-) TimerEvent: {}
+[4.712629] (-) TimerEvent: {}
+[4.812942] (-) TimerEvent: {}
+[4.913317] (-) TimerEvent: {}
+[5.013690] (-) TimerEvent: {}
+[5.114014] (-) TimerEvent: {}
+[5.214248] (-) TimerEvent: {}
+[5.303469] (distributed_mapper) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX static library librobot_measurements.a\x1b[0m\n'}
+[5.314310] (-) TimerEvent: {}
+[5.341522] (distributed_mapper) StdoutLine: {'line': b'[ 50%] Built target robot_measurements\n'}
+[5.364515] (distributed_mapper) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/pairwise_consistency.dir/src/pairwise_consistency_maximization/pairwise_consistency/pairwise_consistency.cpp.o\x1b[0m\n'}
+[5.414396] (-) TimerEvent: {}
+[5.514696] (-) TimerEvent: {}
+[5.614999] (-) TimerEvent: {}
+[5.715337] (-) TimerEvent: {}
+[5.815662] (-) TimerEvent: {}
+[5.915948] (-) TimerEvent: {}
+[6.016253] (-) TimerEvent: {}
+[6.116540] (-) TimerEvent: {}
+[6.216775] (-) TimerEvent: {}
+[6.317014] (-) TimerEvent: {}
+[6.417279] (-) TimerEvent: {}
+[6.517603] (-) TimerEvent: {}
+[6.617919] (-) TimerEvent: {}
+[6.718347] (-) TimerEvent: {}
+[6.818552] (-) TimerEvent: {}
+[6.918779] (-) TimerEvent: {}
+[7.018999] (-) TimerEvent: {}
+[7.119290] (-) TimerEvent: {}
+[7.219511] (-) TimerEvent: {}
+[7.319750] (-) TimerEvent: {}
+[7.420060] (-) TimerEvent: {}
+[7.520267] (-) TimerEvent: {}
+[7.620474] (-) TimerEvent: {}
+[7.720705] (-) TimerEvent: {}
+[7.820941] (-) TimerEvent: {}
+[7.921175] (-) TimerEvent: {}
+[8.021362] (-) TimerEvent: {}
+[8.121571] (-) TimerEvent: {}
+[8.221863] (-) TimerEvent: {}
+[8.258660] (distributed_mapper) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX static library libpairwise_consistency.a\x1b[0m\n'}
+[8.313973] (distributed_mapper) StdoutLine: {'line': b'[ 59%] Built target pairwise_consistency\n'}
+[8.322036] (-) TimerEvent: {}
+[8.341038] (distributed_mapper) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/global_map_solver.dir/src/pairwise_consistency_maximization/global_map/global_map.cpp.o\x1b[0m\n'}
+[8.422163] (-) TimerEvent: {}
+[8.522433] (-) TimerEvent: {}
+[8.622684] (-) TimerEvent: {}
+[8.723003] (-) TimerEvent: {}
+[8.823293] (-) TimerEvent: {}
+[8.923498] (-) TimerEvent: {}
+[9.023706] (-) TimerEvent: {}
+[9.123923] (-) TimerEvent: {}
+[9.224091] (-) TimerEvent: {}
+[9.324232] (-) TimerEvent: {}
+[9.424368] (-) TimerEvent: {}
+[9.524546] (-) TimerEvent: {}
+[9.624775] (-) TimerEvent: {}
+[9.724992] (-) TimerEvent: {}
+[9.825209] (-) TimerEvent: {}
+[9.925395] (-) TimerEvent: {}
+[9.930670] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/global_map/global_map.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<std::vector<int>, int> global_map::GlobalMap::pairwiseConsistencyMaximization()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[9.930805] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/global_map/global_map.cpp:41:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Kmax_clique_size\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[9.930835] (distributed_mapper) StderrLine: {'line': b'   41 |     int \x1b[01;35m\x1b[Kmax_clique_size\x1b[m\x1b[K = 0;\n'}
+[9.930858] (distributed_mapper) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[10.025507] (-) TimerEvent: {}
+[10.125717] (-) TimerEvent: {}
+[10.225953] (-) TimerEvent: {}
+[10.326192] (-) TimerEvent: {}
+[10.354228] (distributed_mapper) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX static library libglobal_map_solver.a\x1b[0m\n'}
+[10.379439] (distributed_mapper) StdoutLine: {'line': b'[ 68%] Built target global_map_solver\n'}
+[10.402751] (distributed_mapper) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/distributed_pcm.dir/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp.o\x1b[0m\n'}
+[10.426326] (-) TimerEvent: {}
+[10.526664] (-) TimerEvent: {}
+[10.626951] (-) TimerEvent: {}
+[10.727263] (-) TimerEvent: {}
+[10.827575] (-) TimerEvent: {}
+[10.927894] (-) TimerEvent: {}
+[11.028107] (-) TimerEvent: {}
+[11.128356] (-) TimerEvent: {}
+[11.228684] (-) TimerEvent: {}
+[11.329001] (-) TimerEvent: {}
+[11.429301] (-) TimerEvent: {}
+[11.529650] (-) TimerEvent: {}
+[11.629974] (-) TimerEvent: {}
+[11.730286] (-) TimerEvent: {}
+[11.830513] (-) TimerEvent: {}
+[11.930748] (-) TimerEvent: {}
+[12.016198] (distributed_mapper) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/evaluation_utils.h:3\x1b[m\x1b[K,\n'}
+[12.016313] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/distributed_mapper.h:3\x1b[m\x1b[K,\n'}
+[12.016347] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.h:6\x1b[m\x1b[K,\n'}
+[12.016372] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:3\x1b[m\x1b[K:\n'}
+[12.016395] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kgtsam::Vector gtsam::BetweenChordalFactor<VALUE>::evaluateError(const T&, const T&, boost::optional<Eigen::Matrix<double, -1, -1>&>, boost::optional<Eigen::Matrix<double, -1, -1>&>) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.016421] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h:132:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kthere are no arguments to \xe2\x80\x98\x1b[01m\x1b[Keye\x1b[m\x1b[K\xe2\x80\x99 that depend on a template parameter, so a declaration of \xe2\x80\x98\x1b[01m\x1b[Keye\x1b[m\x1b[K\xe2\x80\x99 must be available [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[12.016444] (distributed_mapper) StderrLine: {'line': b'  132 |       Hi->block(9,3,3,3) = -\x1b[01;31m\x1b[Keye\x1b[m\x1b[K(3); // TODO: define once outside\n'}
+[12.016466] (distributed_mapper) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[12.016486] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h:132:29:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K(if you use \xe2\x80\x98\x1b[01m\x1b[K-fpermissive\x1b[m\x1b[K\xe2\x80\x99, G++ will accept your code, but allowing the use of an undeclared name is deprecated)\n'}
+[12.020803] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h:139:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kthere are no arguments to \xe2\x80\x98\x1b[01m\x1b[Keye\x1b[m\x1b[K\xe2\x80\x99 that depend on a template parameter, so a declaration of \xe2\x80\x98\x1b[01m\x1b[Keye\x1b[m\x1b[K\xe2\x80\x99 must be available [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[12.020837] (distributed_mapper) StderrLine: {'line': b'  139 |       Hj->block(9,3,3,3) = \x1b[01;31m\x1b[Keye\x1b[m\x1b[K(3);  // TODO: define once outside\n'}
+[12.020858] (distributed_mapper) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[12.030829] (-) TimerEvent: {}
+[12.131125] (-) TimerEvent: {}
+[12.231336] (-) TimerEvent: {}
+[12.331561] (-) TimerEvent: {}
+[12.431768] (-) TimerEvent: {}
+[12.532050] (-) TimerEvent: {}
+[12.632261] (-) TimerEvent: {}
+[12.732467] (-) TimerEvent: {}
+[12.832701] (-) TimerEvent: {}
+[12.848590] (distributed_mapper) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/distributed_mapper.h:3\x1b[m\x1b[K,\n'}
+[12.848705] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.h:6\x1b[m\x1b[K,\n'}
+[12.848734] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:3\x1b[m\x1b[K:\n'}
+[12.848758] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/evaluation_utils.h:\x1b[m\x1b[K At global scope:\n'}
+[12.848780] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/evaluation_utils.h:157:124:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Keye\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgtsam\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.848803] (distributed_mapper) StderrLine: {'line': b'  157 | seModel convertToChordalNoise(const gtsam::SharedNoiseModel& noise, const gtsam::Matrix& Rhat = gtsam::\x1b[01;31m\x1b[Keye\x1b[m\x1b[K(3));\n'}
+[12.848824] (distributed_mapper) StderrLine: {'line': b'      |                                                                                                        \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[12.848845] (distributed_mapper) StderrLine: {'line': b'\n'}
+[12.902590] (distributed_mapper) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.h:6\x1b[m\x1b[K,\n'}
+[12.902718] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:3\x1b[m\x1b[K:\n'}
+[12.902745] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/distributed_mapper.h:27:40:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Keye\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgtsam\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.902770] (distributed_mapper) StderrLine: {'line': b'   27 | static const gtsam::Matrix I9 = gtsam::\x1b[01;31m\x1b[Keye\x1b[m\x1b[K(9);\n'}
+[12.902796] (distributed_mapper) StderrLine: {'line': b'      |                                        \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[12.917127] (distributed_mapper) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.h:6\x1b[m\x1b[K,\n'}
+[12.917234] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:3\x1b[m\x1b[K:\n'}
+[12.917261] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/distributed_mapper.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid distributed_mapper::DistributedMapper::updateNeighbor(const Key&, const gtsam::Pose3&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.917285] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/distributed_mapper.h:306:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kzero\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgtsam\x1b[m\x1b[K\xe2\x80\x99\n'}
+[12.917311] (distributed_mapper) StderrLine: {'line': b'  306 |         neighbors_linearized_poses_.insert(key, gtsam::\x1b[01;31m\x1b[Kzero\x1b[m\x1b[K(6));\n'}
+[12.917335] (distributed_mapper) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[12.932869] (-) TimerEvent: {}
+[12.968634] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic std::pair<int, int> distributed_pcm::DistributedPCM::solveCentralized(std::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >&, std::vector<std::pair<boost::shared_ptr<gtsam::NonlinearFactorGraph>, boost::shared_ptr<gtsam::Values> > >&, const double&, const bool&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.968753] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:21:37:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[12.968782] (distributed_mapper) StderrLine: {'line': b'   21 |         for (int roboti = 0; \x1b[01;35m\x1b[Kroboti < dist_mappers.size()\x1b[m\x1b[K; roboti++) {\n'}
+[12.968807] (distributed_mapper) StderrLine: {'line': b'      |                              \x1b[01;35m\x1b[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.968829] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:22:48:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[12.968852] (distributed_mapper) StderrLine: {'line': b'   22 |             for (int robotj = roboti+1; \x1b[01;35m\x1b[Krobotj < dist_mappers.size()\x1b[m\x1b[K; robotj++) {\n'}
+[12.968873] (distributed_mapper) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.973345] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic void distributed_pcm::DistributedPCM::fillInRequiredInformationCentralized(std::vector<std::vector<std::pair<long unsigned int, long unsigned int> > >&, std::vector<graph_utils::Transforms>&, std::map<std::pair<char, char>, graph_utils::Transforms>&, const std::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.973410] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:62:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[12.973460] (distributed_mapper) StderrLine: {'line': b'   62 |         for (int i = 0; \x1b[01;35m\x1b[Ki < dist_mappers.size()\x1b[m\x1b[K; i++) {\n'}
+[12.973483] (distributed_mapper) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.973506] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:63:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[12.973532] (distributed_mapper) StderrLine: {'line': b'   63 |             for (int j = i+1; \x1b[01;35m\x1b[Kj < dist_mappers.size()\x1b[m\x1b[K; j++) {\n'}
+[12.973553] (distributed_mapper) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.986168] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic std::pair<int, int> distributed_pcm::DistributedPCM::executePCMCentralized(const int&, const int&, const std::vector<graph_utils::Transforms>&, const std::vector<std::vector<std::pair<long unsigned int, long unsigned int> > >&, const std::map<std::pair<char, char>, graph_utils::Transforms>&, std::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >&, std::vector<std::pair<boost::shared_ptr<gtsam::NonlinearFactorGraph>, boost::shared_ptr<gtsam::Values> > >&, const double&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.986238] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:140:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<long unsigned int>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[12.986266] (distributed_mapper) StderrLine: {'line': b'  140 |             for (int i = 0; \x1b[01;35m\x1b[Ki < loopclosures_ids.size()\x1b[m\x1b[K; i++) {\n'}
+[12.986290] (distributed_mapper) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.990268] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic std::pair<std::pair<int, int>, std::pair<std::set<std::pair<long unsigned int, long unsigned int> >, std::set<std::pair<long unsigned int, long unsigned int> > > > distributed_pcm::DistributedPCM::executePCMDecentralized(const int&, robot_measurements::RobotLocalMap&, const robot_measurements::RobotLocalMap&, boost::shared_ptr<distributed_mapper::DistributedMapper>&, gtsam::GraphAndValues&, const double&, const bool&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.990337] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:203:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<long unsigned int>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[12.990364] (distributed_mapper) StderrLine: {'line': b'  203 |         for (int i = 0; \x1b[01;35m\x1b[Ki < loopclosures_ids.size()\x1b[m\x1b[K; i++) {\n'}
+[12.990387] (distributed_mapper) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[12.992382] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:241:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kindex0\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[12.992446] (distributed_mapper) StderrLine: {'line': b'  241 |                 int \x1b[01;35m\x1b[Kindex0\x1b[m\x1b[K = gtsam::symbolIndex(keys.at(0));\n'}
+[12.992472] (distributed_mapper) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[12.992495] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:242:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kindex1\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[12.992520] (distributed_mapper) StderrLine: {'line': b'  242 |                 int \x1b[01;35m\x1b[Kindex1\x1b[m\x1b[K = gtsam::symbolIndex(keys.at(1));\n'}
+[12.992542] (distributed_mapper) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[12.994814] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic bool distributed_pcm::DistributedPCM::isloopclosureToBeRejected(const std::vector<int>&, const int&, const graph_utils::Transforms&, const LoopClosures&, boost::shared_ptr<distributed_mapper::DistributedMapper>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[12.994874] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:268:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<std::pair<long unsigned int, long unsigned int> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[12.994908] (distributed_mapper) StderrLine: {'line': b'  268 |         for (index = 0; \x1b[01;35m\x1b[Kindex < loop_closures.size()\x1b[m\x1b[K; index++) {\n'}
+[12.994931] (distributed_mapper) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[13.033055] (-) TimerEvent: {}
+[13.133271] (-) TimerEvent: {}
+[13.233472] (-) TimerEvent: {}
+[13.333785] (-) TimerEvent: {}
+[13.434100] (-) TimerEvent: {}
+[13.534397] (-) TimerEvent: {}
+[13.634709] (-) TimerEvent: {}
+[13.735022] (-) TimerEvent: {}
+[13.794929] (distributed_mapper) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/evaluation_utils.h:3\x1b[m\x1b[K,\n'}
+[13.795045] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/distributed_mapper.h:3\x1b[m\x1b[K,\n'}
+[13.795071] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.h:6\x1b[m\x1b[K,\n'}
+[13.795096] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:3\x1b[m\x1b[K:\n'}
+[13.795122] (distributed_mapper) StderrLine: {'line': b'/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h: In instantiation of \xe2\x80\x98\x1b[01m\x1b[Kgtsam::Vector gtsam::BetweenChordalFactor<VALUE>::evaluateError(const T&, const T&, boost::optional<Eigen::Matrix<double, -1, -1>&>, boost::optional<Eigen::Matrix<double, -1, -1>&>) const [with VALUE = gtsam::Pose3; gtsam::Vector = Eigen::Matrix<double, -1, 1>; gtsam::BetweenChordalFactor<VALUE>::T = gtsam::Pose3]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[13.795155] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h:97:10:\x1b[m\x1b[K   required from here\n'}
+[13.795176] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h:106:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kconst Point3\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst class Eigen::Matrix<double, 3, 1>\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kvector\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KsubVector\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[13.795199] (distributed_mapper) StderrLine: {'line': b'  106 |     Vector3 tij = \x1b[01;31m\x1b[Kmeasured_.translation().vector\x1b[m\x1b[K();\n'}
+[13.795219] (distributed_mapper) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~\x1b[m\x1b[K\n'}
+[13.795239] (distributed_mapper) StderrLine: {'line': b'      |                   \x1b[32m\x1b[KsubVector\x1b[m\x1b[K\n'}
+[13.795259] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h:110:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kconst Point3\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst class Eigen::Matrix<double, 3, 1>\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kvector\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KsubVector\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[13.795280] (distributed_mapper) StderrLine: {'line': b'  110 |     Vector3 ti = \x1b[01;31m\x1b[Kpi.translation().vector\x1b[m\x1b[K();\n'}
+[13.795300] (distributed_mapper) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~^~~~~~\x1b[m\x1b[K\n'}
+[13.795319] (distributed_mapper) StderrLine: {'line': b'      |                  \x1b[32m\x1b[KsubVector\x1b[m\x1b[K\n'}
+[13.795338] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h:113:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kconst Point3\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst class Eigen::Matrix<double, 3, 1>\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[Kvector\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KsubVector\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[13.795370] (distributed_mapper) StderrLine: {'line': b'  113 |     Vector3 tj = \x1b[01;31m\x1b[Kpj.translation().vector\x1b[m\x1b[K();\n'}
+[13.795388] (distributed_mapper) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~^~~~~~\x1b[m\x1b[K\n'}
+[13.795407] (distributed_mapper) StderrLine: {'line': b'      |                  \x1b[32m\x1b[KsubVector\x1b[m\x1b[K\n'}
+[13.818664] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h:132:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Keye\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[13.818780] (distributed_mapper) StderrLine: {'line': b'  132 |       Hi->block(9,3,3,3) = -\x1b[01;31m\x1b[Keye(3)\x1b[m\x1b[K; // TODO: define once outside\n'}
+[13.818811] (distributed_mapper) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K~~~^~~\x1b[m\x1b[K\n'}
+[13.818866] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h:139:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Keye\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[13.818900] (distributed_mapper) StderrLine: {'line': b'  139 |       Hj->block(9,3,3,3) = \x1b[01;31m\x1b[Keye(3)\x1b[m\x1b[K;  // TODO: define once outside\n'}
+[13.818922] (distributed_mapper) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K~~~^~~\x1b[m\x1b[K\n'}
+[13.835183] (-) TimerEvent: {}
+[13.935356] (-) TimerEvent: {}
+[13.939911] (distributed_mapper) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/distributed_pcm.dir/build.make:76\xef\xbc\x9aCMakeFiles/distributed_pcm.dir/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[13.940032] (distributed_mapper) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:287\xef\xbc\x9aCMakeFiles/distributed_pcm.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[13.940287] (distributed_mapper) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[13.942020] (distributed_mapper) CommandEnded: {'returncode': 2}
+[13.945695] (distributed_mapper) JobEnded: {'identifier': 'distributed_mapper', 'rc': 2}
+[13.955989] (dcl_slam) JobSkipped: {'identifier': 'dcl_slam'}
+[13.956018] (-) EventReactorShutdown: {}

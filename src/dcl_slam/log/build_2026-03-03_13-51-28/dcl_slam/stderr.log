@@ -1,0 +1,19 @@
+[0m** WARNING ** io features related to pcap will be disabled[0m
+[31mCMake Error at CMakeLists.txt:17 (find_package):
+  By not providing "Findlibnabo.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "libnabo", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "libnabo" with any
+  of the following names:
+
+    libnaboConfig.cmake
+    libnabo-config.cmake
+
+  Add the installation prefix of "libnabo" to CMAKE_PREFIX_PATH or set
+  "libnabo_DIR" to a directory containing one of the above files.  If
+  "libnabo" provides a separate development package or SDK, be sure it has
+  been installed.
+
+[0m
+gmake: *** [Makefile:1274：cmake_check_build_system] 错误 1

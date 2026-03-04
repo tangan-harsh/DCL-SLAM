@@ -1,0 +1,4 @@
+Invoking command in '/home/isaac/DCL-SLAM/build/libnabo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/isaac/DCL-SLAM/src/libnabo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/isaac/DCL-SLAM/install/libnabo
+Invoked command in '/home/isaac/DCL-SLAM/build/libnabo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/isaac/DCL-SLAM/src/libnabo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/isaac/DCL-SLAM/install/libnabo
+Invoking command in '/home/isaac/DCL-SLAM/build/libnabo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/libnabo -- -j32 -l32
+Invoked command in '/home/isaac/DCL-SLAM/build/libnabo' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/libnabo -- -j32 -l32

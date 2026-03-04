@@ -1,0 +1,1 @@
+Invoking command in '/home/isaac/DCL-SLAM/build/distributed_mapper': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/isaac/DCL-SLAM/src/distributed_mapper -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/isaac/DCL-SLAM/install/distributed_mapper

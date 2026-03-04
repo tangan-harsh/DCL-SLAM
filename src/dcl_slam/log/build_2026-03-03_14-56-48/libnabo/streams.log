@@ -1,0 +1,41 @@
+[0.005s] Invoking command in '/home/isaac/DCL-SLAM/build/libnabo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/libnabo -- -j32 -l32
+[0.034s] [35m[1mConsolidate compiler generated dependencies of target libnabo[0m
+[0.053s] [100%] Built target libnabo
+[0.067s] Invoked command in '/home/isaac/DCL-SLAM/build/libnabo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/libnabo -- -j32 -l32
+[0.078s] Invoking command in '/home/isaac/DCL-SLAM/build/libnabo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/isaac/DCL-SLAM/build/libnabo
+[0.087s] -- Install configuration: ""
+[0.088s] -- Execute custom install script
+[0.088s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/library_path.sh
+[0.088s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/library_path.dsv
+[0.088s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/brute_force_cpu.cpp
+[0.088s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/index_heap.h
+[0.088s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/kdtree_cpu.cpp
+[0.088s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/kdtree_opencl.cpp
+[0.088s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/nabo.cpp
+[0.088s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/nabo.h
+[0.088s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/nabo_private.h
+[0.088s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/heap.cl
+[0.088s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/knn_bf.cl
+[0.088s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/knn_kdtree_pt_in_leaves.cl
+[0.089s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/knn_kdtree_pt_in_nodes.cl
+[0.089s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/opencl/structure.cl
+[0.089s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/include/nabo/third_party/any.hpp
+[0.089s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/ament_index/resource_index/package_run_dependencies/libnabo
+[0.089s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/ament_index/resource_index/parent_prefix_path/libnabo
+[0.089s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/ament_prefix_path.sh
+[0.089s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/ament_prefix_path.dsv
+[0.089s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/path.sh
+[0.089s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/environment/path.dsv
+[0.089s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.bash
+[0.090s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.sh
+[0.090s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.zsh
+[0.090s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/local_setup.dsv
+[0.090s] -- Symlinking: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.dsv
+[0.095s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/ament_index/resource_index/packages/libnabo
+[0.096s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.096s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/ament_cmake_export_libraries-extras.cmake
+[0.096s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/libnaboConfig.cmake
+[0.096s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/cmake/libnaboConfig-version.cmake
+[0.096s] -- Up-to-date symlink: /home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.xml
+[0.096s] -- Up-to-date: /home/isaac/DCL-SLAM/install/libnabo/lib/liblibnabo.a
+[0.098s] Invoked command in '/home/isaac/DCL-SLAM/build/libnabo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/isaac/DCL-SLAM/build/libnabo

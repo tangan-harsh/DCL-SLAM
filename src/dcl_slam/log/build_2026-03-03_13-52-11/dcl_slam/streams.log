@@ -1,0 +1,304 @@
+[0.005s] Invoking command in '/home/isaac/DCL-SLAM/build/dcl_slam': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/dcl_slam -- -j32 -l32
+[0.023s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.100s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.101s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.102s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.115s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.126s] -- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)
+[0.136s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.149s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.164s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.179s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[0.395s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.399s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.399s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[0.508s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.513s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.519s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.609s] -- Found Qhull version 8.0.2
+[0.698s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.771s] -- looking for PCL_COMMON
+[0.772s] -- looking for PCL_KDTREE
+[0.772s] -- looking for PCL_OCTREE
+[0.772s] -- looking for PCL_SEARCH
+[0.772s] -- looking for PCL_SAMPLE_CONSENSUS
+[0.772s] -- looking for PCL_FILTERS
+[0.772s] -- looking for PCL_2D
+[0.772s] -- looking for PCL_GEOMETRY
+[0.772s] -- looking for PCL_IO
+[0.772s] -- looking for PCL_FEATURES
+[0.773s] -- looking for PCL_ML
+[0.773s] -- looking for PCL_SEGMENTATION
+[0.773s] -- looking for PCL_VISUALIZATION
+[0.773s] -- looking for PCL_SURFACE
+[0.773s] -- looking for PCL_REGISTRATION
+[0.774s] -- looking for PCL_KEYPOINTS
+[0.774s] -- looking for PCL_TRACKING
+[0.774s] -- looking for PCL_RECOGNITION
+[0.774s] -- looking for PCL_STEREO
+[0.774s] -- looking for PCL_APPS
+[0.775s] -- looking for PCL_IN_HAND_SCANNER
+[0.775s] -- looking for PCL_MODELER
+[0.775s] -- looking for PCL_POINT_CLOUD_EDITOR
+[0.775s] -- looking for PCL_OUTOFCORE
+[0.775s] -- looking for PCL_PEOPLE
+[0.783s] -- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+[0.809s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.811s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.898s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.929s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.969s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.185s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.379s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.622s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.637s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.656s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.656s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.656s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.687s] -- Configuring done
+[1.706s] -- Generating done
+[1.713s] -- Build files have been written to: /home/isaac/DCL-SLAM/build/dcl_slam
+[1.735s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_generator_c[0m
+[1.742s] [  2%] [32mBuilding C object CMakeFiles/dcl_slam__rosidl_generator_c.dir/rosidl_generator_c/dcl_slam/msg/detail/loop_info__functions.c.o[0m
+[1.742s] [  4%] Built target dcl_slam__cpp
+[1.743s] [  6%] [32mBuilding C object CMakeFiles/dcl_slam__rosidl_generator_c.dir/rosidl_generator_c/dcl_slam/msg/detail/global_descriptor__functions.c.o[0m
+[1.743s] [  8%] [32mBuilding C object CMakeFiles/dcl_slam__rosidl_generator_c.dir/rosidl_generator_c/dcl_slam/msg/detail/neighbor_estimate__functions.c.o[0m
+[1.746s] [  8%] Built target ament_cmake_python_copy_dcl_slam
+[1.748s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_fastrtps_cpp[0m
+[1.749s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_cpp[0m
+[1.750s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_introspection_cpp[0m
+[1.757s] [ 12%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/dcl_slam/msg/detail/dds_fastrtps/global_descriptor__type_support.cpp.o[0m
+[1.757s] [ 12%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dcl_slam/msg/loop_info__type_support.cpp.o[0m
+[1.757s] [ 14%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dcl_slam/msg/global_descriptor__type_support.cpp.o[0m
+[1.757s] [ 17%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/dcl_slam/msg/neighbor_estimate__type_support.cpp.o[0m
+[1.757s] [ 19%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/dcl_slam/msg/detail/dds_fastrtps/loop_info__type_support.cpp.o[0m
+[1.758s] [ 21%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/dcl_slam/msg/detail/dds_fastrtps/neighbor_estimate__type_support.cpp.o[0m
+[1.759s] [ 23%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dcl_slam/msg/detail/loop_info__type_support.cpp.o[0m
+[1.759s] [ 25%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dcl_slam/msg/detail/global_descriptor__type_support.cpp.o[0m
+[1.761s] [ 27%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/dcl_slam/msg/detail/neighbor_estimate__type_support.cpp.o[0m
+[1.783s] [ 29%] [32m[1mLinking C shared library libdcl_slam__rosidl_generator_c.so[0m
+[1.816s] [ 31%] Built target dcl_slam__rosidl_generator_c
+[1.827s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_c[0m
+[1.827s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_introspection_c[0m
+[1.827s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_fastrtps_c[0m
+[1.838s] [ 44%] [32mBuilding C object CMakeFiles/dcl_slam__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dcl_slam/msg/detail/global_descriptor__type_support.c.o[0m
+[1.838s] [ 44%] [32mBuilding C object CMakeFiles/dcl_slam__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dcl_slam/msg/detail/loop_info__type_support.c.o[0m
+[1.838s] [ 44%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_c.dir/rosidl_typesupport_c/dcl_slam/msg/global_descriptor__type_support.cpp.o[0m
+[1.838s] [ 44%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_c.dir/rosidl_typesupport_c/dcl_slam/msg/neighbor_estimate__type_support.cpp.o[0m
+[1.838s] [ 44%] [32mBuilding C object CMakeFiles/dcl_slam__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/dcl_slam/msg/detail/neighbor_estimate__type_support.c.o[0m
+[1.838s] [ 44%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_c.dir/rosidl_typesupport_c/dcl_slam/msg/loop_info__type_support.cpp.o[0m
+[1.840s] [ 46%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/dcl_slam/msg/detail/loop_info__type_support_c.cpp.o[0m
+[1.840s] [ 48%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/dcl_slam/msg/detail/global_descriptor__type_support_c.cpp.o[0m
+[1.840s] [ 51%] [32mBuilding CXX object CMakeFiles/dcl_slam__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/dcl_slam/msg/detail/neighbor_estimate__type_support_c.cpp.o[0m
+[1.868s] [ 53%] [32m[1mLinking CXX shared library libdcl_slam__rosidl_typesupport_c.so[0m
+[1.874s] [ 55%] [32m[1mLinking C shared library libdcl_slam__rosidl_typesupport_introspection_c.so[0m
+[1.904s] [ 57%] Built target dcl_slam__rosidl_typesupport_introspection_c
+[1.906s] [ 59%] Built target dcl_slam__rosidl_typesupport_c
+[1.939s] [ 61%] [32m[1mLinking CXX shared library libdcl_slam__rosidl_typesupport_cpp.so[0m
+[1.957s] running egg_info
+[1.958s] writing dcl_slam.egg-info/PKG-INFO
+[1.958s] writing dependency_links to dcl_slam.egg-info/dependency_links.txt
+[1.958s] writing top-level names to dcl_slam.egg-info/top_level.txt
+[1.960s] reading manifest file 'dcl_slam.egg-info/SOURCES.txt'
+[1.961s] writing manifest file 'dcl_slam.egg-info/SOURCES.txt'
+[1.973s] [ 63%] Built target dcl_slam__rosidl_typesupport_cpp
+[1.984s] [ 63%] Built target ament_cmake_python_build_dcl_slam_egg
+[2.003s] [ 65%] [32m[1mLinking CXX shared library libdcl_slam__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.050s] [ 68%] Built target dcl_slam__rosidl_typesupport_fastrtps_cpp
+[2.064s] [ 70%] [32m[1mLinking CXX shared library libdcl_slam__rosidl_typesupport_fastrtps_c.so[0m
+[2.095s] [ 72%] [32m[1mLinking CXX shared library libdcl_slam__rosidl_typesupport_introspection_cpp.so[0m
+[2.110s] [ 74%] Built target dcl_slam__rosidl_typesupport_fastrtps_c
+[2.137s] [ 76%] Built target dcl_slam__rosidl_typesupport_introspection_cpp
+[2.154s] [ 76%] Built target dcl_slam
+[2.182s] [ 78%] Built target dcl_slam__py
+[2.196s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_generator_py[0m
+[2.206s] [ 80%] [32mBuilding C object CMakeFiles/dcl_slam__rosidl_generator_py.dir/rosidl_generator_py/dcl_slam/msg/_global_descriptor_s.c.o[0m
+[2.209s] [ 82%] [32mBuilding C object CMakeFiles/dcl_slam__rosidl_generator_py.dir/rosidl_generator_py/dcl_slam/msg/_loop_info_s.c.o[0m
+[2.209s] [ 85%] [32mBuilding C object CMakeFiles/dcl_slam__rosidl_generator_py.dir/rosidl_generator_py/dcl_slam/msg/_neighbor_estimate_s.c.o[0m
+[2.275s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/dcl_slam/libdcl_slam__rosidl_generator_py.so[0m
+[2.301s] [ 87%] Built target dcl_slam__rosidl_generator_py
+[2.308s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_fastrtps_c__pyext[0m
+[2.308s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_introspection_c__pyext[0m
+[2.309s] [35m[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_c__pyext[0m
+[2.317s] [ 89%] [32mBuilding C object CMakeFiles/dcl_slam__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/dcl_slam/_dcl_slam_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[2.319s] [ 93%] [32mBuilding C object CMakeFiles/dcl_slam__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/dcl_slam/_dcl_slam_s.ep.rosidl_typesupport_c.c.o[0m
+[2.319s] [ 93%] [32mBuilding C object CMakeFiles/dcl_slam__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/dcl_slam/_dcl_slam_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[2.371s] [100%] [32m[1mLinking C shared library rosidl_generator_py/dcl_slam/dcl_slam_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.371s] [100%] [32m[1mLinking C shared library rosidl_generator_py/dcl_slam/dcl_slam_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.371s] [100%] [32m[1mLinking C shared library rosidl_generator_py/dcl_slam/dcl_slam_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.403s] [100%] Built target dcl_slam__rosidl_typesupport_introspection_c__pyext
+[2.403s] [100%] Built target dcl_slam__rosidl_typesupport_c__pyext
+[2.403s] [100%] Built target dcl_slam__rosidl_typesupport_fastrtps_c__pyext
+[2.412s] Invoked command in '/home/isaac/DCL-SLAM/build/dcl_slam' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/dcl_slam -- -j32 -l32
+[2.419s] Invoking command in '/home/isaac/DCL-SLAM/build/dcl_slam': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/isaac/DCL-SLAM/build/dcl_slam
+[2.424s] -- Install configuration: ""
+[2.424s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/ament_index/resource_index/rosidl_interfaces/dcl_slam
+[2.424s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam
+[2.424s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg
+[2.424s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail
+[2.424s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__type_support.h
+[2.424s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__type_support.h
+[2.424s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__functions.h
+[2.424s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__functions.h
+[2.425s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__functions.c
+[2.425s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__struct.h
+[2.425s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__type_support.h
+[2.425s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__functions.h
+[2.425s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__functions.c
+[2.425s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__functions.c
+[2.425s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__struct.h
+[2.425s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__struct.h
+[2.425s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/rosidl_generator_c__visibility_control.h
+[2.425s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/global_descriptor.h
+[2.425s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/neighbor_estimate.h
+[2.425s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/loop_info.h
+[2.425s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/library_path.sh
+[2.425s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/library_path.dsv
+[2.425s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_generator_c.so
+[2.425s] -- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_generator_c.so" to ""
+[2.425s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__rosidl_typesupport_fastrtps_c.h
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__rosidl_typesupport_fastrtps_c.h
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__rosidl_typesupport_fastrtps_c.h
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.426s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_fastrtps_c.so
+[2.426s] -- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_fastrtps_c.so" to ""
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__type_support.c
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__rosidl_typesupport_introspection_c.h
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__type_support.c
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__type_support.c
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__rosidl_typesupport_introspection_c.h
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__rosidl_typesupport_introspection_c.h
+[2.426s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.427s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_introspection_c.so
+[2.427s] -- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_introspection_c.so" to ""
+[2.427s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_c.so
+[2.427s] -- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_c.so" to ""
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/global_descriptor.hpp
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/loop_info.hpp
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__traits.hpp
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__type_support.hpp
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__type_support.hpp
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__builder.hpp
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__traits.hpp
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__type_support.hpp
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__builder.hpp
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__traits.hpp
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__struct.hpp
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__builder.hpp
+[2.427s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__struct.hpp
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__struct.hpp
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/neighbor_estimate.hpp
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/rosidl_generator_cpp__visibility_control.hpp
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/dds_fastrtps
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__rosidl_typesupport_fastrtps_cpp.hpp
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__rosidl_typesupport_fastrtps_cpp.hpp
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__rosidl_typesupport_fastrtps_cpp.hpp
+[2.428s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_fastrtps_cpp.so
+[2.428s] -- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_fastrtps_cpp.so" to ""
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__type_support.cpp
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__rosidl_typesupport_introspection_cpp.hpp
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/neighbor_estimate__rosidl_typesupport_introspection_cpp.hpp
+[2.428s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__type_support.cpp
+[2.429s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/loop_info__type_support.cpp
+[2.429s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/include/dcl_slam/dcl_slam/msg/detail/global_descriptor__rosidl_typesupport_introspection_cpp.hpp
+[2.429s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_introspection_cpp.so
+[2.429s] -- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_introspection_cpp.so" to ""
+[2.429s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_cpp.so
+[2.429s] -- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_typesupport_cpp.so" to ""
+[2.429s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/pythonpath.sh
+[2.429s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/pythonpath.dsv
+[2.429s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam-1.0.0-py3.10.egg-info
+[2.429s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam-1.0.0-py3.10.egg-info/dependency_links.txt
+[2.429s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam-1.0.0-py3.10.egg-info/SOURCES.txt
+[2.429s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam-1.0.0-py3.10.egg-info/PKG-INFO
+[2.429s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam-1.0.0-py3.10.egg-info/top_level.txt
+[2.429s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam
+[2.429s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/_dcl_slam_s.ep.rosidl_typesupport_c.c
+[2.429s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/_dcl_slam_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.429s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg
+[2.429s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg/_neighbor_estimate_s.c
+[2.429s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg/_global_descriptor.py
+[2.429s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg/_loop_info_s.c
+[2.430s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg/_loop_info.py
+[2.430s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg/_neighbor_estimate.py
+[2.430s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg/__init__.py
+[2.430s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg/_global_descriptor_s.c
+[2.430s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/libdcl_slam__rosidl_generator_py.so
+[2.430s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.430s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.430s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.430s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/_dcl_slam_s.ep.rosidl_typesupport_introspection_c.c
+[2.430s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/__init__.py
+[2.441s] Listing '/home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam'...
+[2.441s] Compiling '/home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/__init__.py'...
+[2.441s] Listing '/home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/msg'...
+[2.444s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.444s] -- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.444s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.444s] -- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.444s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.444s] -- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/local/lib/python3.10/dist-packages/dcl_slam/dcl_slam_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.444s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_generator_py.so
+[2.444s] -- Set runtime path of "/home/isaac/DCL-SLAM/install/dcl_slam/lib/libdcl_slam__rosidl_generator_py.so" to ""
+[2.444s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/msg/LoopInfo.idl
+[2.444s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/msg/GlobalDescriptor.idl
+[2.444s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/msg/NeighborEstimate.idl
+[2.444s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/msg/LoopInfo.msg
+[2.444s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/msg/GlobalDescriptor.msg
+[2.444s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/msg/NeighborEstimate.msg
+[2.444s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/ament_index/resource_index/package_run_dependencies/dcl_slam
+[2.445s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/ament_index/resource_index/parent_prefix_path/dcl_slam
+[2.445s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/ament_prefix_path.sh
+[2.445s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/ament_prefix_path.dsv
+[2.445s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/path.sh
+[2.445s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/environment/path.dsv
+[2.445s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/local_setup.bash
+[2.445s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/local_setup.sh
+[2.445s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/local_setup.zsh
+[2.445s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/local_setup.dsv
+[2.445s] -- Installing: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/package.dsv
+[2.445s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/ament_index/resource_index/packages/dcl_slam
+[2.445s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_generator_cExport.cmake
+[2.445s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_generator_cExport-noconfig.cmake
+[2.445s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_typesupport_fastrtps_cExport.cmake
+[2.445s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.445s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_introspection_cExport.cmake
+[2.445s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.445s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_cExport.cmake
+[2.446s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_cExport-noconfig.cmake
+[2.446s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_generator_cppExport.cmake
+[2.446s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.446s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.446s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_introspection_cppExport.cmake
+[2.446s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.446s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_cppExport.cmake
+[2.446s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slam__rosidl_typesupport_cppExport-noconfig.cmake
+[2.446s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_generator_pyExport.cmake
+[2.447s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/export_dcl_slam__rosidl_generator_pyExport-noconfig.cmake
+[2.447s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/rosidl_cmake-extras.cmake
+[2.447s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.447s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.447s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/ament_cmake_export_libraries-extras.cmake
+[2.447s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/ament_cmake_export_targets-extras.cmake
+[2.447s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.447s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.447s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slamConfig.cmake
+[2.447s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/cmake/dcl_slamConfig-version.cmake
+[2.447s] -- Up-to-date: /home/isaac/DCL-SLAM/install/dcl_slam/share/dcl_slam/package.xml
+[2.447s] Invoked command in '/home/isaac/DCL-SLAM/build/dcl_slam' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/isaac/DCL-SLAM/build/dcl_slam

@@ -1,0 +1,136 @@
+[0.000000] (-) TimerEvent: {}
+[0.000153] (dcl_slam) JobQueued: {'identifier': 'dcl_slam', 'dependencies': OrderedDict()}
+[0.000289] (dcl_slam) JobStarted: {'identifier': 'dcl_slam'}
+[0.003971] (dcl_slam) JobProgress: {'identifier': 'dcl_slam', 'progress': 'cmake'}
+[0.004650] (dcl_slam) JobProgress: {'identifier': 'dcl_slam', 'progress': 'build'}
+[0.005427] (dcl_slam) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/isaac/DCL-SLAM/build/dcl_slam', '--', '-j32', '-l32'], 'cwd': '/home/isaac/DCL-SLAM/build/dcl_slam', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'isaac'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/usr/local/cuda-12.4/lib64:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.4/lib64:'), ('HOME', '/home/isaac'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/isaac'), ('TERM_PROGRAM_VERSION', '1.109.5'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/isaac/.nvm/versions/node/v24.12.0/bin'), ('NVM_INC', '/home/isaac/.nvm/versions/node/v24.12.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('SYSTEMD_EXEC_PID', '2688'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/isaac/.nvm'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'isaac'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'isaac'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/isaac/.local/bin:/usr/local/cuda-12.4/bin:/home/isaac/.config/Code/User/globalStorage/github.copilot-chat/debugCommand:/home/isaac/.config/Code/User/globalStorage/github.copilot-chat/copilotCli:/home/isaac/.local/bin:/home/isaac/.nvm/versions/node/v24.12.0/bin:/opt/ros/humble/bin:/usr/local/cuda-12.4/bin:/home/isaac/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/isaac-ROG-Strix-G614JV-G614JV:@/tmp/.ICE-unix/2660,unix/isaac-ROG-Strix-G614JV-G614JV:/tmp/.ICE-unix/2660'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/87d0c13a_027f_4791_b49e_e21d95af37ec'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('PYTHONSTARTUP', '/home/isaac/.config/Code/User/workspaceStorage/b4b648b087e46a4865ac5c87cd4fb468/ms-python.python/pythonrc.py'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-bef51f3e1a.sock'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/isaac/DCL-SLAM/build/dcl_slam'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.025314] (dcl_slam) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.097887] (dcl_slam) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.099073] (dcl_slam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.099570] (-) TimerEvent: {}
+[0.100355] (dcl_slam) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.113995] (dcl_slam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.125435] (dcl_slam) StdoutLine: {'line': b'-- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.135786] (dcl_slam) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.148943] (dcl_slam) StdoutLine: {'line': b'-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[0.156443] (dcl_slam) StdoutLine: {'line': b'-- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[0.165077] (dcl_slam) StdoutLine: {'line': b'-- Found tf2: 0.25.17 (/opt/ros/humble/share/tf2/cmake)\n'}
+[0.166727] (dcl_slam) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.17 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[0.187307] (dcl_slam) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.187846] (dcl_slam) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.199756] (-) TimerEvent: {}
+[0.245173] (dcl_slam) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.289274] (dcl_slam) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.17 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[0.290656] (dcl_slam) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[0.291279] (dcl_slam) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[0.291940] (dcl_slam) StdoutLine: {'line': b'-- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)\n'}
+[0.299845] (-) TimerEvent: {}
+[0.308320] (dcl_slam) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[0.325735] (dcl_slam) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)\n'}
+[0.399950] (-) TimerEvent: {}
+[0.495421] (dcl_slam) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[0.499154] (dcl_slam) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[0.500023] (-) TimerEvent: {}
+[0.587497] (dcl_slam) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[0.591773] (dcl_slam) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[0.595333] (dcl_slam) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[0.600147] (-) TimerEvent: {}
+[0.678890] (dcl_slam) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[0.700352] (-) TimerEvent: {}
+[0.756618] (dcl_slam) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[0.800443] (-) TimerEvent: {}
+[0.848092] (dcl_slam) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at CMakeLists.txt:21 (find_package):\n'}
+[0.848266] (dcl_slam) StderrLine: {'line': b'  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.\n'}
+[0.848327] (dcl_slam) StderrLine: {'line': b'  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy\n'}
+[0.848391] (dcl_slam) StderrLine: {'line': b'  command to set the policy and suppress this warning.\n'}
+[0.848456] (dcl_slam) StderrLine: {'line': b'\n'}
+[0.848507] (dcl_slam) StderrLine: {'line': b'  CMake variable PCL_ROOT is set to:\n'}
+[0.848557] (dcl_slam) StderrLine: {'line': b'\n'}
+[0.848607] (dcl_slam) StderrLine: {'line': b'    /usr\n'}
+[0.848655] (dcl_slam) StderrLine: {'line': b'\n'}
+[0.848704] (dcl_slam) StderrLine: {'line': b'  For compatibility, CMake is ignoring the variable.\n'}
+[0.848754] (dcl_slam) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.848804] (dcl_slam) StderrLine: {'line': b'\x1b[0m\n'}
+[0.900540] (-) TimerEvent: {}
+[1.000874] (-) TimerEvent: {}
+[1.037045] (dcl_slam) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.101014] (-) TimerEvent: {}
+[1.194162] (dcl_slam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.201133] (-) TimerEvent: {}
+[1.301514] (-) TimerEvent: {}
+[1.384683] (dcl_slam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.397277] (dcl_slam) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.401640] (-) TimerEvent: {}
+[1.412323] (dcl_slam) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.412438] (dcl_slam) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.412498] (dcl_slam) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.438189] (dcl_slam) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):\n'}
+[1.438276] (dcl_slam) StderrLine: {'line': b'  Use rosidl_get_typesupport_target() and target_link_libraries() instead of\n'}
+[1.438331] (dcl_slam) StderrLine: {'line': b'  rosidl_target_interfaces()\n'}
+[1.438417] (dcl_slam) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[1.438476] (dcl_slam) StderrLine: {'line': b'  CMakeLists.txt:63 (rosidl_target_interfaces)\n'}
+[1.438526] (dcl_slam) StderrLine: {'line': b'\n'}
+[1.438574] (dcl_slam) StderrLine: {'line': b'\x1b[0m\n'}
+[1.440202] (dcl_slam) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.467563] (dcl_slam) StdoutLine: {'line': b'-- Generating done\n'}
+[1.476445] (dcl_slam) StdoutLine: {'line': b'-- Build files have been written to: /home/isaac/DCL-SLAM/build/dcl_slam\n'}
+[1.498096] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_generator_c\x1b[0m\n'}
+[1.501721] (-) TimerEvent: {}
+[1.503604] (dcl_slam) StdoutLine: {'line': b'[  1%] Built target dcl_slam__cpp\n'}
+[1.506652] (dcl_slam) StdoutLine: {'line': b'[ 11%] Built target dcl_slam__rosidl_generator_c\n'}
+[1.509349] (dcl_slam) StdoutLine: {'line': b'[ 11%] Built target ament_cmake_python_copy_dcl_slam\n'}
+[1.509596] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_cpp\x1b[0m\n'}
+[1.509822] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[1.511592] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[1.514301] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_c\x1b[0m\n'}
+[1.514368] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[1.514399] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[1.518123] (dcl_slam) StdoutLine: {'line': b'[ 21%] Built target dcl_slam__rosidl_typesupport_introspection_cpp\n'}
+[1.518255] (dcl_slam) StdoutLine: {'line': b'[ 31%] Built target dcl_slam__rosidl_typesupport_cpp\n'}
+[1.521028] (dcl_slam) StdoutLine: {'line': b'[ 41%] Built target dcl_slam__rosidl_typesupport_c\n'}
+[1.521683] (dcl_slam) StdoutLine: {'line': b'[ 50%] Built target dcl_slam__rosidl_typesupport_fastrtps_cpp\n'}
+[1.523069] (dcl_slam) StdoutLine: {'line': b'[ 60%] Built target dcl_slam__rosidl_typesupport_introspection_c\n'}
+[1.523313] (dcl_slam) StdoutLine: {'line': b'[ 70%] Built target dcl_slam__rosidl_typesupport_fastrtps_c\n'}
+[1.537515] (dcl_slam) StdoutLine: {'line': b'[ 70%] Built target dcl_slam\n'}
+[1.549908] (dcl_slam) StdoutLine: {'line': b'[ 72%] Built target dcl_slam__py\n'}
+[1.550550] (dcl_slam) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam_descriptors.dir/src/m2dpDescriptor.cpp.o\x1b[0m\n'}
+[1.550596] (dcl_slam) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam_descriptors.dir/src/lidarIrisDescriptor.cpp.o\x1b[0m\n'}
+[1.550736] (dcl_slam) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/dcl_slam_descriptors.dir/src/scanContextDescriptor.cpp.o\x1b[0m\n'}
+[1.556662] (dcl_slam) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/include/lidarIrisDescriptor.h:1\x1b[m\x1b[K,\n'}
+[1.556722] (dcl_slam) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/lidarIrisDescriptor.cpp:1\x1b[m\x1b[K:\n'}
+[1.556746] (dcl_slam) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/include/descriptorBasis.h:5:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Knabo/nabo.h: \xe6\xb2\xa1\xe6\x9c\x89\xe9\x82\xa3\xe4\xb8\xaa\xe6\x96\x87\xe4\xbb\xb6\xe6\x88\x96\xe7\x9b\xae\xe5\xbd\x95\n'}
+[1.556770] (dcl_slam) StderrLine: {'line': b'    5 | #include \x1b[01;31m\x1b[K<nabo/nabo.h>\x1b[m\x1b[K\n'}
+[1.556792] (dcl_slam) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.556813] (dcl_slam) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/include/m2dpDescriptor.h:1\x1b[m\x1b[K,\n'}
+[1.556834] (dcl_slam) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/m2dpDescriptor.cpp:1\x1b[m\x1b[K:\n'}
+[1.556855] (dcl_slam) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/include/descriptorBasis.h:5:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Knabo/nabo.h: \xe6\xb2\xa1\xe6\x9c\x89\xe9\x82\xa3\xe4\xb8\xaa\xe6\x96\x87\xe4\xbb\xb6\xe6\x88\x96\xe7\x9b\xae\xe5\xbd\x95\n'}
+[1.556880] (dcl_slam) StderrLine: {'line': b'    5 | #include \x1b[01;31m\x1b[K<nabo/nabo.h>\x1b[m\x1b[K\n'}
+[1.556899] (dcl_slam) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.556919] (dcl_slam) StderrLine: {'line': b'compilation terminated.\n'}
+[1.556939] (dcl_slam) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/include/scanContextDescriptor.h:1\x1b[m\x1b[K,\n'}
+[1.556959] (dcl_slam) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/scanContextDescriptor.cpp:1\x1b[m\x1b[K:\n'}
+[1.556978] (dcl_slam) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/include/descriptorBasis.h:5:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Knabo/nabo.h: \xe6\xb2\xa1\xe6\x9c\x89\xe9\x82\xa3\xe4\xb8\xaa\xe6\x96\x87\xe4\xbb\xb6\xe6\x88\x96\xe7\x9b\xae\xe5\xbd\x95\n'}
+[1.556999] (dcl_slam) StderrLine: {'line': b'    5 | #include \x1b[01;31m\x1b[K<nabo/nabo.h>\x1b[m\x1b[K\n'}
+[1.557020] (dcl_slam) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.557042] (dcl_slam) StderrLine: {'line': b'compilation terminated.\n'}
+[1.557084] (dcl_slam) StderrLine: {'line': b'compilation terminated.\n'}
+[1.557104] (dcl_slam) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target dcl_slam__rosidl_generator_py\x1b[0m\n'}
+[1.557255] (dcl_slam) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/dcl_slam_descriptors.dir/build.make:104\xef\xbc\x9aCMakeFiles/dcl_slam_descriptors.dir/src/m2dpDescriptor.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[1.557321] (dcl_slam) StderrLine: {'line': b'gmake[2]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[1.557356] (dcl_slam) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/dcl_slam_descriptors.dir/build.make:90\xef\xbc\x9aCMakeFiles/dcl_slam_descriptors.dir/src/lidarIrisDescriptor.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[1.557381] (dcl_slam) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/dcl_slam_descriptors.dir/build.make:76\xef\xbc\x9aCMakeFiles/dcl_slam_descriptors.dir/src/scanContextDescriptor.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[1.557407] (dcl_slam) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:594\xef\xbc\x9aCMakeFiles/dcl_slam_descriptors.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[1.557429] (dcl_slam) StderrLine: {'line': b'gmake[1]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[1.565624] (dcl_slam) StdoutLine: {'line': b'[ 86%] Built target dcl_slam__rosidl_generator_py\n'}
+[1.601828] (-) TimerEvent: {}
+[1.610904] (dcl_slam) StdoutLine: {'line': b'running egg_info\n'}
+[1.611223] (dcl_slam) StdoutLine: {'line': b'writing dcl_slam.egg-info/PKG-INFO\n'}
+[1.611327] (dcl_slam) StdoutLine: {'line': b'writing dependency_links to dcl_slam.egg-info/dependency_links.txt\n'}
+[1.611517] (dcl_slam) StdoutLine: {'line': b'writing top-level names to dcl_slam.egg-info/top_level.txt\n'}
+[1.612315] (dcl_slam) StdoutLine: {'line': b"reading manifest file 'dcl_slam.egg-info/SOURCES.txt'\n"}
+[1.612437] (dcl_slam) StdoutLine: {'line': b"writing manifest file 'dcl_slam.egg-info/SOURCES.txt'\n"}
+[1.626366] (dcl_slam) StdoutLine: {'line': b'[ 86%] Built target ament_cmake_python_build_dcl_slam_egg\n'}
+[1.627108] (dcl_slam) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[1.628799] (dcl_slam) CommandEnded: {'returncode': 2}
+[1.637398] (dcl_slam) JobEnded: {'identifier': 'dcl_slam', 'rc': 2}
+[1.647688] (-) EventReactorShutdown: {}

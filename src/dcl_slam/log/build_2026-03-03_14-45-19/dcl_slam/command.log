@@ -1,0 +1,2 @@
+Invoking command in '/home/isaac/DCL-SLAM/build/dcl_slam': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/isaac/DCL-SLAM -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/isaac/DCL-SLAM/install/dcl_slam
+Invoked command in '/home/isaac/DCL-SLAM/build/dcl_slam' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/isaac/DCL-SLAM -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/isaac/DCL-SLAM/install/dcl_slam

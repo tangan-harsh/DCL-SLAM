@@ -1,0 +1,18 @@
+[35m[1mConsolidate compiler generated dependencies of target fast_max-clique_finder[0m
+[35m[1mConsolidate compiler generated dependencies of target graph_utils[0m
+[ 22%] Built target fast_max-clique_finder
+[ 31%] Built target graph_utils
+[35m[1mConsolidate compiler generated dependencies of target robot_measurements[0m
+[ 50%] Built target robot_measurements
+[35m[1mConsolidate compiler generated dependencies of target pairwise_consistency[0m
+[ 59%] Built target pairwise_consistency
+[35m[1mConsolidate compiler generated dependencies of target global_map_solver[0m
+[ 68%] Built target global_map_solver
+[35m[1mConsolidate compiler generated dependencies of target distributed_pcm[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/distributed_pcm.dir/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp.o[0m
+[ 77%] [32m[1mLinking CXX static library libdistributed_pcm.a[0m
+[ 77%] Built target distributed_pcm
+[ 81%] [32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/distributed_mapper_utils.cpp.o[0m
+[ 86%] [32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/run_distributed_mapper.cpp.o[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/distributed_mapper.cpp.o[0m
+[ 95%] [32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/evaluation_utils.cpp.o[0m
