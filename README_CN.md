@@ -1,284 +1,374 @@
-# DCL-SLAM ROS2
+# DCL-SLAM MID-360 部署指南
 
-基于 **FAST-LIO2** 前端和 **DCL-SLAM** 分布式后端的多机器人协同激光 SLAM 系统，适配 ROS2 Humble。
-
-## 架构
-
-```
-fastlio_mapping 进程（每台机器人运行一个）
-├── FAST-LIO2 前端        ← laserMapping 节点：IMU 预积分 + 点云配准 + 里程计输出
-└── DCL-SLAM 后端         ← dcl_slam_node 节点：闭环检测 + 分布式位姿图优化
-```
-
-> **注意**：前端和后端运行在同一个进程内。启动 `fastlio_mapping` 即同时启动前端和后端。
-
-不同机器人通过 ROS2 命名空间（`/a`、`/b`、`/c`）区分，通过 DDS 自动发现和通信。
+在另一台机器上从零部署 DCL-SLAM（FAST-LIO2 + 分布式后端），仅适用于 **Livox MID-360** 雷达。
 
 ---
 
-## 依赖
+## 1. 环境要求
 
-| 依赖 | 安装方式 |
-|------|---------|
-| ROS2 Humble | 基础环境 |
-| GTSAM | `sudo apt install ros-humble-gtsam` |
-| PCL / OpenCV | ROS2 自带 |
-| libnabo | 源码已包含（`src/libnabo`） |
-| distributed_mapper | 源码已包含（`src/distributed_mapper`） |
-| livox_ros_driver2（可选） | Livox 雷达需要，单独编译 |
+| 项目 | 要求 |
+|------|------|
+| 系统 | Ubuntu 22.04 |
+| ROS | ROS2 Humble Desktop |
+| CPU | ≥ 4 核（影响 OpenMP 并行度） |
+| 内存 | ≥ 8 GB |
+| 网络 | 与 MID-360 同一网段（默认 192.168.1.x） |
 
 ---
 
-## 编译
+## 2. 安装 ROS2 Humble
+
+如果已安装可跳过。
 
 ```bash
-cd ~/DCL-SLAM
+# 设置 locale
+sudo apt update && sudo apt install -y locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# 添加 ROS2 源
+sudo apt install -y software-properties-common
+sudo add-apt-repository universe
+sudo apt update && sudo apt install -y curl
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+# 安装
+sudo apt update
+sudo apt install -y ros-humble-desktop
+
+# 写入 bashrc
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+
+---
+
+## 3. 安装系统依赖
+
+```bash
+# GTSAM（因子图优化库）
+sudo apt install -y ros-humble-gtsam
+
+# PCL、OpenCV、Eigen（ROS2 Desktop 通常已包含）
+sudo apt install -y libpcl-dev libopencv-dev libeigen3-dev
+
+# Google Logging
+sudo apt install -y libgoogle-glog-dev
+
+# 编译工具
+sudo apt install -y cmake build-essential python3-colcon-common-extensions
+```
+
+---
+
+## 4. 编译 Livox ROS Driver 2
+
+MID-360 必须使用 `livox_ros_driver2`。
+
+```bash
+mkdir -p ~/ws_livox/src && cd ~/ws_livox/src
+
+git clone https://github.com/Livox-SDK/Livox-SDK2.git
+cd Livox-SDK2
+mkdir build && cd build
+cmake .. && make -j$(nproc)
+sudo make install
+cd ~/ws_livox/src
+
+git clone https://github.com/Livox-SDK/livox_ros_driver2.git
+
+cd ~/ws_livox
 source /opt/ros/humble/setup.bash
+colcon build --symlink-install
 
-# 使用 Livox 雷达时，先 source livox 驱动
+echo "source ~/ws_livox/install/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+
+### 配置 MID-360 连接
+
+编辑驱动配置文件中的 IP，确保：
+- 本机 IP 设为 `192.168.1.5`（或其他同网段地址）
+- MID-360 IP 默认为 `192.168.1.1xx`
+
+```bash
+# 设置本机 IP（以 eth0 为例，根据实际网卡名替换）
+sudo ip addr add 192.168.1.5/24 dev eth0
+```
+
+验证驱动：
+```bash
+ros2 launch livox_ros_driver2 msg_MID360_launch.py
+# 另一个终端检查
+ros2 topic hz /livox/lidar   # 应有 ~10Hz
+ros2 topic hz /livox/imu     # 应有 ~200Hz
+```
+
+---
+
+## 5. 编译 DCL-SLAM
+
+```bash
+cd ~
+git clone <DCL-SLAM仓库地址> DCL-SLAM
+cd ~/DCL-SLAM
+
+# 创建日志目录
+mkdir -p ~/log
+
+# 编译（必须先 source livox 驱动，否则不会启用 Livox CustomMsg 支持）
+source /opt/ros/humble/setup.bash
 source ~/ws_livox/install/setup.bash
-
-# 编译（不要用 sudo）
 colcon build --symlink-install
 
 source install/setup.bash
 ```
 
-> ⚠️ 编译时如果环境中有 `livox_ros_driver2`，会自动启用 Livox CustomMsg 支持；否则仅支持 Velodyne/Ouster 的 PointCloud2。
+> ⚠️ **不要用 `sudo colcon build`**，否则会报 `No module named 'ament_package'`。
+
+### 编译成功标志
+
+终端输出中应包含：
+```
+-- Found livox_ros_driver2, enabling Livox support
+```
+
+如果看到 `livox_ros_driver2 not found`，说明编译前没有 source livox 驱动，需要清理后重新编译：
+```bash
+rm -rf build/ install/ log/
+source ~/ws_livox/install/setup.bash
+colcon build --symlink-install
+```
 
 ---
 
-## 快速开始：Livox MID-360
+## 6. 单机器人启动
 
-### 方式一：使用 Launch 文件（推荐）
+### 一键启动（推荐）
 
 ```bash
-# 终端 1：启动雷达驱动
-source ~/ws_livox/install/setup.bash
+# 终端 1：启动雷达
 ros2 launch livox_ros_driver2 msg_MID360_launch.py
 
-# 终端 2：启动 DCL-SLAM（前端 + 后端 + RViz）
+# 终端 2：启动 DCL-SLAM + RViz
 source ~/ws_livox/install/setup.bash
 source ~/DCL-SLAM/install/setup.bash
 ros2 launch dcl_slam dcl_fast_lio_mid360.launch.py
 ```
 
-Launch 文件会自动完成：
-- 以命名空间 `/a` 启动 `fastlio_mapping`（含前端和后端）
-- 话题重映射（`/a/livox/*` → `/livox/*`）
-- 加载参数文件
-- 启动 RViz2（已配置好 Fixed Frame、话题、Decay Time）
-
-不需要 RViz 时：`ros2 launch dcl_slam dcl_fast_lio_mid360.launch.py rviz:=false`
-
-### 方式二：手动分别启动
-
-```bash
-# 终端 1：雷达驱动
-source ~/ws_livox/install/setup.bash
-ros2 launch livox_ros_driver2 msg_MID360_launch.py
-
-# 终端 2：DCL-SLAM
-source ~/ws_livox/install/setup.bash
-source ~/DCL-SLAM/install/setup.bash
-ros2 run dcl_fast_lio fastlio_mapping --ros-args \
-     --params-file src/dcl_slam/config/dcl_fast_lio_mid360.yaml \
-     -r __ns:=/a \
-     -r /a/livox/imu:=/livox/imu \
-     -r /a/livox/lidar:=/livox/lidar
-
-# 终端 3：RViz（使用预配置文件）
-source ~/DCL-SLAM/install/setup.bash
-rviz2 -d install/dcl_slam/share/dcl_slam/config/dcl_fast_lio_mid360.rviz
-```
-
 ### 启动成功标志
 
 ```
-Multi thread started
 [INFO] Robot Name: /a, ID: 0
 [INFO] distributed mapping class initialization finish
 p_pre->lidar_type 1 4
-~~~~/.../dcl_fast_lio/ file opened
-IMU Initial Done        ← IMU 初始化完成，开始建图
+IMU Initial Done        ← 看到这行说明建图已开始
 ```
 
 ### 验证
 
 ```bash
-ros2 topic hz /livox/lidar         # ~10Hz
-ros2 topic hz /livox/imu           # ~200Hz
-ros2 topic hz /a/cloud_registered  # ~5-8Hz（建图输出）
+ros2 topic hz /a/cloud_registered  # ~5-8Hz（配准点云）
 ros2 topic hz /a/Odometry          # ~30Hz（里程计）
 ```
 
 ---
 
-## 快速开始：Velodyne 数据包回放
+## 7. 双机器人协同部署
 
-```bash
-# 终端 1：启动 DCL-SLAM
-source ~/DCL-SLAM/install/setup.bash
-ros2 run dcl_fast_lio fastlio_mapping --ros-args \
-  --params-file src/dcl_slam/config/dcl_fast_lio_velodyne.yaml \
-  -r __ns:=/a
+假设两台机器人：**机器人A**（192.168.1.10）和 **机器人B**（192.168.1.11），通过交换机或路由器组成局域网。
 
-# 终端 2：播放数据包
-ros2 bag play <数据包路径> --remap /velodyne_points:=/a/points_raw /imu/data:=/a/imu_correct
+### 7.1 前提条件
 
-# 终端 3：RViz（Fixed Frame 设为 a/camera_init）
-rviz2
-```
+| 条件 | 说明 |
+|------|------|
+| 同一局域网 | 两台机器能互相 ping 通 |
+| 相同 `ROS_DOMAIN_ID` | 默认都是 0，不需要改；如果改了需保持一致 |
+| NTP 时钟同步 | `sudo apt install -y chrony`，确保两台机器时间差 < 100ms |
+| 各自有 MID-360 | 每台机器连接自己的雷达 |
 
----
+### 7.2 修改配置文件
 
-## 多机器人协同
+**关键**：配置文件中必须添加 `number_of_robots` 参数，默认值是 1（只有自己，不通信）。
 
-### 同一台电脑模拟（数据包回放）
-
-```bash
-# 分别在不同终端启动各机器人
-ros2 run dcl_fast_lio fastlio_mapping --ros-args \
-  --params-file src/dcl_slam/config/dcl_fast_lio_velodyne.yaml -r __ns:=/a
-
-ros2 run dcl_fast_lio fastlio_mapping --ros-args \
-  --params-file src/dcl_slam/config/dcl_fast_lio_velodyne.yaml -r __ns:=/b
-
-ros2 run dcl_fast_lio fastlio_mapping --ros-args \
-  --params-file src/dcl_slam/config/dcl_fast_lio_velodyne.yaml -r __ns:=/c
-
-# 闭环可视化
-ros2 run dcl_slam dcl_slam_loopVisualizationNode --ros-args -p number_of_robots:=3
-
-# 分别播放各机器人数据包
-ros2 bag play robot_a.bag --remap /velodyne_points:=/a/points_raw /imu/data:=/a/imu_correct
-ros2 bag play robot_b.bag --remap /velodyne_points:=/b/points_raw /imu/data:=/b/imu_correct
-ros2 bag play robot_c.bag --remap /velodyne_points:=/c/points_raw /imu/data:=/c/imu_correct
-```
-
-### 多台物理机器人
-
-每台机器人运行各自的 `fastlio_mapping`，用不同命名空间区分。ROS2 DDS 会自动发现同一局域网的节点。
-
-```
-机器人A (192.168.1.10)          机器人B (192.168.1.11)          监控站 (192.168.1.20)
-┌──────────────────┐           ┌──────────────────┐           ┌──────────────┐
-│ fastlio_mapping  │           │ fastlio_mapping  │           │ rviz2        │
-│ namespace: /a    │◄─ DDS ──►│ namespace: /b    │◄─ DDS ──►│              │
-│ 雷达 + IMU       │           │ 雷达 + IMU       │           │              │
-└──────────────────┘           └──────────────────┘           └──────────────┘
-```
-
-要求：同一局域网、相同 `ROS_DOMAIN_ID`（默认 0）、NTP 时钟同步。
-
----
-
-## 参数配置
-
-配置文件位于 `src/dcl_slam/config/`：
-
-| 文件 | 适用场景 |
-|------|---------|
-| `dcl_fast_lio_mid360.yaml` | Livox MID-360 |
-| `dcl_fast_lio_velodyne.yaml` | Velodyne VLP-64 |
-| `dcl_fast_lio_velodyne16.yaml` | Velodyne VLP-16 |
-
-### 关键参数
+编辑 `src/dcl_slam/config/dcl_fast_lio_mid360.yaml`，在 `ros__parameters:` 下添加：
 
 ```yaml
 /**:
   ros__parameters:
-    # --- FAST-LIO 前端 ---
-    common:
-      lid_topic: "/livox/lidar"    # 雷达话题（绝对路径避免命名空间前缀）
-      imu_topic: "/livox/imu"      # IMU 话题
-    preprocess:
-      lidar_type: 1                # 1=Livox, 2=Velodyne, 3=Ouster
-      scan_line: 4                 # 雷达线数
-      blind: 0.5                   # 最小检测距离（米）
-    mapping:
-      det_range: 100.0             # 最大检测距离（米）
-      extrinsic_T: [x, y, z]      # IMU-雷达外参平移
-      extrinsic_R: [...]           # 旋转矩阵 3x3（行优先）
-    cube_side_length: 1000.0       # 地图立方体边长（必须 > 3 × det_range）
+    number_of_robots: 2          # ← 添加这行，两台机器人
+    # ... 其余参数不变
+```
 
-    # --- DCL-SLAM 后端 ---
-    descriptor_type: "LidarIris"   # 闭环描述子: ScanContext / LidarIris / M2DP
-    inter_robot_loop_closure_enable: true   # 多机闭环
-    intra_robot_loop_closure_enable: false  # 单机闭环
-    global_optmization_enable: true         # 分布式优化
-    keyframe_distance_threshold: 1.0        # 关键帧距离阈值（米）
+两台机器上的这个值**必须相同**。修改后重新编译：
+```bash
+colcon build --symlink-install --packages-select dcl_slam
+```
+
+### 7.3 启动
+
+**机器人 A**（namespace `/a`）：
+```bash
+# 终端 1：雷达
+ros2 launch livox_ros_driver2 msg_MID360_launch.py
+
+# 终端 2：DCL-SLAM（当前 launch 文件默认 namespace=/a，直接启动即可）
+source ~/ws_livox/install/setup.bash
+source ~/DCL-SLAM/install/setup.bash
+ros2 launch dcl_slam dcl_fast_lio_mid360.launch.py rviz:=false
+```
+
+**机器人 B**（namespace `/b`）：
+```bash
+# 终端 1：雷达
+ros2 launch livox_ros_driver2 msg_MID360_launch.py
+
+# 终端 2：DCL-SLAM（需要修改 namespace 为 /b）
+source ~/ws_livox/install/setup.bash
+source ~/DCL-SLAM/install/setup.bash
+ros2 run dcl_fast_lio fastlio_mapping --ros-args \
+  --params-file $(ros2 pkg prefix dcl_slam)/share/dcl_slam/config/dcl_fast_lio_mid360.yaml \
+  -r __ns:=/b \
+  -r /b/livox/imu:=/livox/imu \
+  -r /b/livox/lidar:=/livox/lidar
+```
+
+**监控站**（可选，任意一台电脑）：
+```bash
+source ~/DCL-SLAM/install/setup.bash
+rviz2 -d $(ros2 pkg prefix dcl_slam)/share/dcl_slam/config/dcl_fast_lio_mid360.rviz
+```
+
+### 7.4 验证通信正常
+
+```bash
+# 1. 检查两台机器人的 topic 是否都能看到
+ros2 topic list | grep distributedMapping
+# 预期输出：
+#   /a/distributedMapping/globalDescriptors
+#   /a/distributedMapping/loopInfo
+#   /a/distributedMapping/optimizationState
+#   /b/distributedMapping/globalDescriptors
+#   /b/distributedMapping/loopInfo
+#   /b/distributedMapping/optimizationState
+#   ...
+
+# 2. 检查 topic 有发布者和订阅者
+ros2 topic info /a/distributedMapping/globalDescriptors
+# 预期：Publisher count: 1, Subscription count: 1（机器人B在订阅）
+
+# 3. 监听描述子是否在流通
+ros2 topic echo /a/distributedMapping/globalDescriptors --no-arr --once
+# 有数据输出说明 A 正在广播描述子
+
+# 4. 检查频率
+ros2 topic hz /a/distributedMapping/globalDescriptors
+# 预期：与关键帧产生频率一致（约 1-10Hz）
+
+# 5. 查看日志确认跨机器人描述子已收到
+cat ~/log/*.INFO | grep globalDescriptorHandler
+# 预期：[globalDescriptorHandler(1)] saveDescriptorAndKey:5.
+#        ↑ 机器人A收到了机器人B(id=1)的第5个描述子
+```
+
+### 7.5 通信拓扑图
+
+```
+机器人A (192.168.1.10, ns=/a)          机器人B (192.168.1.11, ns=/b)
+┌───────────────────────────┐          ┌───────────────────────────┐
+│ fastlio_mapping           │          │ fastlio_mapping           │
+│                           │          │                           │
+│ PUB: /a/.../globalDesc    │──DDS──→  │ SUB: /a/.../globalDesc    │
+│ SUB: /b/.../globalDesc    │  ←──DDS──│ PUB: /b/.../globalDesc    │
+│ PUB: /a/.../loopInfo      │──DDS──→  │ SUB: /a/.../loopInfo      │
+│ SUB: /b/.../loopInfo      │  ←──DDS──│ PUB: /b/.../loopInfo      │
+│ PUB: /a/.../optState      │──DDS──→  │ SUB: /a/.../optState      │
+│ SUB: /b/.../optState      │  ←──DDS──│ PUB: /b/.../optState      │
+│ ... (旋转/位姿估计同理)    │          │ ... (旋转/位姿估计同理)    │
+│                           │          │                           │
+│ MID-360 (/livox/lidar)    │          │ MID-360 (/livox/lidar)    │
+└───────────────────────────┘          └───────────────────────────┘
+         ↑ 局域网交换机 / 路由器 ↑
 ```
 
 ---
 
-## 话题
+## 8. 参数速查
 
-### 输入
+`src/dcl_slam/config/dcl_fast_lio_mid360.yaml` 中的关键参数：
 
-| 话题 | 类型 | 说明 |
-|------|------|------|
-| `/livox/lidar` 或 `/<ns>/points_raw` | CustomMsg / PointCloud2 | 点云 |
-| `/livox/imu` 或 `/<ns>/imu_correct` | sensor_msgs/Imu | IMU |
-
-### 输出
-
-| 话题 | 类型 | 说明 |
-|------|------|------|
-| `/<ns>/cloud_registered` | PointCloud2 | 配准点云（世界坐标系） |
-| `/<ns>/Odometry` | Odometry | 里程计 |
-| `/<ns>/path` | Path | 轨迹 |
-| `/<ns>/Laser_map` | PointCloud2 | 全局地图 |
-
-`<ns>` 为机器人命名空间（`a`、`b`、`c`）。
+| 参数 | 默认值 | 说明 |
+|------|--------|------|
+| `number_of_robots` | 1 | 机器人总数（**多机必改**） |
+| `inter_robot_loop_closure_enable` | true | 跨机器人回环检测 |
+| `global_optmization_enable` | true | 分布式位姿图优化 |
+| `descriptor_type` | LidarIris | 描述子类型 |
+| `keyframe_distance_threshold` | 1.0 | 关键帧距离阈值（米） |
+| `fitness_score_threshold` | 0.2 | ICP 匹配阈值（越小越严格） |
+| `mapping.det_range` | 40.0 | MID-360 最大检测距离（米） |
 
 ---
 
-## RViz 可视化说明
+## 9. 常见问题
 
-使用 Launch 文件启动时会自动加载预配置的 RViz。手动配置时注意：
+**Q: 编译报 `No module named 'ament_package'`**
+不要用 `sudo colcon build`。删除 `build/` `install/` `log/` 后重新编译。
 
-| 设置项 | 值 | 说明 |
-|--------|-----|------|
-| Fixed Frame | `a/camera_init` | 必须带命名空间前缀 |
-| PointCloud2 Topic | `/a/cloud_registered` | 配准后的点云 |
-| **Decay Time** | **30** | **关键！使点云累积显示，看起来像在建图** |
+**Q: 编译报 `livox_ros_driver2 not found`**
+编译前忘了 `source ~/ws_livox/install/setup.bash`。清理后重新编译。
 
-> Decay Time = 0 时只显示当前帧点云，看起来像原始数据跟着旋转。设为 30 秒后点云会持续累积。
+**Q: 启动报 `Invalid robot prefix`**
+namespace 必须是单个小写字母，如 `/a`、`/b`。
+
+**Q: `IMU Initial Done` 一直不出现**
+保持雷达静止 2-3 秒让 IMU 完成初始化。如果 `/livox/imu` 没数据，检查雷达驱动。
+
+**Q: 看不到其他机器人的 topic**
+1. 两台机器能互相 `ping` 通？
+2. `echo $ROS_DOMAIN_ID` 值相同？（默认 0）
+3. 防火墙是否阻止了 DDS 端口？尝试 `sudo ufw disable` 临时关闭测试。
+
+**Q: topic 存在但 `ros2 topic info` 显示 0 subscribers**
+`number_of_robots` 仍为 1。修改 yaml 后重新编译。
+
+**Q: 两台机器人都在跑但从不触发跨机器人回环**
+1. 确认 `inter_robot_loop_closure_enable: true`
+2. 确认 `number_of_robots: 2`
+3. 两台机器人需要经过**重叠区域**才能触发回环
+4. 查看 `~/log/*.INFO` 中的 `globalDescriptorHandler` 日志
+
+**Q: `Could not create logging file`**
+```bash
+mkdir -p ~/log
+```
+
+**Q: Ctrl+C 退不出进程**
+```bash
+ps aux | grep fastlio
+kill -9 <PID>
+```
 
 ---
 
-## 支持的雷达
+## 10. 目录结构
 
-| 雷达 | 型号 | 说明 |
-|------|------|------|
-| Livox | MID-360 等 | 需要 `livox_ros_driver2`，编译时自动检测 |
-| Velodyne | VLP-16 / VLP-32 / VLP-64 | 直接支持 |
-| Ouster | OS0 / OS1 / OS2-64 | 直接支持 |
-
----
-
-## 常见问题
-
-**Q: 编译报错 "No module named 'ament_package'"**
-不要用 `sudo colcon build`，删除 `build/` `install/` 后普通用户重新编译。
-
-**Q: 运行时报错 "Invalid robot prefix"**
-必须设置单字母命名空间：`-r __ns:=/a`
-
-**Q: "No Effective Points!" 刷屏**
-检查 `cube_side_length` 是否 > 3 × `det_range`。如果 `det_range=100` 则 `cube_side_length` 至少 `400`（推荐 `1000`）。
-
-**Q: "Could not create logging file"**
-创建日志目录：`mkdir -p ~/log`
-
-**Q: RViz 看不到点云 / 点云跟着旋转**
-1. Fixed Frame 设为 `a/camera_init`（不是 `camera_init`）
-2. PointCloud2 的 **Decay Time** 设为 30
-3. 确认 `ros2 topic hz /a/cloud_registered` 有输出
-
-**Q: Ctrl+C 退不出？**
-`ps aux | grep fastlio` 找到 PID，`kill -9 <PID>`
-
-**Q: 如何禁用分布式功能只跑单机？**
-配置文件中设置 `inter_robot_loop_closure_enable: false` 和 `global_optmization_enable: false`
+```
+DCL-SLAM/
+├── src/
+│   ├── dcl_fast_lio/          # FAST-LIO2 前端（含 DCL-SLAM 集成）
+│   │   ├── src/laserMapping.cpp  # 主程序入口
+│   │   └── include/              # IMU处理、ikd-Tree 等
+│   ├── dcl_slam/              # DCL-SLAM 分布式后端
+│   │   ├── src/               # 分布式建图、回环检测、可视化
+│   │   ├── include/           # 头文件
+│   │   ├── config/            # 参数配置文件
+│   │   ├── launch/            # 启动文件
+│   │   └── msg/               # 自定义消息（LoopInfo、GlobalDescriptor 等）
+│   ├── distributed_mapper/    # 分布式位姿图优化器（DGS）
+│   └── libnabo/               # 近邻搜索库
+├── build/                     # 编译产物（不要提交）
+├── install/                   # 安装产物（不要提交）
+└── log/                       # 编译日志（不要提交）
+```

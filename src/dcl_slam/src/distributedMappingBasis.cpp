@@ -67,13 +67,13 @@ distributedMapping::distributedMapping() : paramsServer("dcl_slam_node")
 		{
 			if(intra_robot_loop_closure_enable_ || inter_robot_loop_closure_enable_)
 			{
-				// subscribe global descriptor
+				// subscribe global descriptor 订阅其他机器全局描述子
 				robot.sub_descriptors = this->create_subscription<dcl_slam::msg::GlobalDescriptor>(
 					robot.name_+"/distributedMapping/globalDescriptors", 50,
 					[this, it](const dcl_slam::msg::GlobalDescriptor::SharedPtr msg) {
 						this->globalDescriptorHandler(msg, it);
 					});
-				// subscribe loop infomation
+				// subscribe loop infomation 
 				robot.sub_loop_info = this->create_subscription<dcl_slam::msg::LoopInfo>(
 					robot.name_+"/distributedMapping/loopInfo", 50,
 					[this, it](const dcl_slam::msg::LoopInfo::SharedPtr msg) {
