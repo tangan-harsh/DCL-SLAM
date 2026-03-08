@@ -1,0 +1,79 @@
+[0.000000] (-) TimerEvent: {}
+[0.000130] (dcl_slam) JobQueued: {'identifier': 'dcl_slam', 'dependencies': OrderedDict()}
+[0.000163] (dcl_slam) JobStarted: {'identifier': 'dcl_slam'}
+[0.003773] (dcl_slam) JobProgress: {'identifier': 'dcl_slam', 'progress': 'cmake'}
+[0.004456] (dcl_slam) JobProgress: {'identifier': 'dcl_slam', 'progress': 'build'}
+[0.005184] (dcl_slam) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/isaac/DCL-SLAM/build/dcl_slam', '--', '-j32', '-l32'], 'cwd': '/home/isaac/DCL-SLAM/build/dcl_slam', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'isaac'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.4/lib64:'), ('HOME', '/home/isaac'), ('OLDPWD', '/home/isaac'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/isaac/.nvm/versions/node/v24.12.0/bin'), ('NVM_INC', '/home/isaac/.nvm/versions/node/v24.12.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2688'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/isaac/.nvm'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'isaac'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'isaac'), ('TERM', 'xterm-color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/isaac/.local/bin:/home/isaac/.nvm/versions/node/v24.12.0/bin:/opt/ros/humble/bin:/usr/local/cuda-12.4/bin:/home/isaac/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/isaac-ROG-Strix-G614JV-G614JV:@/tmp/.ICE-unix/2660,unix/isaac-ROG-Strix-G614JV-G614JV:/tmp/.ICE-unix/2660'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/87d0c13a_027f_4791_b49e_e21d95af37ec'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/isaac/DCL-SLAM/build/dcl_slam'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.027581] (dcl_slam) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.098375] (dcl_slam) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.098960] (dcl_slam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.099639] (-) TimerEvent: {}
+[0.100104] (dcl_slam) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.113306] (dcl_slam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.124251] (dcl_slam) StdoutLine: {'line': b'-- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.134272] (dcl_slam) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.146868] (dcl_slam) StdoutLine: {'line': b'-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[0.155337] (dcl_slam) StdoutLine: {'line': b'-- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[0.169105] (dcl_slam) StdoutLine: {'line': b'-- Found tf2: 0.25.17 (/opt/ros/humble/share/tf2/cmake)\n'}
+[0.174260] (dcl_slam) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.17 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[0.199718] (-) TimerEvent: {}
+[0.200474] (dcl_slam) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.201033] (dcl_slam) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.262820] (dcl_slam) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.299906] (-) TimerEvent: {}
+[0.323569] (dcl_slam) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.17 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[0.334064] (dcl_slam) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[0.335534] (dcl_slam) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[0.335591] (dcl_slam) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[0.337634] (dcl_slam) StdoutLine: {'line': b'-- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)\n'}
+[0.373525] (dcl_slam) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[0.395261] (dcl_slam) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)\n'}
+[0.400007] (-) TimerEvent: {}
+[0.500314] (-) TimerEvent: {}
+[0.600087] (dcl_slam) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[0.600373] (-) TimerEvent: {}
+[0.606431] (dcl_slam) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[0.700495] (-) TimerEvent: {}
+[0.706737] (dcl_slam) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[0.710678] (dcl_slam) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[0.714509] (dcl_slam) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[0.796732] (dcl_slam) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[0.800586] (-) TimerEvent: {}
+[0.893479] (dcl_slam) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[0.900669] (-) TimerEvent: {}
+[0.997291] (dcl_slam) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at CMakeLists.txt:21 (find_package):\n'}
+[0.997400] (dcl_slam) StderrLine: {'line': b'  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.\n'}
+[0.997429] (dcl_slam) StderrLine: {'line': b'  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy\n'}
+[0.997453] (dcl_slam) StderrLine: {'line': b'  command to set the policy and suppress this warning.\n'}
+[0.997475] (dcl_slam) StderrLine: {'line': b'\n'}
+[0.997496] (dcl_slam) StderrLine: {'line': b'  CMake variable PCL_ROOT is set to:\n'}
+[0.997518] (dcl_slam) StderrLine: {'line': b'\n'}
+[0.997538] (dcl_slam) StderrLine: {'line': b'    /usr\n'}
+[0.997558] (dcl_slam) StderrLine: {'line': b'\n'}
+[0.997578] (dcl_slam) StderrLine: {'line': b'  For compatibility, CMake is ignoring the variable.\n'}
+[0.997597] (dcl_slam) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[0.997618] (dcl_slam) StderrLine: {'line': b'\x1b[0m\n'}
+[1.000750] (-) TimerEvent: {}
+[1.014495] (dcl_slam) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.014594] (dcl_slam) StdoutLine: {'line': b'See also "/home/isaac/DCL-SLAM/build/dcl_slam/CMakeFiles/CMakeOutput.log".\n'}
+[1.014618] (dcl_slam) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:24 (find_package):\n'}
+[1.014642] (dcl_slam) StderrLine: {'line': b'  By not providing "FindGTSAM.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[1.014663] (dcl_slam) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "GTSAM", but\n'}
+[1.014683] (dcl_slam) StderrLine: {'line': b'  CMake did not find one.\n'}
+[1.014703] (dcl_slam) StderrLine: {'line': b'\n'}
+[1.014723] (dcl_slam) StderrLine: {'line': b'  Could not find a package configuration file provided by "GTSAM" with any of\n'}
+[1.014743] (dcl_slam) StderrLine: {'line': b'  the following names:\n'}
+[1.014762] (dcl_slam) StderrLine: {'line': b'\n'}
+[1.014781] (dcl_slam) StderrLine: {'line': b'    GTSAMConfig.cmake\n'}
+[1.014801] (dcl_slam) StderrLine: {'line': b'    gtsam-config.cmake\n'}
+[1.014821] (dcl_slam) StderrLine: {'line': b'\n'}
+[1.014840] (dcl_slam) StderrLine: {'line': b'  Add the installation prefix of "GTSAM" to CMAKE_PREFIX_PATH or set\n'}
+[1.014860] (dcl_slam) StderrLine: {'line': b'  "GTSAM_DIR" to a directory containing one of the above files.  If "GTSAM"\n'}
+[1.014879] (dcl_slam) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[1.014903] (dcl_slam) StderrLine: {'line': b'  installed.\n'}
+[1.014923] (dcl_slam) StderrLine: {'line': b'\n'}
+[1.014942] (dcl_slam) StderrLine: {'line': b'\x1b[0m\n'}
+[1.022159] (dcl_slam) StderrLine: {'line': b'gmake: *** [Makefile:1179\xef\xbc\x9acmake_check_build_system] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[1.023793] (dcl_slam) CommandEnded: {'returncode': 2}
+[1.030731] (dcl_slam) JobEnded: {'identifier': 'dcl_slam', 'rc': 2}
+[1.041119] (-) EventReactorShutdown: {}

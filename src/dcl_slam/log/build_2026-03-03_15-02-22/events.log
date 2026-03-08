@@ -1,0 +1,252 @@
+[0.000000] (-) TimerEvent: {}
+[0.000355] (distributed_mapper) JobQueued: {'identifier': 'distributed_mapper', 'dependencies': OrderedDict()}
+[0.000416] (dcl_slam) JobQueued: {'identifier': 'dcl_slam', 'dependencies': OrderedDict([('distributed_mapper', '/home/isaac/DCL-SLAM/install/distributed_mapper')])}
+[0.000439] (distributed_mapper) JobStarted: {'identifier': 'distributed_mapper'}
+[0.004265] (distributed_mapper) JobProgress: {'identifier': 'distributed_mapper', 'progress': 'cmake'}
+[0.004625] (distributed_mapper) JobProgress: {'identifier': 'distributed_mapper', 'progress': 'build'}
+[0.005215] (distributed_mapper) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/isaac/DCL-SLAM/build/distributed_mapper', '--', '-j32', '-l32'], 'cwd': '/home/isaac/DCL-SLAM/build/distributed_mapper', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'isaac'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.4/lib64:'), ('HOME', '/home/isaac'), ('OLDPWD', '/home/isaac'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/isaac/.nvm/versions/node/v24.12.0/bin'), ('NVM_INC', '/home/isaac/.nvm/versions/node/v24.12.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2688'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/isaac/.nvm'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'isaac'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'isaac'), ('TERM', 'xterm-color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/isaac/.local/bin:/home/isaac/.nvm/versions/node/v24.12.0/bin:/opt/ros/humble/bin:/usr/local/cuda-12.4/bin:/home/isaac/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/isaac-ROG-Strix-G614JV-G614JV:@/tmp/.ICE-unix/2660,unix/isaac-ROG-Strix-G614JV-G614JV:/tmp/.ICE-unix/2660'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/87d0c13a_027f_4791_b49e_e21d95af37ec'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/isaac/DCL-SLAM/build/distributed_mapper'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.050372] (distributed_mapper) StdoutLine: {'line': b'[ 22%] Built target fast_max-clique_finder\n'}
+[0.056617] (distributed_mapper) StdoutLine: {'line': b'[ 31%] Built target graph_utils\n'}
+[0.096607] (distributed_mapper) StdoutLine: {'line': b'[ 50%] Built target robot_measurements\n'}
+[0.099962] (-) TimerEvent: {}
+[0.131420] (distributed_mapper) StdoutLine: {'line': b'[ 59%] Built target pairwise_consistency\n'}
+[0.162330] (distributed_mapper) StdoutLine: {'line': b'[ 68%] Built target global_map_solver\n'}
+[0.181952] (distributed_mapper) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target distributed_pcm\x1b[0m\n'}
+[0.199725] (distributed_mapper) StdoutLine: {'line': b'[ 77%] Built target distributed_pcm\n'}
+[0.200069] (-) TimerEvent: {}
+[0.219283] (distributed_mapper) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target distributed_mapper\x1b[0m\n'}
+[0.254716] (distributed_mapper) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/distributed_mapper.cpp.o\x1b[0m\n'}
+[0.256000] (distributed_mapper) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/evaluation_utils.cpp.o\x1b[0m\n'}
+[0.300302] (-) TimerEvent: {}
+[0.400704] (-) TimerEvent: {}
+[0.501108] (-) TimerEvent: {}
+[0.601516] (-) TimerEvent: {}
+[0.701916] (-) TimerEvent: {}
+[0.802267] (-) TimerEvent: {}
+[0.902678] (-) TimerEvent: {}
+[1.003015] (-) TimerEvent: {}
+[1.103361] (-) TimerEvent: {}
+[1.203586] (-) TimerEvent: {}
+[1.303810] (-) TimerEvent: {}
+[1.404121] (-) TimerEvent: {}
+[1.504438] (-) TimerEvent: {}
+[1.604661] (-) TimerEvent: {}
+[1.704977] (-) TimerEvent: {}
+[1.805296] (-) TimerEvent: {}
+[1.905512] (-) TimerEvent: {}
+[2.005751] (-) TimerEvent: {}
+[2.106050] (-) TimerEvent: {}
+[2.206394] (-) TimerEvent: {}
+[2.306610] (-) TimerEvent: {}
+[2.406863] (-) TimerEvent: {}
+[2.507165] (-) TimerEvent: {}
+[2.607432] (-) TimerEvent: {}
+[2.635106] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kgtsam::Values distributed_mapper::evaluation_utils::retractPose3GlobalWithOffset(const gtsam::Values&, const gtsam::VectorValues&, const Point3&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.635246] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:108:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Kt_initial\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable\x07-Wunused-but-set-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.635278] (distributed_mapper) StderrLine: {'line': b'  108 |       Point3 \x1b[01;35m\x1b[Kt_initial\x1b[m\x1b[K = initial.at<Pose3>(key).translation();\n'}
+[2.635314] (distributed_mapper) StderrLine: {'line': b'      |              \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.707520] (-) TimerEvent: {}
+[2.737143] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kstd::tuple<double, double, double> distributed_mapper::evaluation_utils::evaluateEstimates(const size_t&, const GraphAndValues&, const shared_ptr&, const shared_ptr&, const bool&, const gtsam::Values&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.737280] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:538:70:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Knr_robots\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.737323] (distributed_mapper) StderrLine: {'line': b'  538 |   std::tuple<double, double, double> evaluateEstimates(\x1b[01;35m\x1b[Kconst size_t &nr_robots\x1b[m\x1b[K,\n'}
+[2.737348] (distributed_mapper) StderrLine: {'line': b'      |                                                        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[2.741818] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<gtsam::NonlinearFactorGraph, std::vector<long unsigned int> > distributed_mapper::DistributedMapper::createSubgraphInnerAndSepEdges(const gtsam::NonlinearFactorGraph&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.741900] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:35:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kindex_mask\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.741929] (distributed_mapper) StderrLine: {'line': b'   35 |     Key \x1b[01;35m\x1b[Kindex_mask\x1b[m\x1b[K = ~chr_mask;\n'}
+[2.741952] (distributed_mapper) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.807604] (-) TimerEvent: {}
+[2.907844] (-) TimerEvent: {}
+[3.008173] (-) TimerEvent: {}
+[3.108436] (-) TimerEvent: {}
+[3.208646] (-) TimerEvent: {}
+[3.308940] (-) TimerEvent: {}
+[3.409245] (-) TimerEvent: {}
+[3.509471] (-) TimerEvent: {}
+[3.609727] (-) TimerEvent: {}
+[3.710038] (-) TimerEvent: {}
+[3.810272] (-) TimerEvent: {}
+[3.910494] (-) TimerEvent: {}
+[4.010751] (-) TimerEvent: {}
+[4.111088] (-) TimerEvent: {}
+[4.211437] (-) TimerEvent: {}
+[4.311644] (-) TimerEvent: {}
+[4.411908] (-) TimerEvent: {}
+[4.512125] (-) TimerEvent: {}
+[4.612344] (-) TimerEvent: {}
+[4.712472] (-) TimerEvent: {}
+[4.812585] (-) TimerEvent: {}
+[4.912758] (-) TimerEvent: {}
+[5.012907] (-) TimerEvent: {}
+[5.113044] (-) TimerEvent: {}
+[5.213197] (-) TimerEvent: {}
+[5.313350] (-) TimerEvent: {}
+[5.413475] (-) TimerEvent: {}
+[5.513601] (-) TimerEvent: {}
+[5.613766] (-) TimerEvent: {}
+[5.713925] (-) TimerEvent: {}
+[5.814064] (-) TimerEvent: {}
+[5.914251] (-) TimerEvent: {}
+[6.014400] (-) TimerEvent: {}
+[6.114535] (-) TimerEvent: {}
+[6.214686] (-) TimerEvent: {}
+[6.314861] (-) TimerEvent: {}
+[6.415004] (-) TimerEvent: {}
+[6.456428] (distributed_mapper) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking CXX static library libdistributed_mapper.a\x1b[0m\n'}
+[6.515158] (-) TimerEvent: {}
+[6.552467] (distributed_mapper) StdoutLine: {'line': b'[100%] Built target distributed_mapper\n'}
+[6.559603] (distributed_mapper) CommandEnded: {'returncode': 0}
+[6.560100] (distributed_mapper) JobProgress: {'identifier': 'distributed_mapper', 'progress': 'install'}
+[6.567375] (distributed_mapper) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/isaac/DCL-SLAM/build/distributed_mapper'], 'cwd': '/home/isaac/DCL-SLAM/build/distributed_mapper', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'isaac'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.4/lib64:'), ('HOME', '/home/isaac'), ('OLDPWD', '/home/isaac'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/isaac/.nvm/versions/node/v24.12.0/bin'), ('NVM_INC', '/home/isaac/.nvm/versions/node/v24.12.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2688'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/isaac/.nvm'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'isaac'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'isaac'), ('TERM', 'xterm-color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/isaac/.local/bin:/home/isaac/.nvm/versions/node/v24.12.0/bin:/opt/ros/humble/bin:/usr/local/cuda-12.4/bin:/home/isaac/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/isaac-ROG-Strix-G614JV-G614JV:@/tmp/.ICE-unix/2660,unix/isaac-ROG-Strix-G614JV-G614JV:/tmp/.ICE-unix/2660'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/87d0c13a_027f_4791_b49e_e21d95af37ec'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/isaac/DCL-SLAM/build/distributed_mapper'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.572553] (distributed_mapper) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.572959] (distributed_mapper) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[6.573102] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/library_path.sh\n'}
+[6.583819] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/library_path.dsv\n'}
+[6.593671] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/between_chordal_factor.h\n'}
+[6.604341] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/distributed_mapper.h\n'}
+[6.615018] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/distributed_mapper_utils.h\n'}
+[6.615170] (-) TimerEvent: {}
+[6.624626] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/evaluation_utils.h\n'}
+[6.634543] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/run_distributed_mapper.h\n'}
+[6.645247] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.h\n'}
+[6.652776] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/global_map/global_map.h\n'}
+[6.659558] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/graph_utils/graph_types.h\n'}
+[6.670004] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/graph_utils/graph_utils_functions.h\n'}
+[6.680074] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/pairwise_consistency/pairwise_consistency.h\n'}
+[6.689112] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/robot_measurements/interrobot_measurements.h\n'}
+[6.700456] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/robot_measurements/robot_local_map.h\n'}
+[6.709928] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/robot_measurements/robot_measurements.h\n'}
+[6.715352] (-) TimerEvent: {}
+[6.719466] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/ament_index/resource_index/package_run_dependencies/distributed_mapper\n'}
+[6.729716] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/ament_index/resource_index/parent_prefix_path/distributed_mapper\n'}
+[6.739746] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/ament_prefix_path.sh\n'}
+[6.747706] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/ament_prefix_path.dsv\n'}
+[6.758469] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/path.sh\n'}
+[6.770093] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/path.dsv\n'}
+[6.779371] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/local_setup.bash\n'}
+[6.788559] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/local_setup.sh\n'}
+[6.798446] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/local_setup.zsh\n'}
+[6.806442] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/local_setup.dsv\n'}
+[6.813846] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/package.dsv\n'}
+[6.815442] (-) TimerEvent: {}
+[6.821075] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/ament_index/resource_index/packages/distributed_mapper\n'}
+[6.830213] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[6.839584] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[6.847878] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/cmake/distributed_mapperConfig.cmake\n'}
+[6.856136] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/cmake/distributed_mapperConfig-version.cmake\n'}
+[6.863513] (distributed_mapper) StdoutLine: {'line': b'-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/package.xml\n'}
+[6.870439] (distributed_mapper) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libdistributed_mapper.a\n'}
+[6.885352] (distributed_mapper) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libgraph_utils.a\n'}
+[6.886966] (distributed_mapper) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/librobot_measurements.a\n'}
+[6.887848] (distributed_mapper) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libpairwise_consistency.a\n'}
+[6.889476] (distributed_mapper) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libfast_max-clique_finder.a\n'}
+[6.889558] (distributed_mapper) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libdistributed_pcm.a\n'}
+[6.890381] (distributed_mapper) StdoutLine: {'line': b'-- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libglobal_map_solver.a\n'}
+[6.891639] (distributed_mapper) CommandEnded: {'returncode': 0}
+[6.898953] (distributed_mapper) JobEnded: {'identifier': 'distributed_mapper', 'rc': 0}
+[6.899428] (dcl_slam) JobStarted: {'identifier': 'dcl_slam'}
+[6.903212] (dcl_slam) JobProgress: {'identifier': 'dcl_slam', 'progress': 'cmake'}
+[6.904001] (dcl_slam) Command: {'cmd': ['/usr/bin/cmake', '/home/isaac/DCL-SLAM', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/isaac/DCL-SLAM/install/dcl_slam'], 'cwd': '/home/isaac/DCL-SLAM/build/dcl_slam', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'isaac'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/isaac/DCL-SLAM/install/distributed_mapper/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.4/lib64:'), ('HOME', '/home/isaac'), ('OLDPWD', '/home/isaac'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/isaac/.nvm/versions/node/v24.12.0/bin'), ('NVM_INC', '/home/isaac/.nvm/versions/node/v24.12.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2688'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/isaac/.nvm'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'isaac'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'isaac'), ('TERM', 'xterm-color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/isaac/.local/bin:/home/isaac/.nvm/versions/node/v24.12.0/bin:/opt/ros/humble/bin:/usr/local/cuda-12.4/bin:/home/isaac/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/isaac-ROG-Strix-G614JV-G614JV:@/tmp/.ICE-unix/2660,unix/isaac-ROG-Strix-G614JV-G614JV:/tmp/.ICE-unix/2660'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/87d0c13a_027f_4791_b49e_e21d95af37ec'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/isaac/DCL-SLAM/install/distributed_mapper:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/isaac/DCL-SLAM/build/dcl_slam'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/isaac/DCL-SLAM/install/distributed_mapper:/opt/ros/humble')]), 'shell': False}
+[6.911860] (dcl_slam) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[6.915490] (-) TimerEvent: {}
+[6.984809] (dcl_slam) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[6.987875] (dcl_slam) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[6.988599] (dcl_slam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.989743] (dcl_slam) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[7.003127] (dcl_slam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.014090] (dcl_slam) StdoutLine: {'line': b'-- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[7.015548] (-) TimerEvent: {}
+[7.024163] (dcl_slam) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[7.037030] (dcl_slam) StdoutLine: {'line': b'-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[7.044404] (dcl_slam) StdoutLine: {'line': b'-- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[7.052961] (dcl_slam) StdoutLine: {'line': b'-- Found tf2: 0.25.17 (/opt/ros/humble/share/tf2/cmake)\n'}
+[7.054626] (dcl_slam) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.17 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[7.075010] (dcl_slam) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[7.075590] (dcl_slam) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[7.115623] (-) TimerEvent: {}
+[7.126583] (dcl_slam) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[7.170091] (dcl_slam) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.17 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[7.171517] (dcl_slam) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[7.172227] (dcl_slam) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[7.172834] (dcl_slam) StdoutLine: {'line': b'-- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)\n'}
+[7.188848] (dcl_slam) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[7.206410] (dcl_slam) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)\n'}
+[7.215856] (-) TimerEvent: {}
+[7.316206] (-) TimerEvent: {}
+[7.374060] (dcl_slam) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[7.377494] (dcl_slam) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[7.416389] (-) TimerEvent: {}
+[7.463565] (dcl_slam) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[7.467925] (dcl_slam) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[7.471966] (dcl_slam) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[7.516477] (-) TimerEvent: {}
+[7.548900] (dcl_slam) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[7.616567] (-) TimerEvent: {}
+[7.626673] (dcl_slam) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[7.713762] (dcl_slam) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at CMakeLists.txt:21 (find_package):\n'}
+[7.713902] (dcl_slam) StderrLine: {'line': b'  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.\n'}
+[7.713931] (dcl_slam) StderrLine: {'line': b'  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy\n'}
+[7.713956] (dcl_slam) StderrLine: {'line': b'  command to set the policy and suppress this warning.\n'}
+[7.713979] (dcl_slam) StderrLine: {'line': b'\n'}
+[7.714000] (dcl_slam) StderrLine: {'line': b'  CMake variable PCL_ROOT is set to:\n'}
+[7.714021] (dcl_slam) StderrLine: {'line': b'\n'}
+[7.714041] (dcl_slam) StderrLine: {'line': b'    /usr\n'}
+[7.714060] (dcl_slam) StderrLine: {'line': b'\n'}
+[7.714079] (dcl_slam) StderrLine: {'line': b'  For compatibility, CMake is ignoring the variable.\n'}
+[7.714099] (dcl_slam) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[7.714118] (dcl_slam) StderrLine: {'line': b'\x1b[0m\n'}
+[7.716627] (-) TimerEvent: {}
+[7.730410] (dcl_slam) StdoutLine: {'line': b'-- GTSAM include directory:  /opt/ros/humble/lib/cmake/GTSAM/../../../include\n'}
+[7.730510] (dcl_slam) StdoutLine: {'line': b'-- Found distributed_mapper: 1.0.0 (/home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/cmake)\n'}
+[7.816745] (-) TimerEvent: {}
+[7.901387] (dcl_slam) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[7.916810] (-) TimerEvent: {}
+[8.017096] (-) TimerEvent: {}
+[8.046307] (dcl_slam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[8.117271] (-) TimerEvent: {}
+[8.217598] (-) TimerEvent: {}
+[8.243673] (dcl_slam) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[8.259854] (dcl_slam) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[8.273933] (dcl_slam) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[8.274009] (dcl_slam) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[8.274038] (dcl_slam) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[8.301130] (dcl_slam) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):\n'}
+[8.301211] (dcl_slam) StderrLine: {'line': b'  Use rosidl_get_typesupport_target() and target_link_libraries() instead of\n'}
+[8.301237] (dcl_slam) StderrLine: {'line': b'  rosidl_target_interfaces()\n'}
+[8.301261] (dcl_slam) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[8.301281] (dcl_slam) StderrLine: {'line': b'  CMakeLists.txt:62 (rosidl_target_interfaces)\n'}
+[8.301308] (dcl_slam) StderrLine: {'line': b'\n'}
+[8.301329] (dcl_slam) StderrLine: {'line': b'\x1b[0m\n'}
+[8.301349] (dcl_slam) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):\n'}
+[8.301369] (dcl_slam) StderrLine: {'line': b'  Use rosidl_get_typesupport_target() and target_link_libraries() instead of\n'}
+[8.301388] (dcl_slam) StderrLine: {'line': b'  rosidl_target_interfaces()\n'}
+[8.301408] (dcl_slam) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[8.301432] (dcl_slam) StderrLine: {'line': b'  CMakeLists.txt:73 (rosidl_target_interfaces)\n'}
+[8.301451] (dcl_slam) StderrLine: {'line': b'\n'}
+[8.301471] (dcl_slam) StderrLine: {'line': b'\x1b[0m\n'}
+[8.301489] (dcl_slam) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_target_interfaces.cmake:32 (message):\n'}
+[8.301509] (dcl_slam) StderrLine: {'line': b'  Use rosidl_get_typesupport_target() and target_link_libraries() instead of\n'}
+[8.301529] (dcl_slam) StderrLine: {'line': b'  rosidl_target_interfaces()\n'}
+[8.301548] (dcl_slam) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[8.301568] (dcl_slam) StderrLine: {'line': b'  CMakeLists.txt:96 (rosidl_target_interfaces)\n'}
+[8.301586] (dcl_slam) StderrLine: {'line': b'\n'}
+[8.301605] (dcl_slam) StderrLine: {'line': b'\x1b[0m\n'}
+[8.304152] (dcl_slam) StdoutLine: {'line': b'-- Configuring done\n'}
+[8.312510] (dcl_slam) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:64 (add_executable):\n'}
+[8.312576] (dcl_slam) StderrLine: {'line': b'  Target "dcl_slam_loopVisualizationNode" links to target\n'}
+[8.312602] (dcl_slam) StderrLine: {'line': b'  "pcl_conversions::pcl_conversions" but the target was not found.  Perhaps a\n'}
+[8.312624] (dcl_slam) StderrLine: {'line': b'  find_package() call is missing for an IMPORTED target, or an ALIAS target\n'}
+[8.312645] (dcl_slam) StderrLine: {'line': b'  is missing?\n'}
+[8.312665] (dcl_slam) StderrLine: {'line': b'\n'}
+[8.312685] (dcl_slam) StderrLine: {'line': b'\x1b[0m\n'}
+[8.312705] (dcl_slam) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:75 (add_executable):\n'}
+[8.312725] (dcl_slam) StderrLine: {'line': b'  Target "dcl_slam_node" links to target "pcl_conversions::pcl_conversions"\n'}
+[8.312744] (dcl_slam) StderrLine: {'line': b'  but the target was not found.  Perhaps a find_package() call is missing for\n'}
+[8.312764] (dcl_slam) StderrLine: {'line': b'  an IMPORTED target, or an ALIAS target is missing?\n'}
+[8.312784] (dcl_slam) StderrLine: {'line': b'\n'}
+[8.312803] (dcl_slam) StderrLine: {'line': b'\x1b[0m\n'}
+[8.317778] (-) TimerEvent: {}
+[8.345571] (dcl_slam) StdoutLine: {'line': b'-- Generating done\n'}
+[8.347182] (dcl_slam) StderrLine: {'line': b'\x1b[0mCMake Generate step failed.  Build files cannot be regenerated correctly.\x1b[0m\n'}
+[8.357303] (dcl_slam) CommandEnded: {'returncode': 1}
+[8.361777] (dcl_slam) JobEnded: {'identifier': 'dcl_slam', 'rc': 1}
+[8.371982] (-) EventReactorShutdown: {}

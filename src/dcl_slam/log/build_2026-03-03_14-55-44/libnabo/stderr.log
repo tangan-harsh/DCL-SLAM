@@ -1,0 +1,23 @@
+In file included from [01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/nabo_private.h:35[m[K,
+                 from [01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/kdtree_cpu.cpp:32[m[K:
+[01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/nabo.h:35:10:[m[K [01;31m[Kfatal error: [m[KEigen/Core: 没有那个文件或目录
+   35 | #include [01;31m[K"Eigen/Core"[m[K
+      |          [01;31m[K^~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/libnabo.dir/build.make:104：CMakeFiles/libnabo.dir/nabo/kdtree_cpu.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+In file included from [01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/nabo_private.h:35[m[K,
+                 from [01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/brute_force_cpu.cpp:32[m[K:
+[01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/nabo.h:35:10:[m[K [01;31m[Kfatal error: [m[KEigen/Core: 没有那个文件或目录
+   35 | #include [01;31m[K"Eigen/Core"[m[K
+      |          [01;31m[K^~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/libnabo.dir/build.make:90：CMakeFiles/libnabo.dir/nabo/brute_force_cpu.cpp.o] 错误 1
+In file included from [01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/nabo.cpp:32[m[K:
+[01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/nabo.h:35:10:[m[K [01;31m[Kfatal error: [m[KEigen/Core: 没有那个文件或目录
+   35 | #include [01;31m[K"Eigen/Core"[m[K
+      |          [01;31m[K^~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/libnabo.dir/build.make:76：CMakeFiles/libnabo.dir/nabo/nabo.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/libnabo.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

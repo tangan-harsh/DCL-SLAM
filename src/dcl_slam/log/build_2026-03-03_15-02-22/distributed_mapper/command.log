@@ -1,0 +1,4 @@
+Invoking command in '/home/isaac/DCL-SLAM/build/distributed_mapper': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/distributed_mapper -- -j32 -l32
+Invoked command in '/home/isaac/DCL-SLAM/build/distributed_mapper' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/distributed_mapper -- -j32 -l32
+Invoking command in '/home/isaac/DCL-SLAM/build/distributed_mapper': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/isaac/DCL-SLAM/build/distributed_mapper
+Invoked command in '/home/isaac/DCL-SLAM/build/distributed_mapper' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/isaac/DCL-SLAM/build/distributed_mapper

@@ -1,0 +1,2 @@
+Invoking command in '/home/isaac/DCL-SLAM/build/dcl_slam': /usr/bin/cmake /home/isaac/DCL-SLAM -DCMAKE_INSTALL_PREFIX=/home/isaac/DCL-SLAM/install/dcl_slam
+Invoked command in '/home/isaac/DCL-SLAM/build/dcl_slam' returned '1': /usr/bin/cmake /home/isaac/DCL-SLAM -DCMAKE_INSTALL_PREFIX=/home/isaac/DCL-SLAM/install/dcl_slam

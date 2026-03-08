@@ -1,0 +1,53 @@
+[ 22%] Built target fast_max-clique_finder
+[ 31%] Built target graph_utils
+[ 50%] Built target robot_measurements
+[ 59%] Built target pairwise_consistency
+[ 68%] Built target global_map_solver
+[35m[1mConsolidate compiler generated dependencies of target distributed_pcm[0m
+[ 77%] Built target distributed_pcm
+[35m[1mConsolidate compiler generated dependencies of target distributed_mapper[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/distributed_mapper.cpp.o[0m
+[ 86%] [32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/evaluation_utils.cpp.o[0m
+[ 90%] [32m[1mLinking CXX static library libdistributed_mapper.a[0m
+[100%] Built target distributed_mapper
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/library_path.sh
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/library_path.dsv
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/between_chordal_factor.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/distributed_mapper.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/distributed_mapper_utils.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/evaluation_utils.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/distributed_mapper/run_distributed_mapper.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/global_map/global_map.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/graph_utils/graph_types.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/graph_utils/graph_utils_functions.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/pairwise_consistency/pairwise_consistency.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/robot_measurements/interrobot_measurements.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/robot_measurements/robot_local_map.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/include/pairwise_consistency_maximization/robot_measurements/robot_measurements.h
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/ament_index/resource_index/package_run_dependencies/distributed_mapper
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/ament_index/resource_index/parent_prefix_path/distributed_mapper
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/ament_prefix_path.sh
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/ament_prefix_path.dsv
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/path.sh
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/environment/path.dsv
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/local_setup.bash
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/local_setup.sh
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/local_setup.zsh
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/local_setup.dsv
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/package.dsv
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/ament_index/resource_index/packages/distributed_mapper
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/cmake/ament_cmake_export_libraries-extras.cmake
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/cmake/distributed_mapperConfig.cmake
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/cmake/distributed_mapperConfig-version.cmake
+-- Symlinking: /home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/package.xml
+-- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libdistributed_mapper.a
+-- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libgraph_utils.a
+-- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/librobot_measurements.a
+-- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libpairwise_consistency.a
+-- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libfast_max-clique_finder.a
+-- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libdistributed_pcm.a
+-- Installing: /home/isaac/DCL-SLAM/install/distributed_mapper/lib/libglobal_map_solver.a

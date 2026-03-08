@@ -1,0 +1,286 @@
+[0.000000] (-) TimerEvent: {}
+[0.000126] (distributed_mapper) JobQueued: {'identifier': 'distributed_mapper', 'dependencies': OrderedDict()}
+[0.000151] (dcl_slam) JobQueued: {'identifier': 'dcl_slam', 'dependencies': OrderedDict([('distributed_mapper', '/home/isaac/DCL-SLAM/install/distributed_mapper')])}
+[0.000273] (distributed_mapper) JobStarted: {'identifier': 'distributed_mapper'}
+[0.003957] (distributed_mapper) JobProgress: {'identifier': 'distributed_mapper', 'progress': 'cmake'}
+[0.004291] (distributed_mapper) JobProgress: {'identifier': 'distributed_mapper', 'progress': 'build'}
+[0.004752] (distributed_mapper) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/isaac/DCL-SLAM/build/distributed_mapper', '--', '-j32', '-l32'], 'cwd': '/home/isaac/DCL-SLAM/build/distributed_mapper', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'isaac'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda-12.4/lib64:'), ('HOME', '/home/isaac'), ('OLDPWD', '/home/isaac'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/isaac/.nvm/versions/node/v24.12.0/bin'), ('NVM_INC', '/home/isaac/.nvm/versions/node/v24.12.0/include/node'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2688'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/isaac/.nvm'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'isaac'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'isaac'), ('TERM', 'xterm-color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/isaac/.local/bin:/home/isaac/.nvm/versions/node/v24.12.0/bin:/opt/ros/humble/bin:/usr/local/cuda-12.4/bin:/home/isaac/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/isaac-ROG-Strix-G614JV-G614JV:@/tmp/.ICE-unix/2660,unix/isaac-ROG-Strix-G614JV-G614JV:/tmp/.ICE-unix/2660'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/87d0c13a_027f_4791_b49e_e21d95af37ec'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.104'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/isaac/DCL-SLAM/build/distributed_mapper'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.035151] (distributed_mapper) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target fast_max-clique_finder\x1b[0m\n'}
+[0.036021] (distributed_mapper) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target graph_utils\x1b[0m\n'}
+[0.042286] (distributed_mapper) StdoutLine: {'line': b'[ 22%] Built target fast_max-clique_finder\n'}
+[0.049641] (distributed_mapper) StdoutLine: {'line': b'[ 31%] Built target graph_utils\n'}
+[0.062760] (distributed_mapper) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_measurements\x1b[0m\n'}
+[0.092467] (distributed_mapper) StdoutLine: {'line': b'[ 50%] Built target robot_measurements\n'}
+[0.099662] (-) TimerEvent: {}
+[0.104046] (distributed_mapper) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pairwise_consistency\x1b[0m\n'}
+[0.126688] (distributed_mapper) StdoutLine: {'line': b'[ 59%] Built target pairwise_consistency\n'}
+[0.137975] (distributed_mapper) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target global_map_solver\x1b[0m\n'}
+[0.162275] (distributed_mapper) StdoutLine: {'line': b'[ 68%] Built target global_map_solver\n'}
+[0.178500] (distributed_mapper) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target distributed_pcm\x1b[0m\n'}
+[0.199583] (distributed_mapper) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/distributed_pcm.dir/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp.o\x1b[0m\n'}
+[0.199832] (-) TimerEvent: {}
+[0.300122] (-) TimerEvent: {}
+[0.400391] (-) TimerEvent: {}
+[0.500644] (-) TimerEvent: {}
+[0.600974] (-) TimerEvent: {}
+[0.701323] (-) TimerEvent: {}
+[0.801648] (-) TimerEvent: {}
+[0.901914] (-) TimerEvent: {}
+[1.002243] (-) TimerEvent: {}
+[1.102505] (-) TimerEvent: {}
+[1.202741] (-) TimerEvent: {}
+[1.303114] (-) TimerEvent: {}
+[1.403447] (-) TimerEvent: {}
+[1.503699] (-) TimerEvent: {}
+[1.604022] (-) TimerEvent: {}
+[1.704340] (-) TimerEvent: {}
+[1.804599] (-) TimerEvent: {}
+[1.904855] (-) TimerEvent: {}
+[2.005116] (-) TimerEvent: {}
+[2.105395] (-) TimerEvent: {}
+[2.205715] (-) TimerEvent: {}
+[2.306067] (-) TimerEvent: {}
+[2.406481] (-) TimerEvent: {}
+[2.506853] (-) TimerEvent: {}
+[2.607212] (-) TimerEvent: {}
+[2.659534] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic std::pair<int, int> distributed_pcm::DistributedPCM::solveCentralized(std::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >&, std::vector<std::pair<boost::shared_ptr<gtsam::NonlinearFactorGraph>, boost::shared_ptr<gtsam::Values> > >&, const double&, const bool&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.659720] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:21:37:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.659786] (distributed_mapper) StderrLine: {'line': b'   21 |         for (int roboti = 0; \x1b[01;35m\x1b[Kroboti < dist_mappers.size()\x1b[m\x1b[K; roboti++) {\n'}
+[2.659840] (distributed_mapper) StderrLine: {'line': b'      |                              \x1b[01;35m\x1b[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.659891] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:22:48:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.659947] (distributed_mapper) StderrLine: {'line': b'   22 |             for (int robotj = roboti+1; \x1b[01;35m\x1b[Krobotj < dist_mappers.size()\x1b[m\x1b[K; robotj++) {\n'}
+[2.659999] (distributed_mapper) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.663764] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic void distributed_pcm::DistributedPCM::fillInRequiredInformationCentralized(std::vector<std::vector<std::pair<long unsigned int, long unsigned int> > >&, std::vector<graph_utils::Transforms>&, std::map<std::pair<char, char>, graph_utils::Transforms>&, const std::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.663841] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:62:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.663908] (distributed_mapper) StderrLine: {'line': b'   62 |         for (int i = 0; \x1b[01;35m\x1b[Ki < dist_mappers.size()\x1b[m\x1b[K; i++) {\n'}
+[2.663960] (distributed_mapper) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.664009] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:63:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.664069] (distributed_mapper) StderrLine: {'line': b'   63 |             for (int j = i+1; \x1b[01;35m\x1b[Kj < dist_mappers.size()\x1b[m\x1b[K; j++) {\n'}
+[2.664118] (distributed_mapper) StderrLine: {'line': b'      |                               \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.676457] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic std::pair<int, int> distributed_pcm::DistributedPCM::executePCMCentralized(const int&, const int&, const std::vector<graph_utils::Transforms>&, const std::vector<std::vector<std::pair<long unsigned int, long unsigned int> > >&, const std::map<std::pair<char, char>, graph_utils::Transforms>&, std::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >&, std::vector<std::pair<boost::shared_ptr<gtsam::NonlinearFactorGraph>, boost::shared_ptr<gtsam::Values> > >&, const double&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.676570] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:140:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<long unsigned int>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.676630] (distributed_mapper) StderrLine: {'line': b'  140 |             for (int i = 0; \x1b[01;35m\x1b[Ki < loopclosures_ids.size()\x1b[m\x1b[K; i++) {\n'}
+[2.676683] (distributed_mapper) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.680545] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic std::pair<std::pair<int, int>, std::pair<std::set<std::pair<long unsigned int, long unsigned int> >, std::set<std::pair<long unsigned int, long unsigned int> > > > distributed_pcm::DistributedPCM::executePCMDecentralized(const int&, robot_measurements::RobotLocalMap&, const robot_measurements::RobotLocalMap&, boost::shared_ptr<distributed_mapper::DistributedMapper>&, gtsam::GraphAndValues&, const double&, const bool&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.680640] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:203:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<long unsigned int>::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.680698] (distributed_mapper) StderrLine: {'line': b'  203 |         for (int i = 0; \x1b[01;35m\x1b[Ki < loopclosures_ids.size()\x1b[m\x1b[K; i++) {\n'}
+[2.680748] (distributed_mapper) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.682468] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:241:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kindex0\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.682562] (distributed_mapper) StderrLine: {'line': b'  241 |                 int \x1b[01;35m\x1b[Kindex0\x1b[m\x1b[K = gtsam::symbolIndex(keys.at(0));\n'}
+[2.682619] (distributed_mapper) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.682675] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:242:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kindex1\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.682736] (distributed_mapper) StderrLine: {'line': b'  242 |                 int \x1b[01;35m\x1b[Kindex1\x1b[m\x1b[K = gtsam::symbolIndex(keys.at(1));\n'}
+[2.682786] (distributed_mapper) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.684829] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic bool distributed_pcm::DistributedPCM::isloopclosureToBeRejected(const std::vector<int>&, const int&, const graph_utils::Transforms&, const LoopClosures&, boost::shared_ptr<distributed_mapper::DistributedMapper>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.684920] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:268:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<std::pair<long unsigned int, long unsigned int> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.684983] (distributed_mapper) StderrLine: {'line': b'  268 |         for (index = 0; \x1b[01;35m\x1b[Kindex < loop_closures.size()\x1b[m\x1b[K; index++) {\n'}
+[2.685033] (distributed_mapper) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.707286] (-) TimerEvent: {}
+[2.807495] (-) TimerEvent: {}
+[2.907771] (-) TimerEvent: {}
+[3.008024] (-) TimerEvent: {}
+[3.108368] (-) TimerEvent: {}
+[3.208621] (-) TimerEvent: {}
+[3.308875] (-) TimerEvent: {}
+[3.409131] (-) TimerEvent: {}
+[3.509514] (-) TimerEvent: {}
+[3.609808] (-) TimerEvent: {}
+[3.710095] (-) TimerEvent: {}
+[3.810339] (-) TimerEvent: {}
+[3.910590] (-) TimerEvent: {}
+[4.009114] (distributed_mapper) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX static library libdistributed_pcm.a\x1b[0m\n'}
+[4.010650] (-) TimerEvent: {}
+[4.045003] (distributed_mapper) StdoutLine: {'line': b'[ 77%] Built target distributed_pcm\n'}
+[4.068438] (distributed_mapper) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/distributed_mapper_utils.cpp.o\x1b[0m\n'}
+[4.069618] (distributed_mapper) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/run_distributed_mapper.cpp.o\x1b[0m\n'}
+[4.069915] (distributed_mapper) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/distributed_mapper.cpp.o\x1b[0m\n'}
+[4.070197] (distributed_mapper) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/evaluation_utils.cpp.o\x1b[0m\n'}
+[4.110782] (-) TimerEvent: {}
+[4.211140] (-) TimerEvent: {}
+[4.311453] (-) TimerEvent: {}
+[4.411715] (-) TimerEvent: {}
+[4.512088] (-) TimerEvent: {}
+[4.612449] (-) TimerEvent: {}
+[4.712769] (-) TimerEvent: {}
+[4.813129] (-) TimerEvent: {}
+[4.913431] (-) TimerEvent: {}
+[5.013717] (-) TimerEvent: {}
+[5.114052] (-) TimerEvent: {}
+[5.214385] (-) TimerEvent: {}
+[5.314658] (-) TimerEvent: {}
+[5.414948] (-) TimerEvent: {}
+[5.515232] (-) TimerEvent: {}
+[5.615511] (-) TimerEvent: {}
+[5.715806] (-) TimerEvent: {}
+[5.816099] (-) TimerEvent: {}
+[5.916312] (-) TimerEvent: {}
+[6.016563] (-) TimerEvent: {}
+[6.116830] (-) TimerEvent: {}
+[6.217112] (-) TimerEvent: {}
+[6.317386] (-) TimerEvent: {}
+[6.417668] (-) TimerEvent: {}
+[6.517913] (-) TimerEvent: {}
+[6.575486] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:8:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Keye\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.575646] (distributed_mapper) StderrLine: {'line': b'    8 | static const Matrix I9 = \x1b[01;31m\x1b[Keye\x1b[m\x1b[K(9);\n'}
+[6.575701] (distributed_mapper) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[6.581535] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kgtsam::Values distributed_mapper::evaluation_utils::pose3WithZeroTranslation(const gtsam::Values&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.581636] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:48:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kzero\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kzero9\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.581693] (distributed_mapper) StderrLine: {'line': b'   48 |       Pose3 pose(rotations.at<Rot3>(key), \x1b[01;31m\x1b[Kzero\x1b[m\x1b[K(3));\n'}
+[6.581744] (distributed_mapper) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[6.581793] (distributed_mapper) StderrLine: {'line': b'      |                                           \x1b[32m\x1b[Kzero9\x1b[m\x1b[K\n'}
+[6.585244] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kgtsam::VectorValues distributed_mapper::evaluation_utils::initializeVectorValues(const gtsam::Values&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.585333] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:59:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kzero\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kzero9\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.585392] (distributed_mapper) StderrLine: {'line': b'   59 |       vector_values.insert(key, \x1b[01;31m\x1b[Kzero\x1b[m\x1b[K(6));\n'}
+[6.585444] (distributed_mapper) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[6.585495] (distributed_mapper) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[Kzero9\x1b[m\x1b[K\n'}
+[6.588677] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kgtsam::VectorValues distributed_mapper::evaluation_utils::initializeZeroRotation(const gtsam::Values&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.588769] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:69:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kzero\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kzero9\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.588831] (distributed_mapper) StderrLine: {'line': b'   69 |       Vector r = \x1b[01;31m\x1b[Kzero\x1b[m\x1b[K(9);\n'}
+[6.588883] (distributed_mapper) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[6.588933] (distributed_mapper) StderrLine: {'line': b'      |                  \x1b[32m\x1b[Kzero9\x1b[m\x1b[K\n'}
+[6.606302] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kgtsam::NonlinearFactorGraph distributed_mapper::evaluation_utils::convertToChordalGraph(const gtsam::NonlinearFactorGraph&, const SharedNoiseModel&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.606433] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:165:92:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass gtsam::BetweenFactor<gtsam::Pose3>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_noiseModel\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KnoiseModel\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.606496] (distributed_mapper) StderrLine: {'line': b'  165 |           SharedNoiseModel chordal_noise = evaluation_utils::convertToChordalNoise(factor->\x1b[01;31m\x1b[Kget_noiseModel\x1b[m\x1b[K());\n'}
+[6.606550] (distributed_mapper) StderrLine: {'line': b'      |                                                                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.606598] (distributed_mapper) StderrLine: {'line': b'      |                                                                                            \x1b[32m\x1b[KnoiseModel\x1b[m\x1b[K\n'}
+[6.607404] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kgtsam::GaussianFactorGraph distributed_mapper::evaluation_utils::buildLinearOrientationGraph(const gtsam::NonlinearFactorGraph&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.607485] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:194:73:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass gtsam::BetweenFactor<gtsam::Pose3>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_noiseModel\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KnoiseModel\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.607541] (distributed_mapper) StderrLine: {'line': b'  194 |         model = evaluation_utils::convertToDiagonalNoise(pose3_between->\x1b[01;31m\x1b[Kget_noiseModel\x1b[m\x1b[K());\n'}
+[6.607600] (distributed_mapper) StderrLine: {'line': b'      |                                                                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.607650] (distributed_mapper) StderrLine: {'line': b'      |                                                                         \x1b[32m\x1b[KnoiseModel\x1b[m\x1b[K\n'}
+[6.615025] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kgtsam::Values distributed_mapper::evaluation_utils::centralizedEstimation(const gtsam::NonlinearFactorGraph&, const SharedNoiseModel&, const SharedNoiseModel&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.615110] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:245:92:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass gtsam::BetweenFactor<gtsam::Pose3>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_noiseModel\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KnoiseModel\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.615175] (distributed_mapper) StderrLine: {'line': b'  245 |           SharedNoiseModel chordal_noise = evaluation_utils::convertToChordalNoise(factor->\x1b[01;31m\x1b[Kget_noiseModel\x1b[m\x1b[K());\n'}
+[6.615225] (distributed_mapper) StderrLine: {'line': b'      |                                                                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.615279] (distributed_mapper) StderrLine: {'line': b'      |                                                                                            \x1b[32m\x1b[KnoiseModel\x1b[m\x1b[K\n'}
+[6.615949] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kgtsam::Values distributed_mapper::evaluation_utils::centralizedGNEstimation(const gtsam::NonlinearFactorGraph&, const SharedNoiseModel&, const SharedNoiseModel&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.616012] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:303:79:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass gtsam::BetweenFactor<gtsam::Pose3>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_noiseModel\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KnoiseModel\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.616065] (distributed_mapper) StderrLine: {'line': b'  303 |               chordal_noise = evaluation_utils::convertToChordalNoise(factor->\x1b[01;31m\x1b[Kget_noiseModel\x1b[m\x1b[K(), rotation.matrix());\n'}
+[6.616113] (distributed_mapper) StderrLine: {'line': b'      |                                                                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.616160] (distributed_mapper) StderrLine: {'line': b'      |                                                                               \x1b[32m\x1b[KnoiseModel\x1b[m\x1b[K\n'}
+[6.617963] (-) TimerEvent: {}
+[6.618079] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kgtsam::SharedNoiseModel distributed_mapper::evaluation_utils::convertToChordalNoise(const SharedNoiseModel&, const Matrix&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.618178] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:340:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kinverse\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgtsam\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KEigen::inverse\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.618237] (distributed_mapper) StderrLine: {'line': b'  340 |     Matrix C = gtsam::\x1b[01;31m\x1b[Kinverse\x1b[m\x1b[K(trans(R) * R); // get covariance from square root information\n'}
+[6.618293] (distributed_mapper) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.618342] (distributed_mapper) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:380\x1b[m\x1b[K,\n'}
+[6.618391] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[6.618438] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/gtsam/base/OptionalJacobian.h:22\x1b[m\x1b[K,\n'}
+[6.618487] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/gtsam/base/Matrix.h:27\x1b[m\x1b[K,\n'}
+[6.618538] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/gtsam/base/Manifold.h:22\x1b[m\x1b[K,\n'}
+[6.618586] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/gtsam/base/Lie.h:26\x1b[m\x1b[K,\n'}
+[6.618634] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h:21\x1b[m\x1b[K,\n'}
+[6.618683] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/evaluation_utils.h:3\x1b[m\x1b[K,\n'}
+[6.618730] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:1\x1b[m\x1b[K:\n'}
+[6.618778] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h:59:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEigen::inverse\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[6.618827] (distributed_mapper) StderrLine: {'line': b'   59 |   \x1b[01;36m\x1b[KEIGEN_ARRAY_DECLARE_GLOBAL_UNARY\x1b[m\x1b[K(inverse,scalar_inverse_op,inverse,\\sa ArrayBase::inverse)\n'}
+[6.618875] (distributed_mapper) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.626898] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:360:62:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Keye\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgtsam\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.627045] (distributed_mapper) StderrLine: {'line': b'  360 |     Matrix translation = C.block(3, 3, 3, 3) + 0.01 * gtsam::\x1b[01;31m\x1b[Keye\x1b[m\x1b[K(3, 3);\n'}
+[6.627101] (distributed_mapper) StderrLine: {'line': b'      |                                                              \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[6.635372] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kgtsam::SharedDiagonal distributed_mapper::evaluation_utils::convertToDiagonalNoise(const SharedNoiseModel&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.635460] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:373:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kinverse\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kgtsam\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KEigen::inverse\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.635519] (distributed_mapper) StderrLine: {'line': b'  373 |     Matrix C = gtsam::\x1b[01;31m\x1b[Kinverse\x1b[m\x1b[K(trans(R) * R); // get covariance from square root information\n'}
+[6.635574] (distributed_mapper) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.635631] (distributed_mapper) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Core:380\x1b[m\x1b[K,\n'}
+[6.635681] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/eigen3/Eigen/Dense:1\x1b[m\x1b[K,\n'}
+[6.635730] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/gtsam/base/OptionalJacobian.h:22\x1b[m\x1b[K,\n'}
+[6.635779] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/gtsam/base/Matrix.h:27\x1b[m\x1b[K,\n'}
+[6.635827] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/gtsam/base/Manifold.h:22\x1b[m\x1b[K,\n'}
+[6.635884] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/gtsam/base/Lie.h:26\x1b[m\x1b[K,\n'}
+[6.635937] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h:21\x1b[m\x1b[K,\n'}
+[6.635985] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/evaluation_utils.h:3\x1b[m\x1b[K,\n'}
+[6.636035] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:1\x1b[m\x1b[K:\n'}
+[6.636084] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h:59:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KEigen::inverse\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[6.636133] (distributed_mapper) StderrLine: {'line': b'   59 |   \x1b[01;36m\x1b[KEIGEN_ARRAY_DECLARE_GLOBAL_UNARY\x1b[m\x1b[K(inverse,scalar_inverse_op,inverse,\\sa ArrayBase::inverse)\n'}
+[6.636180] (distributed_mapper) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.636446] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:382:65:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krepeat\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kboost::assign::repeat\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.636503] (distributed_mapper) StderrLine: {'line': b'  382 |     SharedDiagonal chordal_noise = noiseModel::Diagonal::Sigmas(\x1b[01;31m\x1b[Krepeat\x1b[m\x1b[K(9, max_C));\n'}
+[6.636555] (distributed_mapper) StderrLine: {'line': b'      |                                                                 \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[6.636635] (distributed_mapper) StderrLine: {'line': b'      |                                                                 \x1b[32m\x1b[Kboost::assign::repeat\x1b[m\x1b[K\n'}
+[6.636686] (distributed_mapper) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/gtsam/inference/FactorGraph.h:32\x1b[m\x1b[K,\n'}
+[6.636734] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/gtsam/inference/MetisIndex.h:21\x1b[m\x1b[K,\n'}
+[6.636782] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/gtsam/inference/Ordering.h:25\x1b[m\x1b[K,\n'}
+[6.636830] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/gtsam/inference/EliminateableFactorGraph.h:26\x1b[m\x1b[K,\n'}
+[6.636877] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/gtsam/linear/GaussianFactorGraph.h:24\x1b[m\x1b[K,\n'}
+[6.636925] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/gtsam/slam/InitializePose3.h:25\x1b[m\x1b[K,\n'}
+[6.636972] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/evaluation_utils.h:4\x1b[m\x1b[K,\n'}
+[6.637020] (distributed_mapper) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:1\x1b[m\x1b[K:\n'}
+[6.637068] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/assign/list_inserter.hpp:196:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kboost::assign::repeat\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[6.637116] (distributed_mapper) StderrLine: {'line': b'  196 |     \x1b[01;36m\x1b[Krepeat\x1b[m\x1b[K( std::size_t sz, T r )\n'}
+[6.637164] (distributed_mapper) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[6.644438] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kstd::tuple<double, double, double> distributed_mapper::evaluation_utils::evaluateEstimates(const size_t&, const GraphAndValues&, const shared_ptr&, const shared_ptr&, const bool&, const gtsam::Values&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.644579] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:538:70:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Knr_robots\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.644637] (distributed_mapper) StderrLine: {'line': b'  538 |   std::tuple<double, double, double> evaluateEstimates(\x1b[01;35m\x1b[Kconst size_t &nr_robots\x1b[m\x1b[K,\n'}
+[6.644689] (distributed_mapper) StderrLine: {'line': b'      |                                                        \x1b[01;35m\x1b[K~~~~~~~~~~~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[6.718098] (-) TimerEvent: {}
+[6.718982] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kstd::pair<gtsam::NonlinearFactorGraph, std::vector<long unsigned int> > distributed_mapper::DistributedMapper::createSubgraphInnerAndSepEdges(const gtsam::NonlinearFactorGraph&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.719098] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:35:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kindex_mask\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.719173] (distributed_mapper) StderrLine: {'line': b'   35 |     Key \x1b[01;35m\x1b[Kindex_mask\x1b[m\x1b[K = ~chr_mask;\n'}
+[6.719225] (distributed_mapper) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.748587] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper_utils.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid distributed_mapper::optimizeRotation(std::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >&, const size_t&, const size_t&, const string&, const std::vector<long unsigned int>&, const bool&, const double&, const bool&, boost::optional<std::vector<gtsam::Values>&>, boost::optional<std::vector<gtsam::Values>&>, boost::optional<std::vector<gtsam::VectorValues>&>, boost::optional<gtsam::VectorValues&>, boost::optional<gtsam::GaussianFactorGraph&>)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.748672] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper_utils.cpp:282:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kchange\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.748724] (distributed_mapper) StderrLine: {'line': b'  282 |         double \x1b[01;35m\x1b[Kchange\x1b[m\x1b[K = dist_mappers[robot]->latestChange();\n'}
+[6.748772] (distributed_mapper) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[6.750433] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper_utils.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid distributed_mapper::optimizePose(std::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >&, const size_t&, const size_t&, const string&, const std::vector<long unsigned int>&, const bool&, const double&, const bool&, boost::optional<std::vector<gtsam::Values>&>, boost::optional<std::vector<gtsam::Values>&>, boost::optional<gtsam::Values&>, boost::optional<gtsam::NonlinearFactorGraph&>)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.750508] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper_utils.cpp:455:16:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kchange\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.750558] (distributed_mapper) StderrLine: {'line': b'  455 |         double \x1b[01;35m\x1b[Kchange\x1b[m\x1b[K = dist_mappers[robot]->latestChange();\n'}
+[6.750607] (distributed_mapper) StderrLine: {'line': b'      |                \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[6.756508] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid distributed_mapper::DistributedMapper::estimateRotation()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.756568] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:169:73:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass gtsam::BetweenFactor<gtsam::Pose3>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_noiseModel\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KnoiseModel\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.756619] (distributed_mapper) StderrLine: {'line': b'  169 |         model = evaluation_utils::convertToDiagonalNoise(pose3_between->\x1b[01;31m\x1b[Kget_noiseModel\x1b[m\x1b[K());\n'}
+[6.756677] (distributed_mapper) StderrLine: {'line': b'      |                                                                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.756726] (distributed_mapper) StderrLine: {'line': b'      |                                                                         \x1b[32m\x1b[KnoiseModel\x1b[m\x1b[K\n'}
+[6.765509] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid distributed_mapper::DistributedMapper::chordalFactorGraph()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.765584] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:220:96:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass gtsam::BetweenFactor<gtsam::Pose3>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_noiseModel\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KnoiseModel\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.765634] (distributed_mapper) StderrLine: {'line': b'  220 |               SharedNoiseModel chordal_noise = evaluation_utils::convertToChordalNoise(factor->\x1b[01;31m\x1b[Kget_noiseModel\x1b[m\x1b[K());\n'}
+[6.765683] (distributed_mapper) StderrLine: {'line': b'      |                                                                                                \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.765737] (distributed_mapper) StderrLine: {'line': b'      |                                                                                                \x1b[32m\x1b[KnoiseModel\x1b[m\x1b[K\n'}
+[6.778437] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid distributed_mapper::DistributedMapper::estimatePoses()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.778547] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:281:105:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass gtsam::BetweenFactor<gtsam::Pose3>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_noiseModel\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KnoiseModel\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.778606] (distributed_mapper) StderrLine: {'line': b'  281 |             SharedNoiseModel chordal_noise = evaluation_utils::convertToChordalNoise(pose3_between->\x1b[01;31m\x1b[Kget_noiseModel\x1b[m\x1b[K(), rotation.matrix());\n'}
+[6.778658] (distributed_mapper) StderrLine: {'line': b'      |                                                                                                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.778708] (distributed_mapper) StderrLine: {'line': b'      |                                                                                                     \x1b[32m\x1b[KnoiseModel\x1b[m\x1b[K\n'}
+[6.779056] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:295:105:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass gtsam::BetweenFactor<gtsam::Pose3>\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_noiseModel\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KnoiseModel\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.779112] (distributed_mapper) StderrLine: {'line': b'  295 |             SharedNoiseModel chordal_noise = evaluation_utils::convertToChordalNoise(pose3_between->\x1b[01;31m\x1b[Kget_noiseModel\x1b[m\x1b[K(), rotation.matrix());\n'}
+[6.779161] (distributed_mapper) StderrLine: {'line': b'      |                                                                                                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.779214] (distributed_mapper) StderrLine: {'line': b'      |                                                                                                     \x1b[32m\x1b[KnoiseModel\x1b[m\x1b[K\n'}
+[6.818188] (-) TimerEvent: {}
+[6.863392] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/run_distributed_mapper.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kstd::tuple<double, double, int> distributed_mapper::runDistributedMapper(const size_t&, const string&, const string&, const string&, const bool&, const bool&, const bool&, const shared_ptr&, const shared_ptr&, const size_t&, const double&, const double&, const double&, const bool&, const distributed_mapper::DistributedMapper::UpdateType&, const bool&, const bool&, const bool&, const double&, const bool&, const bool&, const bool&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.863550] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/run_distributed_mapper.cpp:13:93:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Klog_dir\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.863602] (distributed_mapper) StderrLine: {'line': b'   13 | std::tuple<double, double, int> runDistributedMapper(const size_t& nr_robots, \x1b[01;35m\x1b[Kconst string& log_dir\x1b[m\x1b[K, const string& data_dir, const string& trace_file, const bool& use_XY, const bool& use_OP,\n'}
+[6.863652] (distributed_mapper) StderrLine: {'line': b'      |                                                                               \x1b[01;35m\x1b[K~~~~~~~~~~~~~~^~~~~~~\x1b[m\x1b[K\n'}
+[6.863699] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/run_distributed_mapper.cpp:13:140:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Ktrace_file\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[6.863771] (distributed_mapper) StderrLine: {'line': b'   13 | std::tuple<double, double, int> runDistributedMapper(const size_t& nr_robots, const string& log_dir, const string& data_dir, \x1b[01;35m\x1b[Kconst string& trace_file\x1b[m\x1b[K, const bool& use_XY, const bool& use_OP,\n'}
+[6.863819] (distributed_mapper) StderrLine: {'line': b'      |                                                                                                                              \x1b[01;35m\x1b[K~~~~~~~~~~~~~~^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.918301] (-) TimerEvent: {}
+[7.018534] (-) TimerEvent: {}
+[7.118824] (-) TimerEvent: {}
+[7.219119] (-) TimerEvent: {}
+[7.319381] (-) TimerEvent: {}
+[7.419655] (-) TimerEvent: {}
+[7.519949] (-) TimerEvent: {}
+[7.620231] (-) TimerEvent: {}
+[7.720505] (-) TimerEvent: {}
+[7.820805] (-) TimerEvent: {}
+[7.921113] (-) TimerEvent: {}
+[8.021407] (-) TimerEvent: {}
+[8.049111] (distributed_mapper) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/distributed_mapper.dir/build.make:76\xef\xbc\x9aCMakeFiles/distributed_mapper.dir/src/distributed_mapper/distributed_mapper.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[8.049286] (distributed_mapper) StderrLine: {'line': b'gmake[2]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[8.121573] (-) TimerEvent: {}
+[8.221846] (-) TimerEvent: {}
+[8.290732] (distributed_mapper) StderrLine: {'line': b'\x1b[01m\x1b[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/run_distributed_mapper.cpp:169:1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcontrol reaches end of non-void function [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type\x07-Wreturn-type\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[8.290873] (distributed_mapper) StderrLine: {'line': b'  169 | \x1b[01;35m\x1b[K}\x1b[m\x1b[K\n'}
+[8.290901] (distributed_mapper) StderrLine: {'line': b'      | \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[8.322054] (-) TimerEvent: {}
+[8.332091] (distributed_mapper) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/distributed_mapper.dir/build.make:90\xef\xbc\x9aCMakeFiles/distributed_mapper.dir/src/distributed_mapper/evaluation_utils.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[8.422221] (-) TimerEvent: {}
+[8.522478] (-) TimerEvent: {}
+[8.622779] (-) TimerEvent: {}
+[8.723015] (-) TimerEvent: {}
+[8.781918] (distributed_mapper) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:318\xef\xbc\x9aCMakeFiles/distributed_mapper.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[8.782038] (distributed_mapper) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[8.784091] (distributed_mapper) CommandEnded: {'returncode': 2}
+[8.789200] (distributed_mapper) JobEnded: {'identifier': 'distributed_mapper', 'rc': 2}
+[8.807999] (dcl_slam) JobSkipped: {'identifier': 'dcl_slam'}
+[8.808019] (-) EventReactorShutdown: {}

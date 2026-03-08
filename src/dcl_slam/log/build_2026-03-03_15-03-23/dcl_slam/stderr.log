@@ -1,0 +1,29 @@
+[33mCMake Warning (dev) at CMakeLists.txt:21 (find_package):
+  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  CMake variable PCL_ROOT is set to:
+
+    /usr
+
+  For compatibility, CMake is ignoring the variable.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+[0m
+[31mCMake Error at CMakeLists.txt:25 (find_package):
+  By not providing "Finddistributed_mapper.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "distributed_mapper", but CMake did not find one.
+
+  Could not find a package configuration file provided by
+  "distributed_mapper" with any of the following names:
+
+    distributed_mapperConfig.cmake
+    distributed_mapper-config.cmake
+
+  Add the installation prefix of "distributed_mapper" to CMAKE_PREFIX_PATH or
+  set "distributed_mapper_DIR" to a directory containing one of the above
+  files.  If "distributed_mapper" provides a separate development package or
+  SDK, be sure it has been installed.
+
+[0m

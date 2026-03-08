@@ -1,0 +1,190 @@
+[0.005s] Invoking command in '/home/isaac/DCL-SLAM/build/distributed_mapper': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/distributed_mapper -- -j32 -l32
+[0.035s] [35m[1mConsolidate compiler generated dependencies of target fast_max-clique_finder[0m
+[0.036s] [35m[1mConsolidate compiler generated dependencies of target graph_utils[0m
+[0.042s] [ 22%] Built target fast_max-clique_finder
+[0.049s] [ 31%] Built target graph_utils
+[0.063s] [35m[1mConsolidate compiler generated dependencies of target robot_measurements[0m
+[0.092s] [ 50%] Built target robot_measurements
+[0.104s] [35m[1mConsolidate compiler generated dependencies of target pairwise_consistency[0m
+[0.126s] [ 59%] Built target pairwise_consistency
+[0.138s] [35m[1mConsolidate compiler generated dependencies of target global_map_solver[0m
+[0.162s] [ 68%] Built target global_map_solver
+[0.178s] [35m[1mConsolidate compiler generated dependencies of target distributed_pcm[0m
+[0.199s] [ 72%] [32mBuilding CXX object CMakeFiles/distributed_pcm.dir/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp.o[0m
+[2.659s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:[m[K In static member function ‘[01m[Kstatic std::pair<int, int> distributed_pcm::DistributedPCM::solveCentralized(std::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >&, std::vector<std::pair<boost::shared_ptr<gtsam::NonlinearFactorGraph>, boost::shared_ptr<gtsam::Values> > >&, const double&, const bool&, const bool&)[m[K’:
+[2.659s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:21:37:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.660s]    21 |         for (int roboti = 0; [01;35m[Kroboti < dist_mappers.size()[m[K; roboti++) {
+[2.660s]       |                              [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.660s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:22:48:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.660s]    22 |             for (int robotj = roboti+1; [01;35m[Krobotj < dist_mappers.size()[m[K; robotj++) {
+[2.660s]       |                                         [01;35m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.664s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:[m[K In static member function ‘[01m[Kstatic void distributed_pcm::DistributedPCM::fillInRequiredInformationCentralized(std::vector<std::vector<std::pair<long unsigned int, long unsigned int> > >&, std::vector<graph_utils::Transforms>&, std::map<std::pair<char, char>, graph_utils::Transforms>&, const std::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >&, const bool&)[m[K’:
+[2.664s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:62:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.664s]    62 |         for (int i = 0; [01;35m[Ki < dist_mappers.size()[m[K; i++) {
+[2.664s]       |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.664s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:63:33:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.664s]    63 |             for (int j = i+1; [01;35m[Kj < dist_mappers.size()[m[K; j++) {
+[2.664s]       |                               [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~[m[K
+[2.676s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:[m[K In static member function ‘[01m[Kstatic std::pair<int, int> distributed_pcm::DistributedPCM::executePCMCentralized(const int&, const int&, const std::vector<graph_utils::Transforms>&, const std::vector<std::vector<std::pair<long unsigned int, long unsigned int> > >&, const std::map<std::pair<char, char>, graph_utils::Transforms>&, std::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >&, std::vector<std::pair<boost::shared_ptr<gtsam::NonlinearFactorGraph>, boost::shared_ptr<gtsam::Values> > >&, const double&, const bool&)[m[K’:
+[2.676s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:140:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<long unsigned int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.676s]   140 |             for (int i = 0; [01;35m[Ki < loopclosures_ids.size()[m[K; i++) {
+[2.676s]       |                             [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.680s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:[m[K In static member function ‘[01m[Kstatic std::pair<std::pair<int, int>, std::pair<std::set<std::pair<long unsigned int, long unsigned int> >, std::set<std::pair<long unsigned int, long unsigned int> > > > distributed_pcm::DistributedPCM::executePCMDecentralized(const int&, robot_measurements::RobotLocalMap&, const robot_measurements::RobotLocalMap&, boost::shared_ptr<distributed_mapper::DistributedMapper>&, gtsam::GraphAndValues&, const double&, const bool&, const bool&)[m[K’:
+[2.680s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:203:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<long unsigned int>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.680s]   203 |         for (int i = 0; [01;35m[Ki < loopclosures_ids.size()[m[K; i++) {
+[2.680s]       |                         [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[2.682s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:241:21:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kindex0[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.682s]   241 |                 int [01;35m[Kindex0[m[K = gtsam::symbolIndex(keys.at(0));
+[2.682s]       |                     [01;35m[K^~~~~~[m[K
+[2.682s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:242:21:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kindex1[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[2.682s]   242 |                 int [01;35m[Kindex1[m[K = gtsam::symbolIndex(keys.at(1));
+[2.683s]       |                     [01;35m[K^~~~~~[m[K
+[2.685s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:[m[K In static member function ‘[01m[Kstatic bool distributed_pcm::DistributedPCM::isloopclosureToBeRejected(const std::vector<int>&, const int&, const graph_utils::Transforms&, const LoopClosures&, boost::shared_ptr<distributed_mapper::DistributedMapper>&)[m[K’:
+[2.685s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/pairwise_consistency_maximization/distributed_pcm/distributed_pcm.cpp:268:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::pair<long unsigned int, long unsigned int> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.685s]   268 |         for (index = 0; [01;35m[Kindex < loop_closures.size()[m[K; index++) {
+[2.685s]       |                         [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.009s] [ 77%] [32m[1mLinking CXX static library libdistributed_pcm.a[0m
+[4.045s] [ 77%] Built target distributed_pcm
+[4.068s] [ 81%] [32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/distributed_mapper_utils.cpp.o[0m
+[4.069s] [ 86%] [32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/run_distributed_mapper.cpp.o[0m
+[4.070s] [ 90%] [32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/distributed_mapper.cpp.o[0m
+[4.070s] [ 95%] [32mBuilding CXX object CMakeFiles/distributed_mapper.dir/src/distributed_mapper/evaluation_utils.cpp.o[0m
+[6.575s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:8:26:[m[K [01;31m[Kerror: [m[K‘[01m[Keye[m[K’ was not declared in this scope
+[6.575s]     8 | static const Matrix I9 = [01;31m[Keye[m[K(9);
+[6.575s]       |                          [01;31m[K^~~[m[K
+[6.581s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:[m[K In function ‘[01m[Kgtsam::Values distributed_mapper::evaluation_utils::pose3WithZeroTranslation(const gtsam::Values&)[m[K’:
+[6.581s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:48:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kzero[m[K’ was not declared in this scope; did you mean ‘[01m[Kzero9[m[K’?
+[6.581s]    48 |       Pose3 pose(rotations.at<Rot3>(key), [01;31m[Kzero[m[K(3));
+[6.581s]       |                                           [01;31m[K^~~~[m[K
+[6.582s]       |                                           [32m[Kzero9[m[K
+[6.585s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:[m[K In function ‘[01m[Kgtsam::VectorValues distributed_mapper::evaluation_utils::initializeVectorValues(const gtsam::Values&)[m[K’:
+[6.585s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:59:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kzero[m[K’ was not declared in this scope; did you mean ‘[01m[Kzero9[m[K’?
+[6.585s]    59 |       vector_values.insert(key, [01;31m[Kzero[m[K(6));
+[6.585s]       |                                 [01;31m[K^~~~[m[K
+[6.585s]       |                                 [32m[Kzero9[m[K
+[6.588s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:[m[K In function ‘[01m[Kgtsam::VectorValues distributed_mapper::evaluation_utils::initializeZeroRotation(const gtsam::Values&)[m[K’:
+[6.589s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:69:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kzero[m[K’ was not declared in this scope; did you mean ‘[01m[Kzero9[m[K’?
+[6.589s]    69 |       Vector r = [01;31m[Kzero[m[K(9);
+[6.589s]       |                  [01;31m[K^~~~[m[K
+[6.589s]       |                  [32m[Kzero9[m[K
+[6.606s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:[m[K In function ‘[01m[Kgtsam::NonlinearFactorGraph distributed_mapper::evaluation_utils::convertToChordalGraph(const gtsam::NonlinearFactorGraph&, const SharedNoiseModel&, const bool&)[m[K’:
+[6.606s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:165:92:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gtsam::BetweenFactor<gtsam::Pose3>[m[K’ has no member named ‘[01m[Kget_noiseModel[m[K’; did you mean ‘[01m[KnoiseModel[m[K’?
+[6.606s]   165 |           SharedNoiseModel chordal_noise = evaluation_utils::convertToChordalNoise(factor->[01;31m[Kget_noiseModel[m[K());
+[6.606s]       |                                                                                            [01;31m[K^~~~~~~~~~~~~~[m[K
+[6.606s]       |                                                                                            [32m[KnoiseModel[m[K
+[6.607s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:[m[K In function ‘[01m[Kgtsam::GaussianFactorGraph distributed_mapper::evaluation_utils::buildLinearOrientationGraph(const gtsam::NonlinearFactorGraph&, const bool&)[m[K’:
+[6.607s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:194:73:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gtsam::BetweenFactor<gtsam::Pose3>[m[K’ has no member named ‘[01m[Kget_noiseModel[m[K’; did you mean ‘[01m[KnoiseModel[m[K’?
+[6.607s]   194 |         model = evaluation_utils::convertToDiagonalNoise(pose3_between->[01;31m[Kget_noiseModel[m[K());
+[6.607s]       |                                                                         [01;31m[K^~~~~~~~~~~~~~[m[K
+[6.607s]       |                                                                         [32m[KnoiseModel[m[K
+[6.615s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:[m[K In function ‘[01m[Kgtsam::Values distributed_mapper::evaluation_utils::centralizedEstimation(const gtsam::NonlinearFactorGraph&, const SharedNoiseModel&, const SharedNoiseModel&, const bool&)[m[K’:
+[6.615s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:245:92:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gtsam::BetweenFactor<gtsam::Pose3>[m[K’ has no member named ‘[01m[Kget_noiseModel[m[K’; did you mean ‘[01m[KnoiseModel[m[K’?
+[6.615s]   245 |           SharedNoiseModel chordal_noise = evaluation_utils::convertToChordalNoise(factor->[01;31m[Kget_noiseModel[m[K());
+[6.615s]       |                                                                                            [01;31m[K^~~~~~~~~~~~~~[m[K
+[6.615s]       |                                                                                            [32m[KnoiseModel[m[K
+[6.616s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:[m[K In function ‘[01m[Kgtsam::Values distributed_mapper::evaluation_utils::centralizedGNEstimation(const gtsam::NonlinearFactorGraph&, const SharedNoiseModel&, const SharedNoiseModel&, const bool&)[m[K’:
+[6.616s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:303:79:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gtsam::BetweenFactor<gtsam::Pose3>[m[K’ has no member named ‘[01m[Kget_noiseModel[m[K’; did you mean ‘[01m[KnoiseModel[m[K’?
+[6.616s]   303 |               chordal_noise = evaluation_utils::convertToChordalNoise(factor->[01;31m[Kget_noiseModel[m[K(), rotation.matrix());
+[6.616s]       |                                                                               [01;31m[K^~~~~~~~~~~~~~[m[K
+[6.616s]       |                                                                               [32m[KnoiseModel[m[K
+[6.618s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:[m[K In function ‘[01m[Kgtsam::SharedNoiseModel distributed_mapper::evaluation_utils::convertToChordalNoise(const SharedNoiseModel&, const Matrix&)[m[K’:
+[6.618s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:340:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kinverse[m[K’ is not a member of ‘[01m[Kgtsam[m[K’; did you mean ‘[01m[KEigen::inverse[m[K’?
+[6.618s]   340 |     Matrix C = gtsam::[01;31m[Kinverse[m[K(trans(R) * R); // get covariance from square root information
+[6.618s]       |                       [01;31m[K^~~~~~~[m[K
+[6.618s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:380[m[K,
+[6.618s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.618s]                  from [01m[K/opt/ros/humble/include/gtsam/base/OptionalJacobian.h:22[m[K,
+[6.618s]                  from [01m[K/opt/ros/humble/include/gtsam/base/Matrix.h:27[m[K,
+[6.618s]                  from [01m[K/opt/ros/humble/include/gtsam/base/Manifold.h:22[m[K,
+[6.618s]                  from [01m[K/opt/ros/humble/include/gtsam/base/Lie.h:26[m[K,
+[6.618s]                  from [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h:21[m[K,
+[6.618s]                  from [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/evaluation_utils.h:3[m[K,
+[6.618s]                  from [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:1[m[K:
+[6.619s] [01m[K/usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h:59:3:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::inverse[m[K’ declared here
+[6.619s]    59 |   [01;36m[KEIGEN_ARRAY_DECLARE_GLOBAL_UNARY[m[K(inverse,scalar_inverse_op,inverse,\sa ArrayBase::inverse)
+[6.619s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.627s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:360:62:[m[K [01;31m[Kerror: [m[K‘[01m[Keye[m[K’ is not a member of ‘[01m[Kgtsam[m[K’
+[6.627s]   360 |     Matrix translation = C.block(3, 3, 3, 3) + 0.01 * gtsam::[01;31m[Keye[m[K(3, 3);
+[6.627s]       |                                                              [01;31m[K^~~[m[K
+[6.635s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:[m[K In function ‘[01m[Kgtsam::SharedDiagonal distributed_mapper::evaluation_utils::convertToDiagonalNoise(const SharedNoiseModel&)[m[K’:
+[6.635s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:373:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kinverse[m[K’ is not a member of ‘[01m[Kgtsam[m[K’; did you mean ‘[01m[KEigen::inverse[m[K’?
+[6.635s]   373 |     Matrix C = gtsam::[01;31m[Kinverse[m[K(trans(R) * R); // get covariance from square root information
+[6.635s]       |                       [01;31m[K^~~~~~~[m[K
+[6.635s] In file included from [01m[K/usr/include/eigen3/Eigen/Core:380[m[K,
+[6.635s]                  from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+[6.635s]                  from [01m[K/opt/ros/humble/include/gtsam/base/OptionalJacobian.h:22[m[K,
+[6.636s]                  from [01m[K/opt/ros/humble/include/gtsam/base/Matrix.h:27[m[K,
+[6.636s]                  from [01m[K/opt/ros/humble/include/gtsam/base/Manifold.h:22[m[K,
+[6.636s]                  from [01m[K/opt/ros/humble/include/gtsam/base/Lie.h:26[m[K,
+[6.636s]                  from [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/between_chordal_factor.h:21[m[K,
+[6.636s]                  from [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/evaluation_utils.h:3[m[K,
+[6.636s]                  from [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:1[m[K:
+[6.636s] [01m[K/usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h:59:3:[m[K [01;36m[Knote: [m[K‘[01m[KEigen::inverse[m[K’ declared here
+[6.636s]    59 |   [01;36m[KEIGEN_ARRAY_DECLARE_GLOBAL_UNARY[m[K(inverse,scalar_inverse_op,inverse,\sa ArrayBase::inverse)
+[6.636s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.636s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:382:65:[m[K [01;31m[Kerror: [m[K‘[01m[Krepeat[m[K’ was not declared in this scope; did you mean ‘[01m[Kboost::assign::repeat[m[K’?
+[6.636s]   382 |     SharedDiagonal chordal_noise = noiseModel::Diagonal::Sigmas([01;31m[Krepeat[m[K(9, max_C));
+[6.636s]       |                                                                 [01;31m[K^~~~~~[m[K
+[6.636s]       |                                                                 [32m[Kboost::assign::repeat[m[K
+[6.636s] In file included from [01m[K/opt/ros/humble/include/gtsam/inference/FactorGraph.h:32[m[K,
+[6.636s]                  from [01m[K/opt/ros/humble/include/gtsam/inference/MetisIndex.h:21[m[K,
+[6.637s]                  from [01m[K/opt/ros/humble/include/gtsam/inference/Ordering.h:25[m[K,
+[6.637s]                  from [01m[K/opt/ros/humble/include/gtsam/inference/EliminateableFactorGraph.h:26[m[K,
+[6.637s]                  from [01m[K/opt/ros/humble/include/gtsam/linear/GaussianFactorGraph.h:24[m[K,
+[6.637s]                  from [01m[K/opt/ros/humble/include/gtsam/slam/InitializePose3.h:25[m[K,
+[6.637s]                  from [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/include/distributed_mapper/evaluation_utils.h:4[m[K,
+[6.637s]                  from [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:1[m[K:
+[6.637s] [01m[K/usr/include/boost/assign/list_inserter.hpp:196:5:[m[K [01;36m[Knote: [m[K‘[01m[Kboost::assign::repeat[m[K’ declared here
+[6.637s]   196 |     [01;36m[Krepeat[m[K( std::size_t sz, T r )
+[6.637s]       |     [01;36m[K^~~~~~[m[K
+[6.644s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:[m[K In function ‘[01m[Kstd::tuple<double, double, double> distributed_mapper::evaluation_utils::evaluateEstimates(const size_t&, const GraphAndValues&, const shared_ptr&, const shared_ptr&, const bool&, const gtsam::Values&, const bool&)[m[K’:
+[6.644s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:538:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knr_robots[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.644s]   538 |   std::tuple<double, double, double> evaluateEstimates([01;35m[Kconst size_t &nr_robots[m[K,
+[6.644s]       |                                                        [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[6.719s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:[m[K In member function ‘[01m[Kstd::pair<gtsam::NonlinearFactorGraph, std::vector<long unsigned int> > distributed_mapper::DistributedMapper::createSubgraphInnerAndSepEdges(const gtsam::NonlinearFactorGraph&)[m[K’:
+[6.719s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:35:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kindex_mask[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.719s]    35 |     Key [01;35m[Kindex_mask[m[K = ~chr_mask;
+[6.719s]       |         [01;35m[K^~~~~~~~~~[m[K
+[6.748s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper_utils.cpp:[m[K In function ‘[01m[Kvoid distributed_mapper::optimizeRotation(std::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >&, const size_t&, const size_t&, const string&, const std::vector<long unsigned int>&, const bool&, const double&, const bool&, boost::optional<std::vector<gtsam::Values>&>, boost::optional<std::vector<gtsam::Values>&>, boost::optional<std::vector<gtsam::VectorValues>&>, boost::optional<gtsam::VectorValues&>, boost::optional<gtsam::GaussianFactorGraph&>)[m[K’:
+[6.748s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper_utils.cpp:282:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kchange[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.748s]   282 |         double [01;35m[Kchange[m[K = dist_mappers[robot]->latestChange();
+[6.749s]       |                [01;35m[K^~~~~~[m[K
+[6.750s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper_utils.cpp:[m[K In function ‘[01m[Kvoid distributed_mapper::optimizePose(std::vector<boost::shared_ptr<distributed_mapper::DistributedMapper> >&, const size_t&, const size_t&, const string&, const std::vector<long unsigned int>&, const bool&, const double&, const bool&, boost::optional<std::vector<gtsam::Values>&>, boost::optional<std::vector<gtsam::Values>&>, boost::optional<gtsam::Values&>, boost::optional<gtsam::NonlinearFactorGraph&>)[m[K’:
+[6.750s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper_utils.cpp:455:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kchange[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[6.750s]   455 |         double [01;35m[Kchange[m[K = dist_mappers[robot]->latestChange();
+[6.750s]       |                [01;35m[K^~~~~~[m[K
+[6.756s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:[m[K In member function ‘[01m[Kvoid distributed_mapper::DistributedMapper::estimateRotation()[m[K’:
+[6.756s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:169:73:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gtsam::BetweenFactor<gtsam::Pose3>[m[K’ has no member named ‘[01m[Kget_noiseModel[m[K’; did you mean ‘[01m[KnoiseModel[m[K’?
+[6.756s]   169 |         model = evaluation_utils::convertToDiagonalNoise(pose3_between->[01;31m[Kget_noiseModel[m[K());
+[6.756s]       |                                                                         [01;31m[K^~~~~~~~~~~~~~[m[K
+[6.756s]       |                                                                         [32m[KnoiseModel[m[K
+[6.765s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:[m[K In member function ‘[01m[Kvoid distributed_mapper::DistributedMapper::chordalFactorGraph()[m[K’:
+[6.765s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:220:96:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gtsam::BetweenFactor<gtsam::Pose3>[m[K’ has no member named ‘[01m[Kget_noiseModel[m[K’; did you mean ‘[01m[KnoiseModel[m[K’?
+[6.765s]   220 |               SharedNoiseModel chordal_noise = evaluation_utils::convertToChordalNoise(factor->[01;31m[Kget_noiseModel[m[K());
+[6.765s]       |                                                                                                [01;31m[K^~~~~~~~~~~~~~[m[K
+[6.765s]       |                                                                                                [32m[KnoiseModel[m[K
+[6.778s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:[m[K In member function ‘[01m[Kvoid distributed_mapper::DistributedMapper::estimatePoses()[m[K’:
+[6.778s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:281:105:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gtsam::BetweenFactor<gtsam::Pose3>[m[K’ has no member named ‘[01m[Kget_noiseModel[m[K’; did you mean ‘[01m[KnoiseModel[m[K’?
+[6.778s]   281 |             SharedNoiseModel chordal_noise = evaluation_utils::convertToChordalNoise(pose3_between->[01;31m[Kget_noiseModel[m[K(), rotation.matrix());
+[6.778s]       |                                                                                                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[6.778s]       |                                                                                                     [32m[KnoiseModel[m[K
+[6.779s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:295:105:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass gtsam::BetweenFactor<gtsam::Pose3>[m[K’ has no member named ‘[01m[Kget_noiseModel[m[K’; did you mean ‘[01m[KnoiseModel[m[K’?
+[6.779s]   295 |             SharedNoiseModel chordal_noise = evaluation_utils::convertToChordalNoise(pose3_between->[01;31m[Kget_noiseModel[m[K(), rotation.matrix());
+[6.779s]       |                                                                                                     [01;31m[K^~~~~~~~~~~~~~[m[K
+[6.779s]       |                                                                                                     [32m[KnoiseModel[m[K
+[6.863s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/run_distributed_mapper.cpp:[m[K In function ‘[01m[Kstd::tuple<double, double, int> distributed_mapper::runDistributedMapper(const size_t&, const string&, const string&, const string&, const bool&, const bool&, const bool&, const shared_ptr&, const shared_ptr&, const size_t&, const double&, const double&, const double&, const bool&, const distributed_mapper::DistributedMapper::UpdateType&, const bool&, const bool&, const bool&, const double&, const bool&, const bool&, const bool&)[m[K’:
+[6.863s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/run_distributed_mapper.cpp:13:93:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klog_dir[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.863s]    13 | std::tuple<double, double, int> runDistributedMapper(const size_t& nr_robots, [01;35m[Kconst string& log_dir[m[K, const string& data_dir, const string& trace_file, const bool& use_XY, const bool& use_OP,
+[6.863s]       |                                                                               [01;35m[K~~~~~~~~~~~~~~^~~~~~~[m[K
+[6.863s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/run_distributed_mapper.cpp:13:140:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktrace_file[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.864s]    13 | std::tuple<double, double, int> runDistributedMapper(const size_t& nr_robots, const string& log_dir, const string& data_dir, [01;35m[Kconst string& trace_file[m[K, const bool& use_XY, const bool& use_OP,
+[6.864s]       |                                                                                                                              [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[8.049s] gmake[2]: *** [CMakeFiles/distributed_mapper.dir/build.make:76：CMakeFiles/distributed_mapper.dir/src/distributed_mapper/distributed_mapper.cpp.o] 错误 1
+[8.049s] gmake[2]: *** 正在等待未完成的任务....
+[8.291s] [01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/run_distributed_mapper.cpp:169:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[8.291s]   169 | [01;35m[K}[m[K
+[8.291s]       | [01;35m[K^[m[K
+[8.332s] gmake[2]: *** [CMakeFiles/distributed_mapper.dir/build.make:90：CMakeFiles/distributed_mapper.dir/src/distributed_mapper/evaluation_utils.cpp.o] 错误 1
+[8.782s] gmake[1]: *** [CMakeFiles/Makefile2:318：CMakeFiles/distributed_mapper.dir/all] 错误 2
+[8.782s] gmake: *** [Makefile:146：all] 错误 2
+[8.784s] Invoked command in '/home/isaac/DCL-SLAM/build/distributed_mapper' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/distributed_mapper -- -j32 -l32

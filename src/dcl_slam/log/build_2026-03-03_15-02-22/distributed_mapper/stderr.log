@@ -1,0 +1,12 @@
+[01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:[m[K In function ‘[01m[Kgtsam::Values distributed_mapper::evaluation_utils::retractPose3GlobalWithOffset(const gtsam::Values&, const gtsam::VectorValues&, const Point3&)[m[K’:
+[01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:108:14:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kt_initial[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  108 |       Point3 [01;35m[Kt_initial[m[K = initial.at<Pose3>(key).translation();
+      |              [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:[m[K In function ‘[01m[Kstd::tuple<double, double, double> distributed_mapper::evaluation_utils::evaluateEstimates(const size_t&, const GraphAndValues&, const shared_ptr&, const shared_ptr&, const bool&, const gtsam::Values&, const bool&)[m[K’:
+[01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/evaluation_utils.cpp:538:70:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knr_robots[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  538 |   std::tuple<double, double, double> evaluateEstimates([01;35m[Kconst size_t &nr_robots[m[K,
+      |                                                        [01;35m[K~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:[m[K In member function ‘[01m[Kstd::pair<gtsam::NonlinearFactorGraph, std::vector<long unsigned int> > distributed_mapper::DistributedMapper::createSubgraphInnerAndSepEdges(const gtsam::NonlinearFactorGraph&)[m[K’:
+[01m[K/home/isaac/DCL-SLAM/src/distributed_mapper/src/distributed_mapper/distributed_mapper.cpp:35:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kindex_mask[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   35 |     Key [01;35m[Kindex_mask[m[K = ~chr_mask;
+      |         [01;35m[K^~~~~~~~~~[m[K

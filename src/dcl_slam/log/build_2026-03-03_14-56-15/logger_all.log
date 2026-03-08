@@ -1,0 +1,157 @@
+[0.044s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--base-paths', '.', 'src/distributed_mapper', 'src/libnabo']
+[0.044s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=32, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.', 'src/distributed_mapper', 'src/libnabo'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7a6e1f41b370>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7a6e1f5688b0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7a6e1f5688b0>>)
+[0.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.106s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.106s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/isaac/DCL-SLAM', '/home/isaac/DCL-SLAM/src/distributed_mapper', '/home/isaac/DCL-SLAM/src/libnabo'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.107s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.113s] DEBUG:colcon.colcon_core.package_identification:Package '.' with type 'ros.ament_cmake' and name 'dcl_slam'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/distributed_mapper) by extensions ['ignore', 'ignore_ament_install']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/distributed_mapper) by extension 'ignore'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/distributed_mapper) by extension 'ignore_ament_install'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/distributed_mapper) by extensions ['colcon_pkg']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/distributed_mapper) by extension 'colcon_pkg'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/distributed_mapper) by extensions ['colcon_meta']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(src/distributed_mapper) by extension 'colcon_meta'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/distributed_mapper) by extensions ['ros']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/distributed_mapper) by extension 'ros'
+[0.114s] DEBUG:colcon.colcon_core.package_identification:Package 'src/distributed_mapper' with type 'ros.ament_cmake' and name 'distributed_mapper'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/libnabo) by extensions ['ignore', 'ignore_ament_install']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/libnabo) by extension 'ignore'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/libnabo) by extension 'ignore_ament_install'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/libnabo) by extensions ['colcon_pkg']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/libnabo) by extension 'colcon_pkg'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/libnabo) by extensions ['colcon_meta']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/libnabo) by extension 'colcon_meta'
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/libnabo) by extensions ['ros']
+[0.114s] Level 1:colcon.colcon_core.package_identification:_identify(src/libnabo) by extension 'ros'
+[0.114s] DEBUG:colcon.colcon_core.package_identification:Package 'src/libnabo' with type 'ros.ament_cmake' and name 'libnabo'
+[0.114s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.123s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.123s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.124s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 271 installed packages in /opt/ros/humble
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.143s] Level 5:colcon.colcon_core.verb:set package 'distributed_mapper' build argument 'cmake_args' from command line to 'None'
+[0.143s] Level 5:colcon.colcon_core.verb:set package 'distributed_mapper' build argument 'cmake_target' from command line to 'None'
+[0.143s] Level 5:colcon.colcon_core.verb:set package 'distributed_mapper' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.143s] Level 5:colcon.colcon_core.verb:set package 'distributed_mapper' build argument 'cmake_clean_cache' from command line to 'False'
+[0.143s] Level 5:colcon.colcon_core.verb:set package 'distributed_mapper' build argument 'cmake_clean_first' from command line to 'False'
+[0.143s] Level 5:colcon.colcon_core.verb:set package 'distributed_mapper' build argument 'cmake_force_configure' from command line to 'False'
+[0.143s] Level 5:colcon.colcon_core.verb:set package 'distributed_mapper' build argument 'ament_cmake_args' from command line to 'None'
+[0.143s] Level 5:colcon.colcon_core.verb:set package 'distributed_mapper' build argument 'catkin_cmake_args' from command line to 'None'
+[0.143s] Level 5:colcon.colcon_core.verb:set package 'distributed_mapper' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.143s] DEBUG:colcon.colcon_core.verb:Building package 'distributed_mapper' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/isaac/DCL-SLAM/build/distributed_mapper', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/isaac/DCL-SLAM/install/distributed_mapper', 'merge_install': False, 'path': '/home/isaac/DCL-SLAM/src/distributed_mapper', 'symlink_install': True, 'test_result_base': None}
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'libnabo' build argument 'cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'libnabo' build argument 'cmake_target' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'libnabo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'libnabo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'libnabo' build argument 'cmake_clean_first' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'libnabo' build argument 'cmake_force_configure' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'libnabo' build argument 'ament_cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'libnabo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'libnabo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.144s] DEBUG:colcon.colcon_core.verb:Building package 'libnabo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/isaac/DCL-SLAM/build/libnabo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/isaac/DCL-SLAM/install/libnabo', 'merge_install': False, 'path': '/home/isaac/DCL-SLAM/src/libnabo', 'symlink_install': True, 'test_result_base': None}
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'dcl_slam' build argument 'cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'dcl_slam' build argument 'cmake_target' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'dcl_slam' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'dcl_slam' build argument 'cmake_clean_cache' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'dcl_slam' build argument 'cmake_clean_first' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'dcl_slam' build argument 'cmake_force_configure' from command line to 'False'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'dcl_slam' build argument 'ament_cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'dcl_slam' build argument 'catkin_cmake_args' from command line to 'None'
+[0.144s] Level 5:colcon.colcon_core.verb:set package 'dcl_slam' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.144s] DEBUG:colcon.colcon_core.verb:Building package 'dcl_slam' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/isaac/DCL-SLAM/build/dcl_slam', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/isaac/DCL-SLAM/install/dcl_slam', 'merge_install': False, 'path': '/home/isaac/DCL-SLAM', 'symlink_install': True, 'test_result_base': None}
+[0.144s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.144s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.145s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/isaac/DCL-SLAM/src/distributed_mapper' with build type 'ament_cmake'
+[0.145s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/isaac/DCL-SLAM/src/distributed_mapper'
+[0.146s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.146s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.146s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.147s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/isaac/DCL-SLAM/src/libnabo' with build type 'ament_cmake'
+[0.147s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/isaac/DCL-SLAM/src/libnabo'
+[0.147s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.147s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.151s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/isaac/DCL-SLAM/build/distributed_mapper': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/distributed_mapper -- -j32 -l32
+[0.152s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/isaac/DCL-SLAM/build/libnabo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/libnabo -- -j32 -l32
+[2.081s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/isaac/DCL-SLAM/build/libnabo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/libnabo -- -j32 -l32
+[2.087s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/isaac/DCL-SLAM/build/libnabo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/isaac/DCL-SLAM/build/libnabo
+[2.265s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(libnabo)
+[2.265s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/isaac/DCL-SLAM/build/libnabo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/isaac/DCL-SLAM/build/libnabo
+[2.266s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/libnabo' for CMake module files
+[2.266s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/libnabo' for CMake config files
+[2.266s] Level 1:colcon.colcon_core.shell:create_environment_hook('libnabo', 'cmake_prefix_path')
+[2.266s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/hook/cmake_prefix_path.ps1'
+[2.267s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/hook/cmake_prefix_path.dsv'
+[2.267s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/hook/cmake_prefix_path.sh'
+[2.267s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/libnabo/lib'
+[2.267s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/libnabo/bin'
+[2.267s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/libnabo/lib/pkgconfig/libnabo.pc'
+[2.267s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/libnabo/lib/python3.10/site-packages'
+[2.268s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/libnabo/bin'
+[2.268s] INFO:colcon.colcon_core.shell:Creating package script '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.ps1'
+[2.268s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.dsv'
+[2.268s] INFO:colcon.colcon_core.shell:Creating package script '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.sh'
+[2.269s] INFO:colcon.colcon_core.shell:Creating package script '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.bash'
+[2.269s] INFO:colcon.colcon_core.shell:Creating package script '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.zsh'
+[2.269s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/isaac/DCL-SLAM/install/libnabo/share/colcon-core/packages/libnabo)
+[2.269s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(libnabo)
+[2.269s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/libnabo' for CMake module files
+[2.270s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/libnabo' for CMake config files
+[2.270s] Level 1:colcon.colcon_core.shell:create_environment_hook('libnabo', 'cmake_prefix_path')
+[2.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/hook/cmake_prefix_path.ps1'
+[2.270s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/hook/cmake_prefix_path.dsv'
+[2.270s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/hook/cmake_prefix_path.sh'
+[2.270s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/libnabo/lib'
+[2.270s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/libnabo/bin'
+[2.270s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/libnabo/lib/pkgconfig/libnabo.pc'
+[2.271s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/libnabo/lib/python3.10/site-packages'
+[2.271s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/libnabo/bin'
+[2.271s] INFO:colcon.colcon_core.shell:Creating package script '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.ps1'
+[2.271s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.dsv'
+[2.271s] INFO:colcon.colcon_core.shell:Creating package script '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.sh'
+[2.271s] INFO:colcon.colcon_core.shell:Creating package script '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.bash'
+[2.271s] INFO:colcon.colcon_core.shell:Creating package script '/home/isaac/DCL-SLAM/install/libnabo/share/libnabo/package.zsh'
+[2.272s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/isaac/DCL-SLAM/install/libnabo/share/colcon-core/packages/libnabo)
+[14.087s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/isaac/DCL-SLAM/build/distributed_mapper' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/distributed_mapper -- -j32 -l32
+[14.087s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(distributed_mapper)
+[14.088s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/distributed_mapper' for CMake module files
+[14.088s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/distributed_mapper' for CMake config files
+[14.088s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/distributed_mapper/bin'
+[14.088s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/distributed_mapper/lib/pkgconfig/distributed_mapper.pc'
+[14.088s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/distributed_mapper/lib/python3.10/site-packages'
+[14.088s] Level 1:colcon.colcon_core.environment:checking '/home/isaac/DCL-SLAM/install/distributed_mapper/bin'
+[14.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/package.ps1'
+[14.089s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/package.dsv'
+[14.089s] INFO:colcon.colcon_core.shell:Creating package script '/home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/package.sh'
+[14.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/package.bash'
+[14.090s] INFO:colcon.colcon_core.shell:Creating package script '/home/isaac/DCL-SLAM/install/distributed_mapper/share/distributed_mapper/package.zsh'
+[14.090s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/isaac/DCL-SLAM/install/distributed_mapper/share/colcon-core/packages/distributed_mapper)
+[14.100s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[14.101s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[14.101s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[14.101s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[14.103s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[14.103s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[14.103s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[14.113s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[14.114s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/isaac/DCL-SLAM/install/local_setup.ps1'
+[14.115s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/isaac/DCL-SLAM/install/_local_setup_util_ps1.py'
+[14.117s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/isaac/DCL-SLAM/install/setup.ps1'
+[14.118s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/isaac/DCL-SLAM/install/local_setup.sh'
+[14.119s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/isaac/DCL-SLAM/install/_local_setup_util_sh.py'
+[14.120s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/isaac/DCL-SLAM/install/setup.sh'
+[14.120s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/isaac/DCL-SLAM/install/local_setup.bash'
+[14.121s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/isaac/DCL-SLAM/install/setup.bash'
+[14.121s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/isaac/DCL-SLAM/install/local_setup.zsh'
+[14.122s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/isaac/DCL-SLAM/install/setup.zsh'

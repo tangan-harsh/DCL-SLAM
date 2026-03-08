@@ -1,0 +1,49 @@
+[0.004s] Invoking command in '/home/isaac/DCL-SLAM/build/libnabo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/isaac/DCL-SLAM/src/libnabo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/isaac/DCL-SLAM/install/libnabo
+[0.045s] -- The C compiler identification is GNU 11.4.0
+[0.090s] -- The CXX compiler identification is GNU 11.4.0
+[0.095s] -- Detecting C compiler ABI info
+[0.175s] -- Detecting C compiler ABI info - done
+[0.179s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.179s] -- Detecting C compile features
+[0.179s] -- Detecting C compile features - done
+[0.182s] -- Detecting CXX compiler ABI info
+[0.252s] -- Detecting CXX compiler ABI info - done
+[0.257s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.257s] -- Detecting CXX compile features
+[0.257s] -- Detecting CXX compile features - done
+[0.258s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.342s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.373s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.416s] -- Configuring done
+[0.419s] -- Generating done
+[0.420s] -- Build files have been written to: /home/isaac/DCL-SLAM/build/libnabo
+[0.423s] Invoked command in '/home/isaac/DCL-SLAM/build/libnabo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/isaac/DCL-SLAM/src/libnabo -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/isaac/DCL-SLAM/install/libnabo
+[0.424s] Invoking command in '/home/isaac/DCL-SLAM/build/libnabo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/libnabo -- -j32 -l32
+[0.460s] [ 20%] [32mBuilding CXX object CMakeFiles/libnabo.dir/nabo/brute_force_cpu.cpp.o[0m
+[0.462s] [ 40%] [32mBuilding CXX object CMakeFiles/libnabo.dir/nabo/kdtree_cpu.cpp.o[0m
+[0.462s] [ 60%] [32mBuilding CXX object CMakeFiles/libnabo.dir/nabo/kdtree_opencl.cpp.o[0m
+[0.463s] [ 80%] [32mBuilding CXX object CMakeFiles/libnabo.dir/nabo/nabo.cpp.o[0m
+[0.467s] In file included from [01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/nabo_private.h:35[m[K,
+[0.467s]                  from [01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/kdtree_cpu.cpp:32[m[K:
+[0.467s] [01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/nabo.h:35:10:[m[K [01;31m[Kfatal error: [m[KEigen/Core: 没有那个文件或目录
+[0.467s]    35 | #include [01;31m[K"Eigen/Core"[m[K
+[0.467s]       |          [01;31m[K^~~~~~~~~~~~[m[K
+[0.467s] compilation terminated.
+[0.467s] gmake[2]: *** [CMakeFiles/libnabo.dir/build.make:104：CMakeFiles/libnabo.dir/nabo/kdtree_cpu.cpp.o] 错误 1
+[0.468s] gmake[2]: *** 正在等待未完成的任务....
+[0.468s] In file included from [01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/nabo_private.h:35[m[K,
+[0.468s]                  from [01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/brute_force_cpu.cpp:32[m[K:
+[0.468s] [01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/nabo.h:35:10:[m[K [01;31m[Kfatal error: [m[KEigen/Core: 没有那个文件或目录
+[0.468s]    35 | #include [01;31m[K"Eigen/Core"[m[K
+[0.468s]       |          [01;31m[K^~~~~~~~~~~~[m[K
+[0.468s] compilation terminated.
+[0.469s] gmake[2]: *** [CMakeFiles/libnabo.dir/build.make:90：CMakeFiles/libnabo.dir/nabo/brute_force_cpu.cpp.o] 错误 1
+[0.470s] In file included from [01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/nabo.cpp:32[m[K:
+[0.470s] [01m[K/home/isaac/DCL-SLAM/src/libnabo/nabo/nabo.h:35:10:[m[K [01;31m[Kfatal error: [m[KEigen/Core: 没有那个文件或目录
+[0.470s]    35 | #include [01;31m[K"Eigen/Core"[m[K
+[0.470s]       |          [01;31m[K^~~~~~~~~~~~[m[K
+[0.470s] compilation terminated.
+[0.470s] gmake[2]: *** [CMakeFiles/libnabo.dir/build.make:76：CMakeFiles/libnabo.dir/nabo/nabo.cpp.o] 错误 1
+[0.475s] gmake[1]: *** [CMakeFiles/Makefile2:137：CMakeFiles/libnabo.dir/all] 错误 2
+[0.475s] gmake: *** [Makefile:146：all] 错误 2
+[0.478s] Invoked command in '/home/isaac/DCL-SLAM/build/libnabo' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/isaac/DCL-SLAM/build/libnabo -- -j32 -l32
