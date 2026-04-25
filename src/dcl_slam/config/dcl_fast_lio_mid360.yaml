@@ -47,10 +47,19 @@
     ransac_outlier_reject_threshold: 0.3    # RANSAC 外点剔除距离
 
     # ===== FAST-LIO 前端参数 =====
+    ros__parameters:
+      feature_extract_enable: false  # 是否启用特征提取
+      point_filter_num: 20  # 点云下采样倍数，数值越大点云越稀疏
+      max_iteration: 3  # 最大迭代次数，用于优化算法收敛
+      filter_size_surf: 0.5  # 表面点滤波网格大小（米）
+      filter_size_map: 0.5  # 地图点滤波网格大小（米）
+      cube_side_length: 1000.0  # 地图立方体边长（米）
+      runtime_pos_log_enable: false  # 是否启用运行时位置日志
+      map_file_path: "./test.pcd"  # 地图文件保存路径
     common:
-      lid_topic: "/livox/lidar"             # MID-360 默认话题名（绝对路径，避免命名空间前缀）
-      imu_topic: "/livox/imu"              # MID-360 内置 IMU 话题名（绝对路径）
-      time_sync_en: false                   # MID-360 硬件同步，无需软件同步
+      lid_topic: "livox/lidar"             # MID-360 默认话题名（绝对路径，避免命名空间前缀）
+      imu_topic: "livox/imu"              # MID-360 内置 IMU 话题名（绝对路径）
+      time_sync_en: true                   # MID-360 硬件同步，无需软件同步
 
     preprocess:
       lidar_type: 1              # 1=Livox, 2=Velodyne, 3=Ouster
@@ -68,7 +77,7 @@
       det_range: 40.0            # MID-360 最大检测距离 40m
       extrinsic_est_en: false    # 是否在线估计外参
       # MID-360 的 IMU 和雷达一体化，外参接近单位阵
-      extrinsic_T: [0.04165, 0.02326, -0.0284]
+      extrinsic_T: [-0.011, -0.02329, -0.04412]
       extrinsic_R: [1.0, 0.0, 0.0,
                      0.0, 1.0, 0.0,
                      0.0, 0.0, 1.0]

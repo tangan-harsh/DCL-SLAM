@@ -79,9 +79,9 @@ cd ~/ws_livox/src
 
 git clone https://github.com/Livox-SDK/livox_ros_driver2.git
 
-cd ~/ws_livox
+cd ~/ws_livox/src/livox_ros_driver2
 source /opt/ros/humble/setup.bash
-colcon build --symlink-install
+./build.sh humble
 
 echo "source ~/ws_livox/install/setup.bash" >> ~/.bashrc
 source ~/.bashrc
@@ -90,7 +90,7 @@ source ~/.bashrc
 ### 配置 MID-360 连接
 
 编辑驱动配置文件中的 IP，确保：
-- 本机 IP 设为 `192.168.1.5`（或其他同网段地址）
+- 本机 IP 设为 `192.168.1.50`（或其他同网段地址）
 - MID-360 IP 默认为 `192.168.1.1xx`
 
 ```bash
@@ -306,7 +306,7 @@ cat ~/log/*.INFO | grep globalDescriptorHandler
 │ SUB: /b/.../loopInfo      │  ←──DDS──│ PUB: /b/.../loopInfo      │
 │ PUB: /a/.../optState      │──DDS──→  │ SUB: /a/.../optState      │
 │ SUB: /b/.../optState      │  ←──DDS──│ PUB: /b/.../optState      │
-│ ... (旋转/位姿估计同理)    │          │ ... (旋转/位姿估计同理)    │
+│ ... (旋转/位姿估计同理)      │          │ ... (旋转/位姿估计同理)      │
 │                           │          │                           │
 │ MID-360 (/livox/lidar)    │          │ MID-360 (/livox/lidar)    │
 └───────────────────────────┘          └───────────────────────────┘

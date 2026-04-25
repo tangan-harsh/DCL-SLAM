@@ -160,6 +160,61 @@ rclcpp::Node::SharedPtr node;
 shared_ptr<Preprocess> p_pre(new Preprocess());
 shared_ptr<ImuProcess> p_imu(new ImuProcess());
 
+rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odomHigh_speed;   
+double latest_time;
+V3D latest_P, latest_V, latest_Ba, latest_Bg,latest_acc_0, latest_gyr_0, acc_0, gyr_0;
+M3D latest_Q;
+bool init = false;
+double imu_acc_norm_factor = 1.0;
+
+void updateLatestStates()
+{
+    latest_time = lidar_end_time;
+    latest_P = state_point.pos;
+    latest_V = state_point.vel;
+    latest_Q = state_point.rot;
+    latest_Ba = state_point.ba;
+    latest_Bg = state_point.bg;
+    imu_acc_norm_factor = G_m_s2 / p_imu->get_mean_acc_norm();
+}
+
+void fastPredictIMU(double t,V3D acc, V3D gyr)
+{
+    double dt = t - latest_time;
+    latest_time = t;
+    V3D acc_normalized = acc * imu_acc_norm_factor;
+    V3D latest_acc_0_normalized = latest_acc_0 * imu_acc_norm_factor;
+    V3D un_acc_0 = latest_Q * (latest_acc_0_normalized - latest_Ba) + V3D(state_point.grav[0],state_point.grav[1],state_point.grav[2]);
+    V3D un_gyr = 0.5 * (latest_gyr_0 + gyr) - latest_Bg;
+    latest_Q = latest_Q * Exp(un_gyr, dt);
+    V3D un_acc_1 = latest_Q * (acc_normalized - latest_Ba) + V3D(state_point.grav[0],state_point.grav[1],state_point.grav[2]);
+    V3D un_acc = 0.5 * (un_acc_0 + un_acc_1);
+    latest_P = latest_P + dt * latest_V + 0.5 * dt * dt * un_acc;
+    latest_V = latest_V + dt * un_acc;
+    latest_acc_0 = acc;
+    latest_gyr_0 = gyr;
+    nav_msgs::msg::Odometry odomHigh;
+    Eigen::Quaterniond quadrotor_Q = Eigen::Quaterniond(latest_Q);
+    odomHigh.header.stamp = to_ros_time(t);
+    odomHigh.header.frame_id = name +"/"+ "camera_init";
+    odomHigh.child_frame_id = name +"/"+ "body";
+    odomHigh.pose.pose.position.x = latest_P.x();
+    odomHigh.pose.pose.position.y = latest_P.y();
+    odomHigh.pose.pose.position.z = latest_P.z();
+    odomHigh.pose.pose.orientation.x = quadrotor_Q.x();
+    odomHigh.pose.pose.orientation.y = quadrotor_Q.y();
+    odomHigh.pose.pose.orientation.z = quadrotor_Q.z();
+    odomHigh.pose.pose.orientation.w = quadrotor_Q.w();
+    odomHigh.twist.twist.linear.x = latest_V.x();
+    odomHigh.twist.twist.linear.y = latest_V.y();
+    odomHigh.twist.twist.linear.z = latest_V.z();
+    odomHigh.twist.twist.angular.x = gyr.x() - state_point.bg.x();
+    odomHigh.twist.twist.angular.y = gyr.y() - state_point.bg.y();
+    odomHigh.twist.twist.angular.z = gyr.z() - state_point.bg.z();
+
+    odomHigh_speed->publish(odomHigh);
+}
+
 void SigHandle(int sig)
 {
     flg_exit = true;
@@ -363,6 +418,12 @@ void imu_cbk(const sensor_msgs::msg::Imu::ConstSharedPtr msg_in)
     publish_count ++;
     auto msg = std::make_shared<sensor_msgs::msg::Imu>(*msg_in);
 
+    if(init)
+    {
+        fastPredictIMU(get_time_sec(msg->header.stamp)
+        ,V3D(msg->linear_acceleration.x, msg->linear_acceleration.y, msg->linear_acceleration.z)
+        ,V3D(msg->angular_velocity.x, msg->angular_velocity.y, msg->angular_velocity.z));
+    }
     if (abs(timediff_lidar_wrt_imu) > 0.1 && time_sync_en)
     {
         double corrected_time = timediff_lidar_wrt_imu + get_time_sec(msg_in->header.stamp);
@@ -611,8 +672,22 @@ void publish_odometry(const rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPt
     odomAftMapped.child_frame_id = name +"/"+ "body";
     odomAftMapped.header.stamp = to_ros_time(lidar_end_time);
     set_posestamp(odomAftMapped.pose);
-    pubOdomAftMapped->publish(odomAftMapped);
+    odomAftMapped.twist.twist.linear.x = state_point.vel(0);
+    odomAftMapped.twist.twist.linear.y = state_point.vel(1);
+    odomAftMapped.twist.twist.linear.z = state_point.vel(2);
     auto P = kf.get_P();
+    for (int i = 0; i < 6; i ++)
+    {
+        int k = i < 3 ? i + 3 : i - 3 + 12;
+        odomAftMapped.twist.covariance[i*6 + 0] = P(k, 12);
+        odomAftMapped.twist.covariance[i*6 + 1] = P(k, 13);
+        odomAftMapped.twist.covariance[i*6 + 2] = P(k, 14);
+        odomAftMapped.twist.covariance[i*6 + 3] = P(k, 15);
+        odomAftMapped.twist.covariance[i*6 + 4] = P(k, 16);
+        odomAftMapped.twist.covariance[i*6 + 5] = P(k, 17);
+    }
+    pubOdomAftMapped->publish(odomAftMapped);
+    // auto P = kf.get_P();
     for (int i = 0; i < 6; i ++)
     {
         int k = i < 3 ? i + 3 : i - 3;
@@ -961,7 +1036,8 @@ int main(int argc, char** argv)
         "Odometry", 100000);
     auto pubPath = node->create_publisher<nav_msgs::msg::Path>(
         "path", 100000);
-
+    odomHigh_speed = node->create_publisher<nav_msgs::msg::Odometry>(
+        "Odom_high_fre", 100000);
     auto tf_broadcaster = std::make_unique<tf2_ros::TransformBroadcaster>(*node);
 
 //------------------------------------------------------------------------------------------------------
@@ -1034,7 +1110,7 @@ int main(int argc, char** argv)
             int featsFromMapNum = ikdtree.validnum();
             kdtree_size_st = ikdtree.size();
             
-            cout<<"[ mapping ]: In num: "<<feats_undistort->points.size()<<" downsamp "<<feats_down_size<<" Map num: "<<featsFromMapNum<<"effect num:"<<effct_feat_num<<endl;
+            // cout<<"[ mapping ]: In num: "<<feats_undistort->points.size()<<" downsamp "<<feats_down_size<<" Map num: "<<featsFromMapNum<<"effect num:"<<effct_feat_num<<endl;
 
             /*** ICP and iterated Kalman filter update ***/
             if (feats_down_size < 5)
@@ -1150,6 +1226,9 @@ int main(int argc, char** argv)
             }
             dm.publishTransformation(rclcpp::Time(to_ros_time(lidar_end_time)));
 			/*** dcl-slam ***/
+
+            init = true;
+            updateLatestStates();
 
             /******* Publish odometry *******/
             publish_odometry(pubOdomAftMapped, tf_broadcaster);
