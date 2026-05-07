@@ -33,6 +33,7 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 #include <omp.h>
+#include <algorithm>
 #include <mutex>
 #include <math.h>
 #include <thread>
@@ -161,58 +162,217 @@ shared_ptr<Preprocess> p_pre(new Preprocess());
 shared_ptr<ImuProcess> p_imu(new ImuProcess());
 
 rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr odomHigh_speed;   
-double latest_time;
-V3D latest_P, latest_V, latest_Ba, latest_Bg,latest_acc_0, latest_gyr_0, acc_0, gyr_0;
-M3D latest_Q;
-bool init = false;
-double imu_acc_norm_factor = 1.0;
 
-void updateLatestStates()
+struct HighFreqPredictorState
 {
-    latest_time = lidar_end_time;
-    latest_P = state_point.pos;
-    latest_V = state_point.vel;
-    latest_Q = state_point.rot;
-    latest_Ba = state_point.ba;
-    latest_Bg = state_point.bg;
-    imu_acc_norm_factor = G_m_s2 / p_imu->get_mean_acc_norm();
+    bool enable = true;
+    bool initialized = false;
+    bool imu_seeded = false;
+    bool fallback_to_lio_velocity = true;
+    double max_dt = 0.02;
+    double max_speed = 1.0;
+    double max_acc = 5.0;
+    double velocity_lpf_alpha = 0.35;
+    double time = 0.0;
+    double imu_acc_norm_factor = 1.0;
+    V3D pos = Zero3d;
+    V3D vel = Zero3d;
+    V3D ba = Zero3d;
+    V3D bg = Zero3d;
+    V3D gravity = Zero3d;
+    V3D last_acc = Zero3d;
+    V3D last_gyr = Zero3d;
+    V3D lio_pos = Zero3d;
+    V3D lio_vel = Zero3d;
+    V3D filtered_vel = Zero3d;
+    M3D rot = Eye3d;
+    M3D lio_rot = Eye3d;
+};
+
+HighFreqPredictorState high_freq_predictor;
+std::mutex high_freq_predictor_mtx;
+
+bool isFiniteVector(const V3D &v)
+{
+    return std::isfinite(v.x()) && std::isfinite(v.y()) && std::isfinite(v.z());
 }
 
-void fastPredictIMU(double t,V3D acc, V3D gyr)
+V3D limitedVector(const V3D &v, double max_norm)
 {
-    double dt = t - latest_time;
-    latest_time = t;
-    V3D acc_normalized = acc * imu_acc_norm_factor;
-    V3D latest_acc_0_normalized = latest_acc_0 * imu_acc_norm_factor;
-    V3D un_acc_0 = latest_Q * (latest_acc_0_normalized - latest_Ba) + V3D(state_point.grav[0],state_point.grav[1],state_point.grav[2]);
-    V3D un_gyr = 0.5 * (latest_gyr_0 + gyr) - latest_Bg;
-    latest_Q = latest_Q * Exp(un_gyr, dt);
-    V3D un_acc_1 = latest_Q * (acc_normalized - latest_Ba) + V3D(state_point.grav[0],state_point.grav[1],state_point.grav[2]);
-    V3D un_acc = 0.5 * (un_acc_0 + un_acc_1);
-    latest_P = latest_P + dt * latest_V + 0.5 * dt * dt * un_acc;
-    latest_V = latest_V + dt * un_acc;
-    latest_acc_0 = acc;
-    latest_gyr_0 = gyr;
+    if (max_norm <= 0.0 || !std::isfinite(max_norm))
+    {
+        return v;
+    }
+
+    const double norm = v.norm();
+    if (!std::isfinite(norm) || norm <= max_norm)
+    {
+        return v;
+    }
+
+    return v * (max_norm / norm);
+}
+
+void publishHighFreqOdometry(double t, const V3D &pos, const M3D &rot,
+                             const V3D &linear_vel, const V3D &angular_vel)
+{
+    if (!odomHigh_speed)
+    {
+        return;
+    }
+
     nav_msgs::msg::Odometry odomHigh;
-    Eigen::Quaterniond quadrotor_Q = Eigen::Quaterniond(latest_Q);
+    Eigen::Quaterniond quadrotor_Q = Eigen::Quaterniond(rot);
     odomHigh.header.stamp = to_ros_time(t);
     odomHigh.header.frame_id = name +"/"+ "camera_init";
     odomHigh.child_frame_id = name +"/"+ "body";
-    odomHigh.pose.pose.position.x = latest_P.x();
-    odomHigh.pose.pose.position.y = latest_P.y();
-    odomHigh.pose.pose.position.z = latest_P.z();
+    odomHigh.pose.pose.position.x = pos.x();
+    odomHigh.pose.pose.position.y = pos.y();
+    odomHigh.pose.pose.position.z = pos.z();
     odomHigh.pose.pose.orientation.x = quadrotor_Q.x();
     odomHigh.pose.pose.orientation.y = quadrotor_Q.y();
     odomHigh.pose.pose.orientation.z = quadrotor_Q.z();
     odomHigh.pose.pose.orientation.w = quadrotor_Q.w();
-    odomHigh.twist.twist.linear.x = latest_V.x();
-    odomHigh.twist.twist.linear.y = latest_V.y();
-    odomHigh.twist.twist.linear.z = latest_V.z();
-    odomHigh.twist.twist.angular.x = gyr.x() - state_point.bg.x();
-    odomHigh.twist.twist.angular.y = gyr.y() - state_point.bg.y();
-    odomHigh.twist.twist.angular.z = gyr.z() - state_point.bg.z();
+    odomHigh.twist.twist.linear.x = linear_vel.x();
+    odomHigh.twist.twist.linear.y = linear_vel.y();
+    odomHigh.twist.twist.linear.z = linear_vel.z();
+    odomHigh.twist.twist.angular.x = angular_vel.x();
+    odomHigh.twist.twist.angular.y = angular_vel.y();
+    odomHigh.twist.twist.angular.z = angular_vel.z();
 
     odomHigh_speed->publish(odomHigh);
+}
+
+void updateLatestStates()
+{
+    std::lock_guard<std::mutex> lock(high_freq_predictor_mtx);
+
+    high_freq_predictor.time = lidar_end_time;
+    high_freq_predictor.pos = state_point.pos;
+    high_freq_predictor.vel = state_point.vel;
+    high_freq_predictor.rot = state_point.rot;
+    high_freq_predictor.ba = state_point.ba;
+    high_freq_predictor.bg = state_point.bg;
+    high_freq_predictor.gravity = V3D(state_point.grav[0], state_point.grav[1], state_point.grav[2]);
+    high_freq_predictor.lio_pos = state_point.pos;
+    high_freq_predictor.lio_vel = state_point.vel;
+    high_freq_predictor.lio_rot = state_point.rot;
+    high_freq_predictor.filtered_vel = state_point.vel;
+    high_freq_predictor.imu_seeded = false;
+    high_freq_predictor.initialized = true;
+
+    const double mean_acc_norm = p_imu->get_mean_acc_norm();
+    high_freq_predictor.imu_acc_norm_factor =
+        (std::isfinite(mean_acc_norm) && mean_acc_norm > 1e-3) ? G_m_s2 / mean_acc_norm : 1.0;
+}
+
+void publishHighFreqFallbackLocked(double t, const V3D &gyr)
+{
+    V3D output_vel = high_freq_predictor.fallback_to_lio_velocity
+                         ? high_freq_predictor.lio_vel
+                         : high_freq_predictor.filtered_vel;
+    output_vel = limitedVector(output_vel, high_freq_predictor.max_speed);
+    high_freq_predictor.filtered_vel = output_vel;
+
+    publishHighFreqOdometry(t, high_freq_predictor.lio_pos, high_freq_predictor.lio_rot,
+                            output_vel, gyr - high_freq_predictor.bg);
+}
+
+void fastPredictIMU(double t, V3D acc, V3D gyr)
+{
+    std::lock_guard<std::mutex> lock(high_freq_predictor_mtx);
+
+    if (!high_freq_predictor.enable || !high_freq_predictor.initialized || !std::isfinite(t))
+    {
+        return;
+    }
+
+    if (!isFiniteVector(acc) || !isFiniteVector(gyr))
+    {
+        return;
+    }
+
+    if (!high_freq_predictor.imu_seeded)
+    {
+        high_freq_predictor.time = t;
+        high_freq_predictor.last_acc = acc;
+        high_freq_predictor.last_gyr = gyr;
+        high_freq_predictor.imu_seeded = true;
+        return;
+    }
+
+    // 将上一时刻的高频预测状态推进到当前 IMU 时间戳。
+    double dt = t - high_freq_predictor.time;
+    if (dt <= 0.0)
+    {
+        high_freq_predictor.last_acc = acc;
+        high_freq_predictor.last_gyr = gyr;
+        return;
+    }
+
+    if (dt > high_freq_predictor.max_dt)
+    {
+        high_freq_predictor.time = t;
+        high_freq_predictor.pos = high_freq_predictor.lio_pos;
+        high_freq_predictor.vel = high_freq_predictor.lio_vel;
+        high_freq_predictor.rot = high_freq_predictor.lio_rot;
+        high_freq_predictor.last_acc = acc;
+        high_freq_predictor.last_gyr = gyr;
+        publishHighFreqFallbackLocked(t, gyr);
+        return;
+    }
+
+    // 使用 IMU 初始化得到的重力尺度因子对加速度做归一化。
+    V3D acc_normalized = acc * high_freq_predictor.imu_acc_norm_factor;
+    V3D last_acc_normalized = high_freq_predictor.last_acc * high_freq_predictor.imu_acc_norm_factor;
+
+    // 采用中点积分：先计算上一采样时刻在世界系下的加速度。
+    V3D un_acc_0 = high_freq_predictor.rot * (last_acc_normalized - high_freq_predictor.ba)
+                   + high_freq_predictor.gravity;
+    V3D un_gyr = 0.5 * (high_freq_predictor.last_gyr + gyr) - high_freq_predictor.bg;
+
+    // 用去偏后的角速度积分姿态。
+    M3D predicted_rot = high_freq_predictor.rot * Exp(un_gyr, dt);
+
+    // 计算当前采样时刻加速度，并与上一时刻取均值以提高数值稳定性。
+    V3D un_acc_1 = predicted_rot * (acc_normalized - high_freq_predictor.ba)
+                   + high_freq_predictor.gravity;
+    V3D un_acc = 0.5 * (un_acc_0 + un_acc_1);
+
+    V3D predicted_vel = high_freq_predictor.vel + dt * un_acc;
+    V3D predicted_pos = high_freq_predictor.pos + dt * high_freq_predictor.vel + 0.5 * dt * dt * un_acc;
+
+    const bool prediction_ok = isFiniteVector(un_acc) && isFiniteVector(predicted_vel) &&
+                               isFiniteVector(predicted_pos) &&
+                               un_acc.norm() <= high_freq_predictor.max_acc &&
+                               predicted_vel.norm() <= high_freq_predictor.max_speed;
+
+    high_freq_predictor.time = t;
+    high_freq_predictor.last_acc = acc;
+    high_freq_predictor.last_gyr = gyr;
+
+    if (!prediction_ok)
+    {
+        high_freq_predictor.pos = high_freq_predictor.lio_pos;
+        high_freq_predictor.vel = high_freq_predictor.lio_vel;
+        high_freq_predictor.rot = high_freq_predictor.lio_rot;
+        publishHighFreqFallbackLocked(t, gyr);
+        return;
+    }
+
+    // 在世界坐标系下更新位置和速度。
+    high_freq_predictor.pos = predicted_pos;
+    high_freq_predictor.vel = predicted_vel;
+    high_freq_predictor.rot = predicted_rot;
+
+    const double alpha = std::clamp(high_freq_predictor.velocity_lpf_alpha, 0.0, 1.0);
+    high_freq_predictor.filtered_vel =
+        alpha * predicted_vel + (1.0 - alpha) * high_freq_predictor.filtered_vel;
+    high_freq_predictor.filtered_vel =
+        limitedVector(high_freq_predictor.filtered_vel, high_freq_predictor.max_speed);
+
+    publishHighFreqOdometry(t, high_freq_predictor.pos, high_freq_predictor.rot,
+                            high_freq_predictor.filtered_vel, gyr - high_freq_predictor.bg);
 }
 
 void SigHandle(int sig)
@@ -418,12 +578,6 @@ void imu_cbk(const sensor_msgs::msg::Imu::ConstSharedPtr msg_in)
     publish_count ++;
     auto msg = std::make_shared<sensor_msgs::msg::Imu>(*msg_in);
 
-    if(init)
-    {
-        fastPredictIMU(get_time_sec(msg->header.stamp)
-        ,V3D(msg->linear_acceleration.x, msg->linear_acceleration.y, msg->linear_acceleration.z)
-        ,V3D(msg->angular_velocity.x, msg->angular_velocity.y, msg->angular_velocity.z));
-    }
     if (abs(timediff_lidar_wrt_imu) > 0.1 && time_sync_en)
     {
         double corrected_time = timediff_lidar_wrt_imu + get_time_sec(msg_in->header.stamp);
@@ -445,6 +599,10 @@ void imu_cbk(const sensor_msgs::msg::Imu::ConstSharedPtr msg_in)
 
     imu_buffer.push_back(msg);
     mtx_buffer.unlock();
+
+    fastPredictIMU(timestamp,
+    V3D(msg->linear_acceleration.x, msg->linear_acceleration.y, msg->linear_acceleration.z),
+    V3D(msg->angular_velocity.x, msg->angular_velocity.y, msg->angular_velocity.z));
     sig_buffer.notify_all();
 }
 
@@ -918,6 +1076,12 @@ int main(int argc, char** argv)
     node->declare_parameter<bool>("mapping.extrinsic_est_en", true);
     node->declare_parameter<bool>("pcd_save.pcd_save_en", true);
     node->declare_parameter<int>("pcd_save.interval", -1);
+    node->declare_parameter<bool>("high_freq_predict.enable", true);
+    node->declare_parameter<double>("high_freq_predict.max_dt", 0.02);
+    node->declare_parameter<double>("high_freq_predict.max_speed", 1.0);
+    node->declare_parameter<double>("high_freq_predict.max_acc", 5.0);
+    node->declare_parameter<double>("high_freq_predict.velocity_lpf_alpha", 0.35);
+    node->declare_parameter<bool>("high_freq_predict.fallback_to_lio_velocity", true);
     node->declare_parameter<std::vector<double>>("mapping.extrinsic_T", std::vector<double>{0.0, 0.0, 0.0});
     node->declare_parameter<std::vector<double>>("mapping.extrinsic_R", std::vector<double>{1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0});
 
@@ -953,6 +1117,16 @@ int main(int argc, char** argv)
     node->get_parameter("mapping.extrinsic_est_en", extrinsic_est_en);
     node->get_parameter("pcd_save.pcd_save_en", pcd_save_en);
     node->get_parameter("pcd_save.interval", pcd_save_interval);
+    node->get_parameter("high_freq_predict.enable", high_freq_predictor.enable);
+    node->get_parameter("high_freq_predict.max_dt", high_freq_predictor.max_dt);
+    node->get_parameter("high_freq_predict.max_speed", high_freq_predictor.max_speed);
+    node->get_parameter("high_freq_predict.max_acc", high_freq_predictor.max_acc);
+    node->get_parameter("high_freq_predict.velocity_lpf_alpha", high_freq_predictor.velocity_lpf_alpha);
+    node->get_parameter("high_freq_predict.fallback_to_lio_velocity", high_freq_predictor.fallback_to_lio_velocity);
+    high_freq_predictor.max_dt = std::max(0.0, high_freq_predictor.max_dt);
+    high_freq_predictor.max_speed = std::max(0.0, high_freq_predictor.max_speed);
+    high_freq_predictor.max_acc = std::max(0.0, high_freq_predictor.max_acc);
+    high_freq_predictor.velocity_lpf_alpha = std::clamp(high_freq_predictor.velocity_lpf_alpha, 0.0, 1.0);
     node->get_parameter("mapping.extrinsic_T", extrinT);
     node->get_parameter("mapping.extrinsic_R", extrinR);
 
@@ -1227,7 +1401,6 @@ int main(int argc, char** argv)
             dm.publishTransformation(rclcpp::Time(to_ros_time(lidar_end_time)));
 			/*** dcl-slam ***/
 
-            init = true;
             updateLatestStates();
 
             /******* Publish odometry *******/

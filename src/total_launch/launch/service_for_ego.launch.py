@@ -56,7 +56,7 @@ def generate_launch_description():
 
     livox_launch_path_arg = DeclareLaunchArgument(
         "livox_launch_path",
-        default_value="/home/intelcup/ws_livox/src/livox_ros_driver2/launch_ROS2/msg_MID360_launch.py",
+        default_value="/home/intelcup/ws_livox/src/livox_ros_driver2/launch_ROS2/msg_MID360s_launch.py",
         description="Absolute path to Livox driver launch file"
     )
     
@@ -86,7 +86,7 @@ def generate_launch_description():
     # 2. DCL-SLAM (延迟 0.5 秒启动 T+0.5s)
     dcl_slam_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(dcl_slam_share, "launch", "dcl_fast_lio_mid360.launch.py")
+            os.path.join(dcl_slam_share, "launch", "dcl_fast_lio_mid360s.launch.py")
         ),
         launch_arguments={
             "namespace": namespace,

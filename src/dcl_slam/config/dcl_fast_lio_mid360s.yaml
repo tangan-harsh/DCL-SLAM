@@ -66,7 +66,7 @@
       scan_line: 4               # MID-360: 4 线
       scan_rate: 10              # 扫描频率 10Hz
       timestamp_unit: 3          # Livox 时间戳单位: 3=纳秒（与原版 FAST-LIO mid360.yaml 一致）
-      blind: 0.5                 # 最小检测距离 0.5m（MID-360 近距有效）
+      blind: 0.3                 # 最小检测距离 0.5m（MID-360 近距有效）
 
     mapping:
       acc_cov: 0.1               # 加速度计噪声协方差
