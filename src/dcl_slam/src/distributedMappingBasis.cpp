@@ -39,43 +39,46 @@ distributedMapping::distributedMapping() : paramsServer("dcl_slam_node")
 			// enable descriptor for detecting loop
 			if(intra_robot_loop_closure_enable_ || inter_robot_loop_closure_enable_)
 			{
+				auto desc_qos = rclcpp::QoS(5).best_effort();
 				// publish global descriptor
 				robot.pub_descriptors = this->create_publisher<dcl_slam::msg::GlobalDescriptor>(
-					robot.name_+"/distributedMapping/globalDescriptors", 5);
+					robot.name_+"/distributedMapping/globalDescriptors", desc_qos);
 				// publish loop infomation
 				robot.pub_loop_info = this->create_publisher<dcl_slam::msg::LoopInfo>(
-					robot.name_+"/distributedMapping/loopInfo", 5);
+					robot.name_+"/distributedMapping/loopInfo", desc_qos);
 			}
-			
+
 			// enable DGS
 			if(global_optmization_enable_)
 			{
+				auto dgs_qos = rclcpp::QoS(50).best_effort();
 				robot.pub_optimization_state = this->create_publisher<std_msgs::msg::Int8>(
-					robot.name_+"/distributedMapping/optimizationState", 50);
+					robot.name_+"/distributedMapping/optimizationState", dgs_qos);
 				robot.pub_rotation_estimate_state = this->create_publisher<std_msgs::msg::Int8>(
-					robot.name_+"/distributedMapping/rotationEstimateState", 50);
+					robot.name_+"/distributedMapping/rotationEstimateState", dgs_qos);
 				robot.pub_pose_estimate_state = this->create_publisher<std_msgs::msg::Int8>(
-					robot.name_+"/distributedMapping/poseEstimateState", 50);
+					robot.name_+"/distributedMapping/poseEstimateState", dgs_qos);
 				robot.pub_neighbor_rotation_estimates = this->create_publisher<dcl_slam::msg::NeighborEstimate>(
-					robot.name_+"/distributedMapping/neighborRotationEstimates", 50);
+					robot.name_+"/distributedMapping/neighborRotationEstimates", dgs_qos);
 				robot.pub_neighbor_pose_estimates = this->create_publisher<dcl_slam::msg::NeighborEstimate>(
-					robot.name_+"/distributedMapping/neighborPoseEstimates", 50);
+					robot.name_+"/distributedMapping/neighborPoseEstimates", dgs_qos);
 			}
 		}
 		// other robot
 		else
 		{
+			auto sub_qos = rclcpp::QoS(50).best_effort();
 			if(intra_robot_loop_closure_enable_ || inter_robot_loop_closure_enable_)
 			{
 				// subscribe global descriptor 订阅其他机器全局描述子
 				robot.sub_descriptors = this->create_subscription<dcl_slam::msg::GlobalDescriptor>(
-					robot.name_+"/distributedMapping/globalDescriptors", 50,
+					robot.name_+"/distributedMapping/globalDescriptors", sub_qos,
 					[this, it](const dcl_slam::msg::GlobalDescriptor::SharedPtr msg) {
 						this->globalDescriptorHandler(msg, it);
 					});
-				// subscribe loop infomation 
+				// subscribe loop infomation
 				robot.sub_loop_info = this->create_subscription<dcl_slam::msg::LoopInfo>(
-					robot.name_+"/distributedMapping/loopInfo", 50,
+					robot.name_+"/distributedMapping/loopInfo", sub_qos,
 					[this, it](const dcl_slam::msg::LoopInfo::SharedPtr msg) {
 						this->loopInfoHandler(msg, it);
 					});
@@ -84,27 +87,27 @@ distributedMapping::distributedMapping() : paramsServer("dcl_slam_node")
 			if(global_optmization_enable_)
 			{
 				robot.sub_optimization_state = this->create_subscription<std_msgs::msg::Int8>(
-					robot.name_+"/distributedMapping/optimizationState", 50,
+					robot.name_+"/distributedMapping/optimizationState", sub_qos,
 					[this, it](const std_msgs::msg::Int8::SharedPtr msg) {
 						this->optStateHandler(msg, it);
 					});
 				robot.sub_rotation_estimate_state = this->create_subscription<std_msgs::msg::Int8>(
-					robot.name_+"/distributedMapping/rotationEstimateState", 50,
+					robot.name_+"/distributedMapping/rotationEstimateState", sub_qos,
 					[this, it](const std_msgs::msg::Int8::SharedPtr msg) {
 						this->rotationStateHandler(msg, it);
 					});
 				robot.sub_pose_estimate_state = this->create_subscription<std_msgs::msg::Int8>(
-					robot.name_+"/distributedMapping/poseEstimateState", 50,
+					robot.name_+"/distributedMapping/poseEstimateState", sub_qos,
 					[this, it](const std_msgs::msg::Int8::SharedPtr msg) {
 						this->poseStateHandler(msg, it);
 					});
 				robot.sub_neighbor_rotation_estimates = this->create_subscription<dcl_slam::msg::NeighborEstimate>(
-					robot.name_+"/distributedMapping/neighborRotationEstimates", 50,
+					robot.name_+"/distributedMapping/neighborRotationEstimates", sub_qos,
 					[this, it](const dcl_slam::msg::NeighborEstimate::SharedPtr msg) {
 						this->neighborRotationHandler(msg, it);
 					});
 				robot.sub_neighbor_pose_estimates = this->create_subscription<dcl_slam::msg::NeighborEstimate>(
-					robot.name_+"/distributedMapping/neighborPoseEstimates", 50,
+					robot.name_+"/distributedMapping/neighborPoseEstimates", sub_qos,
 					[this, it](const dcl_slam::msg::NeighborEstimate::SharedPtr msg) {
 						this->neighborPoseHandler(msg, it);
 					});
@@ -123,24 +126,25 @@ distributedMapping::distributedMapping() : paramsServer("dcl_slam_node")
 
 	/*** ros subscriber and publisher ***/
 	// loop closure visualization
+	auto viz_qos = rclcpp::QoS(1).best_effort();
 	pub_loop_closure_constraints = this->create_publisher<visualization_msgs::msg::MarkerArray>(
-		"distributedMapping/loopClosureConstraints", 1);
+		"distributedMapping/loopClosureConstraints", viz_qos);
 	// scan2map cloud
 	pub_scan_of_scan2map = this->create_publisher<sensor_msgs::msg::PointCloud2>(
-		"distributedMapping/scanOfScan2map", 1);
+		"distributedMapping/scanOfScan2map", viz_qos);
 	pub_map_of_scan2map = this->create_publisher<sensor_msgs::msg::PointCloud2>(
-		"distributedMapping/mapOfScan2map", 1);
+		"distributedMapping/mapOfScan2map", viz_qos);
 	// global map visualization
 	pub_global_map = this->create_publisher<sensor_msgs::msg::PointCloud2>(
-		"distributedMapping/globalMap", 1);
+		"distributedMapping/globalMap", viz_qos);
 	// path for independent robot
 	pub_global_path = this->create_publisher<nav_msgs::msg::Path>(
-		"distributedMapping/path", 1);
+		"distributedMapping/path", viz_qos);
 	pub_local_path = this->create_publisher<nav_msgs::msg::Path>(
-		"distributedMapping/localPath", 1);
+		"distributedMapping/localPath", viz_qos);
 	// keypose cloud
 	pub_keypose_cloud = this->create_publisher<sensor_msgs::msg::PointCloud2>(
-		"distributedMapping/keyposeCloud", 1);
+		"distributedMapping/keyposeCloud", viz_qos);
 
 	/*** message information ***/
 	cloud_for_decript_ds.reset(new pcl::PointCloud<PointPose3D>()); 

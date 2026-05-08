@@ -27,22 +27,23 @@ public:
         number_of_robots_ = this->get_parameter("number_of_robots").as_int();
 
         pub_loop_closure_constraints = this->create_publisher<visualization_msgs::msg::MarkerArray>(
-            "distributedMapping/loopClosureConstraints", 1);
+            "distributedMapping/loopClosureConstraints", rclcpp::QoS(1).best_effort());
 
         for(int i = 0; i < number_of_robots_; i++)
         {
             std::string name = "a";
             name[0] += i;
 
+            auto viz_qos = rclcpp::QoS(1).best_effort();
             auto sub_keypose_cloud = this->create_subscription<sensor_msgs::msg::PointCloud2>(
-                name+"/distributedMapping/keyposeCloud", 1, 
+                name+"/distributedMapping/keyposeCloud", viz_qos, 
                 [this, i](const sensor_msgs::msg::PointCloud2::SharedPtr msg) {
                     this->keyposeCloudHandler(msg, i);
                 });
             sub_keypose_cloud_vec.push_back(sub_keypose_cloud);
 
             auto sub_loop_info = this->create_subscription<dcl_slam::msg::LoopInfo>(
-                name+"/distributedMapping/loopInfo", 1, 
+                name+"/distributedMapping/loopInfo", viz_qos, 
                 [this, i](const dcl_slam::msg::LoopInfo::SharedPtr msg) {
                     this->loopInfoHandler(msg, i);
                 });

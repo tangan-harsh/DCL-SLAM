@@ -1198,20 +1198,25 @@ int main(int argc, char** argv)
     auto sub_imu = node->create_subscription<sensor_msgs::msg::Imu>(
         imu_topic, qos, imu_cbk);
 
+    auto cloud_qos = rclcpp::QoS(1).best_effort().durability_volatile();
     auto pubLaserCloudFull = node->create_publisher<sensor_msgs::msg::PointCloud2>(
-        "cloud_registered", 100000);
+        "cloud_registered", cloud_qos);
     auto pubLaserCloudFull_body = node->create_publisher<sensor_msgs::msg::PointCloud2>(
-        "cloud_registered_body", 100000);
+        "cloud_registered_body", cloud_qos);
     auto pubLaserCloudEffect = node->create_publisher<sensor_msgs::msg::PointCloud2>(
-        "cloud_effected", 100000);
+        "cloud_effected", cloud_qos);
     auto pubLaserCloudMap = node->create_publisher<sensor_msgs::msg::PointCloud2>(
-        "Laser_map", 100000);
+        "Laser_map", cloud_qos);
+
+    auto odom_qos = rclcpp::QoS(1).best_effort();
     auto pubOdomAftMapped = node->create_publisher<nav_msgs::msg::Odometry>(
-        "Odometry", 100000);
-    auto pubPath = node->create_publisher<nav_msgs::msg::Path>(
-        "path", 100000);
+        "Odometry", odom_qos);
     odomHigh_speed = node->create_publisher<nav_msgs::msg::Odometry>(
-        "Odom_high_fre", 100000);
+        "Odom_high_fre", odom_qos);
+
+    auto path_qos = rclcpp::QoS(5).best_effort();
+    auto pubPath = node->create_publisher<nav_msgs::msg::Path>(
+        "path", path_qos);
     auto tf_broadcaster = std::make_unique<tf2_ros::TransformBroadcaster>(*node);
 
 //------------------------------------------------------------------------------------------------------

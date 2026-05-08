@@ -49,7 +49,7 @@
     # ===== FAST-LIO 前端参数 =====
     ros__parameters:
       feature_extract_enable: false  # 是否启用特征提取
-      point_filter_num: 20  # 点云下采样倍数，数值越大点云越稀疏
+      point_filter_num: 40  # 点云下采样倍数，数值越大点云越稀疏
       max_iteration: 3  # 最大迭代次数，用于优化算法收敛
       filter_size_surf: 0.5  # 表面点滤波网格大小（米）
       filter_size_map: 0.5  # 地图点滤波网格大小（米）
@@ -85,8 +85,8 @@
     publish:
       path_en: true              # 发布轨迹路径
       scan_publish_en: true      # 发布点云
-      dense_publish_en: true     # 发布稠密点云
-      scan_bodyframe_pub_en: true  # 在 IMU 体坐标系下发布点云
+      dense_publish_en: false     # 发布稠密点云
+      scan_bodyframe_pub_en: false  # 在 IMU 体坐标系下发布点云
 
     high_freq_predict:
       enable: true
